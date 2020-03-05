@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notice_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1236px;
+  background-color: #fafafa;
+  padding: 18px 0 0 0;
+}
+
+.notice_area .wrap {
+  position: relative;
+  left: 50%;
+  margin-left: -512px;
+  width: 1024px;
+}
+
+.notice_area .wrap nav {
+  margin-bottom: 15px;
+}
+
+.notice_area .wrap nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.notice_area .wrap nav ul li {
+  width: 342px;
+  height: 44px;
+  text-align: center;
+}
+
+.notice_area .wrap nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+.notice_area .wrap nav ul li:first-child {
+  border-bottom: solid red 3px;
+}
+
+.notice_area .wrap nav ul li:first-child a {
+  color: red;
+}
+
+.notice_area .wrap main .notice_contents {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notice_area .wrap main .notice_contents li {
+  margin-top: -1px;
+}
+
+.notice_area .wrap main .notice_contents li article.detail_off {
+  height: 75px;
+  overflow: hidden;
+}
+
+.notice_area .wrap main .notice_contents li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  border: solid 1px gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 75px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+}
+
+.notice_area .wrap main .notice_contents li button div {
+  width: 969px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notice_area .wrap main .notice_contents li button div h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.notice_area .wrap main .notice_contents li button div time {
+  margin: 10px 0 0 0;
+  color: #999999;
+  text-align: left;
+}
+
+.notice_area .wrap main .notice_contents li button i {
+  margin: 0;
+  padding: 0;
+  background: url("../img/슬라이드아이콘.PNG") no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 15px;
+}
+
+.notice_area .wrap main .notice_contents li button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=공지사항.css.map */

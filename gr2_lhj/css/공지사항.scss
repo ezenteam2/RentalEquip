@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+$backgroundColor:#fafafa;
+*{
+    font-family:'Noto Sans KR', sans-serif;
+}
+.notice_area{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-width: 1236px;
+    background-color:$backgroundColor;
+    padding:18px 0 0 0;
+    .wrap{
+        position: relative;
+        left:50%;
+        margin-left:-512px;
+        width:1024px;
+        nav{
+            margin-bottom:15px;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin:0;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                
+                li{
+                    width:342px;
+                    height:44px;
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        color:black;
+                        font-weight: bold;
+                        line-height: 44px;
+                    }                    
+                }
+                li:first-child{
+                    border-bottom: solid red 3px;
+                    a{
+                        color:red;
+                    }
+                }
+            }
+        }
+        main{
+            .notice_contents{
+                list-style: none;
+                padding:0;
+                margin:0;
+                li{
+                    article.detail_off{
+                        height:75px;
+                        overflow: hidden;
+                    }
+                    margin-top:-1px;
+                    button{
+                        display:flex;
+                        background-color: white;
+                        border:solid 1px gray;
+                        box-sizing: border-box;
+                        padding:0;
+                        margin:0;
+                        height:75px;
+                        width:100%;
+                        align-items: center;
+                        padding:0 20px 0 20px;
+                        cursor: pointer;
+                        div{
+                            width:969px;
+                            height:42px;
+                            display:flex;
+                            flex-direction: column;
+                            h1{
+                                margin:0;
+                                padding:0;
+                                font-size:14px;
+                                text-align: left; 
+                                font-weight: 600;                           
+                            }
+                            time{
+                                margin:10px 0 0 0;
+                                color:rgb(153,153,153);
+                                text-align: left;
+                            }
+                        }
+                        i{
+                            margin:0;
+                            padding:0;
+                            background: url('../img/슬라이드아이콘.PNG') no-repeat;
+                            background-size: 20px 20px;
+                            width:20px;
+                            height:15px;
+                            
+                        }
+                    }
+                    button:focus{
+                        outline:none;
+                    }
+                }
+            }
+        }
+    }
+}
