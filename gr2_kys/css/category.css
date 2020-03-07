@@ -1,0 +1,72 @@
+main{
+    margin-left:15%;
+    margin-right: 15%;
+    
+}
+
+#mainProduct{
+    width:100%;
+    margin-left: 5%;
+}
+#menuBar{
+    width: 100%;
+    height: 200px;
+    margin-top: 2%;
+    margin-left:5%;
+    display: inline-block;
+}
+.menu{
+    width: 15%;
+    height: 30px;
+    float: left;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1.2%;
+    cursor: pointer;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu:hover{
+    background-color: grey;
+    color:white;
+}
+
+#vertical{
+    margin: auto;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width:100%;
+    height:200px;
+}
+span{
+    display:block;
+    text-align: center;
+}
+
+.product{
+    
+    width:20%;
+    height:300px;
+    float: left;
+    align-items: center;
+    padding: 1.2%;
+    cursor: pointer;
+
+}
+
+#main02{
+    
+    margin-left:18%;
+    margin-right: 20%;
+    
+}
+
+
