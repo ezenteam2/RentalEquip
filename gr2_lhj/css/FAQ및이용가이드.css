@@ -122,6 +122,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 0.25px #eeeeee solid;
 }
 
 .guide_area .wrap main .guide_content ul li i {

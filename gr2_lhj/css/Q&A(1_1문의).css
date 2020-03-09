@@ -85,7 +85,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid 1px;
+  border: solid 1px #ddd;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -151,7 +151,7 @@
 }
 
 .qna_area .wrap main .reg_qna .sel_cate .cate_li ul li:hover {
-  background-color: #cccccc;
+  background-color: #eee;
 }
 
 .qna_area .wrap main .reg_qna textarea {
@@ -159,6 +159,11 @@
   overflow: scroll;
   overflow-x: hidden;
   resize: none;
+  border: solid 1px #ddd;
+}
+
+.qna_area .wrap main .reg_qna textarea:focus {
+  outline: none;
 }
 
 .qna_area .wrap main .reg_qna button[type=submit] {
@@ -183,10 +188,48 @@
   list-style: none;
 }
 
+@-webkit-keyframes height_auto {
+  0% {
+    max-height: 75px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+
+@keyframes height_auto {
+  0% {
+    max-height: 75px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+
+@-webkit-keyframes height_75px {
+  0% {
+    max-height: 500px;
+  }
+  100% {
+    max-height: 75px;
+  }
+}
+
+@keyframes height_75px {
+  0% {
+    max-height: 500px;
+  }
+  100% {
+    max-height: 75px;
+  }
+}
+
 .qna_area .wrap main .qna_li ul li {
   position: relative;
   display: block;
-  height: 75px;
+  max-height: 75px;
+  border: 1px #eee solid;
+  margin-top: -2px;
   overflow: hidden;
   -webkit-transition: height 350ms ease-in-out;
   transition: height 350ms ease-in-out;
@@ -197,6 +240,7 @@
   margin: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
 
 .qna_area .wrap main .qna_li ul li .title {
@@ -213,6 +257,7 @@
 .qna_area .wrap main .qna_li ul li .title h1 {
   display: block;
   height: 75px;
+  padding: 0 0 0 15px;
   line-height: 75px;
   font-size: 16px;
 }
@@ -223,11 +268,13 @@
   width: 25px;
   height: 20px;
   margin-left: auto;
+  margin-right: 15px;
   overflow: hidden;
   color: transparent;
 }
 
 .qna_area .wrap main .qna_li ul li p {
   font-size: 14px;
+  padding: 10px;
 }
 /*# sourceMappingURL=Q&A(1_1문의).css.map */
