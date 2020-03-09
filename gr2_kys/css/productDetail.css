@@ -25,7 +25,6 @@
 #productImage{
     margin-top:50px;
     float: left;
-    
     width:60%
 }
 #productSample{
@@ -49,10 +48,33 @@ span{
 .btn{
     width:100px;
     height:40px;
-    margin-top:100px;
+    margin-top:80px;
     background-color: orange;
     text-align: center;
     margin-left: 60px;
     color:white;
     font: bold;
+}
+
+#detail_product01{
+    display:inline-block;
+    margin-top: 50px;
+    width:100%;
+    border-top:1px solid black;
+}
+
+#detail_product02{
+    margin-top:10px;
+    width: 100%;   
+}
+
+#detail_image{
+    width:60%;
+    margin-left:20%;
+    
+
+}
+
+.img{
+    position: absolute;
 }
