@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+$backgroundColor:#fafafa;
+*{
+    font-family:'Noto Sans KR', sans-serif;
+}
+.guide_area{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-width: 1236px;
+    background-color:$backgroundColor;
+    padding:18px 0 0 0;
+    .wrap{
+        position: relative;
+        left:50%;
+        margin-left:-512px;
+        width:1024px;
+        nav{
+            ul{
+                list-style: none;
+                padding: 0;
+                margin:0;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                
+                li{
+                    width:342px;
+                    height:44px;
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        color:black;
+                        font-weight: bold;
+                        line-height: 44px;
+                    }                    
+                }
+                li:nth-child(2){
+                    border-bottom: solid red 3px;
+                    a{
+                        color:red;
+                    }
+                }
+            }
+        }
+        main{
+            background-color: white;
+            .guide_header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding:36px 0 0 0;
+                i{
+                    background: url('../img/FAQ아이콘.PNG') no-repeat;
+                    background-size: 230px 93px;
+                    width:230px;
+                    height:93px;
+                    color:transparent;
+                    overflow: hidden;
+                }
+                h1{
+                    text-align: center;
+                    span{
+                        color:red;
+                    }
+                }
+                p{
+                    color:#666666;
+                }
+
+            }
+            .guide_content{
+                ul{
+                    display:flex;
+                    flex-direction: column;
+                    flex:0 0 0;
+                    list-style: none;
+                    margin:0;
+                    padding:0 20px 0 20px;
+                    
+                    li{
+                        display: flex;
+                        padding:30px 0 30px 0;
+                        margin:0;
+                        flex:0 0 0;
+                        align-items: center;
+                        i{
+                            width:92px;
+                            height:87px;
+                            color:transparent;
+                            overflow: hidden;
+                            margin-right:10px;
+                        }
+                        h1{
+                            margin:0;
+                            padding:10px 0 0 0;
+                            font-size: 16px;
+                        }
+                        p{
+                            color: #888888;
+                            font-size: 14px;
+                            margin:15px 0 0 0;
+                            padding:0;
+                        }
+                    }
+                    li:nth-child(1){
+                        i{
+                            background: url('../img/FAQ리스트아이콘_거래금지품목.PNG') no-repeat;
+                            background-size: 92px 87px;
+                        }
+                        
+                    }
+                    li:nth-child(2){
+                        i{
+                            background: url('../img/FAQ리스트아이콘_랜덤박스.PNG') no-repeat;
+                            background-size: 92px 87px;
+                        }
+                        
+                    }
+                    li:nth-child(3){
+                        i{
+                            background: url('../img/FAQ리스트아이콘_욕설.PNG') no-repeat;
+                            background-size: 92px 87px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

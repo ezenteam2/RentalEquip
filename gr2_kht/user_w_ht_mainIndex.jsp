@@ -14,35 +14,70 @@ body{
 
 
 .mainIndexRoot_ht{
-	margin-left:15%;
-	margin-right:15%;
-	width:1400px;
+	margin-left:22%;
+	
+	width:1050px;
 	height:1000px;
 	background-color:#BECDFF;
 	}
 	
 .mainIndexTop_ht{
-	font-size:18px;
-	height:50px;
-	background-color:#D2D2FF;
+	font-size:14px;
+	height:45px;
+	padding-top:10px;
 	}
 	
-.mainIndexTopContent_ht{
+.mainIndexTopContent1_ht{
 	width:120px;
-	height:100%;
+	height:50px;
 	vertical-align:middle;
+	display:inline-block;
+	}
+
+.mainIndexTopContent2_ht{
+	width:60px;
+	height:50px;
+	vertical-align:middle;
+	display:inline-block;
+	
 	}
 	
 .mainIndexMiddle_ht{
-	height:180px;
-	background-color:#FFB4FF;
+	height:150px;
+	
+	font-size:14px;
+	}
+
+.mainIndexMiddleContent1_ht{
+	width:120px;
+	height:50px;
+	
+	
+	margin-left:60px;
+	margin-top:10px;
+	display:inline-block;
+	}
+
+.mainIndexMiddleContent2_ht{
+	width:70px;
+	height:50px;
+	
+	
+	margin-top:10px;
+	margin-right:5px;
+	display:inline-block;
+	}
+	
+.mainIndexMiddleContentImage_ht{
+	width:20px;
+	margin-right:5px;
 	}
 
 .mainIndexTopMiddle_ht{
 	position:fixed;
-	width:1398px;
+	width:1048px;
 	top:0;
-	margin-left:15%;
+	margin-left:22%;
 	}
 
 .mainIndexBottom_ht{
@@ -52,6 +87,7 @@ body{
 	
 .mainIndexFooter_ht{
 	background-color:#F479DF;
+	font-size:14px;
 	}
 
 </style>
@@ -65,31 +101,31 @@ body{
 	
 
 	<header class="mainIndexTopMiddle_ht">
-		<div class="mainIndexTop_ht">
-			<span class="mainIndexTopContent_ht"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</span>
-			<span class="mainIndexTopContent_ht"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</span>
-			<span>로그인</span>
-			<span class="mainIndexTopContent_ht">회원가입</span>
-			<span class="mainIndexTopContent_ht">내 렌탈</span>
+		<div class="mainIndexTop_ht">			
+				<div class="mainIndexTopContent1_ht"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
+				<div class="mainIndexTopContent1_ht"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</div>			
+				<div class="mainIndexTopContent2_ht" style="margin-left:600px;">로그인</div>   
+				<div class="mainIndexTopContent2_ht">회원가입</div>   
+				<div class="mainIndexTopContent2_ht">내 렌탈</div>			
 		</div>
 		
 		
 		<div class="mainIndexMiddle_ht">
-			<div style="vertical-align:center;height:140px;">
-				<span><img src="image/mainIndexLogo.jpg" style="height:50px;"></span>
-				<span><input type="text" placeholder="상품명, 카테고리 입력" style="width:800px;height:50px;border:solid 5px red;"></span>
-				<span class="mainIndexTopContent_ht">렌탈 상품 등록</span>
-				<span class="mainIndexTopContent_ht">내 렌탈</span>
-				<span class="mainIndexTopContent_ht">번개톡</span>
+			<div style="vertical-align:middle;height:80px;padding-top:20px;">
+				<div style="display:inline-block;vertical-align:top;"><img src="image/mainIndexLogo.jpg" height="50px;"></div>
+				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
+				<div class="mainIndexMiddleContent1_ht"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
+				<div class="mainIndexMiddleContent2_ht"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
+				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht">번개톡</div>
 			<br>
 			</div>
-			<div style="padding-left:30px;">
-			<img src="image/mainIndexCategoryMenuIcon.png">
+			<div style="padding-left:20px;">
+			<img src="image/mainIndexCategoryMenuIcon.png" width="25px">
 			</div>
 		</div>		
 	</header>
 	
-	<div style="height:230px;"></div>	
+	<div style="height:210px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		<div class="">
 			<iframe src="" width=100% height=500px></iframe>
