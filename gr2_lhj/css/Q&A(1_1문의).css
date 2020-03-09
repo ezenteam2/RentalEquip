@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.qna_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1236px;
+  background-color: #fafafa;
+  padding: 18px 0 0 0;
+}
+
+.qna_area .wrap {
+  position: relative;
+  left: 50%;
+  margin-left: -512px;
+  width: 1024px;
+}
+
+.qna_area .wrap nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.qna_area .wrap nav ul li {
+  width: 342px;
+  height: 44px;
+  text-align: center;
+}
+
+.qna_area .wrap nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+.qna_area .wrap nav ul li:nth-child(3) {
+  border-bottom: solid red 3px;
+}
+
+.qna_area .wrap nav ul li:nth-child(3) a {
+  color: red;
+}
+
+.qna_area .wrap main .reg_qna {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate {
+  background-color: white;
+  height: 46px;
+  position: relative;
+  margin: 5px 0 10px 0;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate h1 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate h1 span {
+  margin-left: 10px;
+  line-height: 46px;
+  font-size: 14px;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate h1 i {
+  margin-left: auto;
+  margin-right: 8px;
+  background: url("../img/슬라이드아이콘.PNG") no-repeat;
+  background-size: 25px 20px;
+  width: 25px;
+  height: 20px;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate #cate_check {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate .cate_li {
+  width: 1024px;
+  height: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  -webkit-box-shadow: -2px 24px 35px -17px rgba(0, 0, 0, 0.61);
+          box-shadow: -2px 24px 35px -17px rgba(0, 0, 0, 0.61);
+}
+
+.qna_area .wrap main .reg_qna .sel_cate .cate_li ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate .cate_li ul li {
+  position: relative;
+  padding: 0 0 0 10px;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  line-height: 50px;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate .cate_li ul li input[type=radio] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.qna_area .wrap main .reg_qna .sel_cate .cate_li ul li:hover {
+  background-color: #cccccc;
+}
+
+.qna_area .wrap main .reg_qna textarea {
+  height: 326px;
+  overflow: scroll;
+  overflow-x: hidden;
+  resize: none;
+}
+
+.qna_area .wrap main .reg_qna button[type=submit] {
+  border: none;
+  width: 150px;
+  height: 38px;
+  margin-left: auto;
+  margin-top: 12px;
+  background-color: #ff5058;
+  color: white;
+  cursor: pointer;
+}
+
+.qna_area .wrap main .qna_li {
+  width: 1024px;
+}
+
+.qna_area .wrap main .qna_li ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.qna_area .wrap main .qna_li ul li {
+  position: relative;
+  display: block;
+  height: 75px;
+  overflow: hidden;
+  -webkit-transition: height 350ms ease-in-out;
+  transition: height 350ms ease-in-out;
+}
+
+.qna_area .wrap main .qna_li ul li input {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qna_area .wrap main .qna_li ul li .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  height: 75px;
+}
+
+.qna_area .wrap main .qna_li ul li .title h1 {
+  display: block;
+  height: 75px;
+  line-height: 75px;
+  font-size: 16px;
+}
+
+.qna_area .wrap main .qna_li ul li .title i {
+  background: url("../img/슬라이드아이콘.PNG") no-repeat;
+  background-size: 25px 20px;
+  width: 25px;
+  height: 20px;
+  margin-left: auto;
+  overflow: hidden;
+  color: transparent;
+}
+
+.qna_area .wrap main .qna_li ul li p {
+  font-size: 14px;
+}
+/*# sourceMappingURL=Q&A(1_1문의).css.map */

@@ -10,13 +10,14 @@
         <link rel="stylesheet" href="../css/공지사항.css">
     </head>
     <body>
+ 
         <div class="notice_area">
             <div class="wrap">
                 <nav>
                     <ul>
                         <li><a href="#">공지사항</a></li>
-                        <li><a href="#">운영정책</a></li>
-                        <li><a href="#">자주묻는 질문</a></li>
+                        <li><a href="FAQ및이용가이드.jsp">FAQ및이용가이드</a></li>
+                        <li><a href="#">Q&A(1:1문의)</a></li>
                     </ul>
                 </nav>
                 <main>
