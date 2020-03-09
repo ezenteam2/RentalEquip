@@ -5,33 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/user_w_kb_EmoneyCharge.css">
+
+    <script>
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
 <body>
+    <script>
+          function clickPrice(num){
+            var PriceComma = numberWithCommas(num);
+            var input_Price=  document.querySelector("#Price_Span")
+            input_Price.innerHTML=PriceComma;
+            $("#Check_Input").prop("checked", false);
+            console.log(PriceComma);
+        }
+        function inputPrice(e, obj){
+
+            $("#Check_Input").prop("checked", true);
+
+            if ($(obj).val() == "") {
+                $("#PAmt").val("0");
+                $("#Price_Span").text("0");
+            } else {
+                $("#PAmt").val($(obj).val());
+                $("#Price_Span").text(numberWithCommas($(obj).val()));
+            }
+        }
+    </script>
     <main>
         <div id="kb_title">
             <h2>E머니 충전</h2>
         </div>
+        
+        <h3>결제 방법</h3>
         <div id="Bank_Btns">
-            <div class="bank_menubar"><div class="bank_text">우리은행</div></div>
-            <div class="bank_menubar"><div class="bank_text">신한은행</div></div>
-            <div class="bank_menubar"><div class="bank_text">국민은행</div></div>
-            <div class="bank_menubar"><div class="bank_text">하나은행</div></div>
-            <div class="bank_menubar"><div class="bank_text">농협</div></div>
-            <div class="bank_menubar"><div class="bank_text">IBK 기업은행</div></div>
+            <div class="bank_menubar"><div class="bank_text">문화상품권</div></div>
+            <div class="bank_menubar"><div class="bank_text">모바일(휴대폰)</div></div>
+            <div class="bank_menubar"><div class="bank_text">계좌이체</div></div>
+            <div class="bank_menubar"><div class="bank_text">신용카드</div></div>
+            <div class="bank_menubar"><div class="bank_text">무통장입금</div></div>
+            <div class="bank_menubar"><div class="bank_text">편의점/포인트</div></div>
         </div>
+        <h3>충전 금액</h3>
         <div id="Price_Btns">
-            <div class="Price_menubar"><div class="Price_text">10,000원</div></div>
-            <div class="Price_menubar"><div class="Price_text">20,000원</div></div>
-            <div class="Price_menubar"><div class="Price_text">30,000원</div></div>
-            <div class="Price_menubar"><div class="Price_text">40,000원</div></div>
+            <div class="Price_menubar" onclick="clickPrice(10000)"><div class="Price_text">10,000원</div></div>
+            <div class="Price_menubar" onclick="clickPrice(20000)"><div class="Price_text">20,000원</div></div>
+            <div class="Price_menubar" onclick="clickPrice(30000)"><div class="Price_text">30,000원</div></div>
+            <div class="Price_menubar" onclick="clickPrice(50000)"><div class="Price_text">50,000원</div></div>
             <div class="input_Price_Div">
                 <div id="Price_radio_Div">
-                    <input type="radio" value="true" name="Check_Input">&nbsp;직접 입력 
+                    <input type="radio" value="true" id="Check_Input" name="Check_Input">&nbsp;직접 입력 
                 </div>
                 <div id="input_Price_Div">
-                    <input type="number" name="Price" id="input_price" placeholder="충전 금액 입력">
+                    <input type="number" name="Price" id="input_price" onkeyup="inputPrice(event, this)" placeholder="충전 금액 입력">
                 </div>
             </div>
+        </div>
+        <div id="Charge_Price_Text">
+            <b>충전 금액 : </b>&nbsp;<span id="Price_Span">5,000</span>&nbsp;<b>원</b>&nbsp;&nbsp;&nbsp;
+        </div>
+        <div id="Charge_Btn_Div">
+            <button id="Charge_Btn">충전하기</button>
         </div>
     </main>
 </body>

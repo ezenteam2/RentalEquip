@@ -1,7 +1,6 @@
 body{
     margin:0;
     padding:0;
-    
 }
 
 main{
@@ -14,27 +13,14 @@ main{
     border-bottom: 1px solid black;
     margin-top: 5%;
 }
-#Bank_Btns{
+
+#Emoney_Balance_Div{
+    font-size:16pt;
     margin-top:2%;
-    width:100%;
-    height:100px;
-    margin-left:3%;
-    display:inline-block;
 }
-
-.bank_menubar{
-    width:15%;
-    height:100%;
-    border:0.5px solid black;
-    float:left;
-    display: flex;
-    text-align:center;
-    align-items: center;
-    cursor:pointer;
-}
-
-.bank_text{
-    margin:auto;
+#Balance_Span{
+    color:red;
+    font-weight: bold;
 }
 
 #Price_Btns{
@@ -55,7 +41,7 @@ main{
     align-items: center;
     margin-left:1%;
     background-color: #f6f9fc;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .input_Price_Div{
@@ -102,15 +88,30 @@ main{
     color:red;
     font-weight: bold;
 }
+#Bank_Account_input_Div{
+text-align:left;
+}
 
-#Charge_Btn_Div{
+select{
+    width:140px;
+    height:30px;
+    margin-left:5%;
+}
+
+#input_Account{
+    width:320px;
+    height:30px;
+    text-align:center;
+}
+
+#Withraw_Btn_Div{
     width:100%;
     height:60px;
     text-align:center;
     margin-top:2%;
 }
 
-#Charge_Btn{
+#Withraw_Btn{
     width:240px;
     height:60px;
     background-color: red;
