@@ -1,13 +1,176 @@
+*{
+    outline: none;
+}
 body{
-    background-color: #F2F2F2;
+    background-color: rgb(249, 249, 249);
 }
 .signup{
-    width : 40%;
+    width : 430px;
     height : 80%;
     background-color : white;
-    border : 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+    border-radius: 4px;
     margin : auto;
-    &__form{
-        padding : 5%;
+    margin-top:100px;
+    padding : 70px;
+    padding-top : 40px;
+   @mixin form(){
+    margin-left : 10px;
+    width : 300px;
+    height : 20px;
+    position: relative;
+    border : none;
+    margin-top : 15px;
+   }
+   @mixin button(){
+    width : 90px;
+    height : 30px;
+    background-color : rgb(179, 179, 179);
+    color : white;
+    float : right;
+    position : relative;
+    border-radius: 2px;
+    border : none;
+    top : 12px;
+    cursor: pointer;
+    margin-top : 15px;
+   }
+    .form{
+        border : none;
+        &__title{
+            font-size: 28px;
+            margin-top : 15px;
+        }
+        &__img{
+            width : 20px;
+            padding : 5px;
+            position : relative;
+            top : 10px;
+            margin-top : 15px;
+        }
+        &__id{
+            @include form();
+            
+        }
+        &__pwd{
+            @include form();
+            &--check{
+                @include form();
+            }
+        }
+        &__username{
+            @include form();
+        }
+        &__nickname{
+            @include form();
+        }
+        &__address{
+            @include form();
+            &--btn{
+                @include button();
+                top : 6px;
+            }
+        }
+        &__isdouble--btn{
+            @include button();
+        }
+        &__phone{
+            @include form();
+            &--request{
+                @include button();
+                top : 14px;
+            }
+        }
+        &__requst-number{
+            @include form();
+        }
     }
+}
+@mixin inner(){
+    line-height: 1.4;
+    max-height: 150px;
+    overflow: hidden auto;
+    transition: max-height 0.5s ease 0s;
+    color: gray;
+    font-size: 13px;
+    padding: 10px;
+    background: rgb(249, 249, 249);
+    border : 1pz solid rgb(238, 238, 238);
+    margin-top : 15px;
+}
+@mixin updownimg(){
+    font-size : 20px;
+    float: right;
+    cursor : pointer;
+}
+$checkboxsize : 20px;
+@mixin titletext(){
+font-size : 14px;
+left :  35px;
+position : relative;
+}
+.allow{   
+    [type=checkbox]{
+        display : none;
+    }
+    .content{
+        color : black;    
+        background-color: white;
+        border : 1px solid gray;
+        width : $checkboxsize;
+        height : $checkboxsize;
+        cursor: pointer;
+        position: relative;
+        top : 34px;
+    }
+    &__total{
+
+        &--text{
+            @include titletext();
+        }
+    }
+    &__must{
+        margin-bottom : 10px;
+        &--text{
+            @include titletext();
+            display : inline;
+         
+        }
+        &--img1-1{
+            @include updownimg();
+        }
+        &--img2-1{
+            @include updownimg();
+        }
+        &--inner1{
+            @include inner();
+            display : none;
+        }
+        &--inner2{
+            @include inner();
+            display : none;
+        }
+    }
+    &__not-must{
+        &--text{
+            @include titletext();
+        }
+    }
+    &--checkbox{
+        width : 15px;
+        height : 15px;
+        position : relative;
+        left : 3px;
+        top : 2px;
+        display:none;
+    }
+}
+.submit{
+    width : 100%;
+    height : 56px;
+    background-color: red;
+    color : white;
+    border : none;
+    font-size : 18px;
+    cursor: pointer;
 }
