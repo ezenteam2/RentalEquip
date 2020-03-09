@@ -74,6 +74,10 @@
   overflow: hidden;
 }
 
+.notice_area .wrap main .notice_contents li article p {
+  padding: 15px 7px 15px 7px;
+}
+
 .notice_area .wrap main .notice_contents li button {
   display: -webkit-box;
   display: -ms-flexbox;
