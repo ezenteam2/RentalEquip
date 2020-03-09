@@ -1,0 +1,16 @@
+body {
+  background-color: #F2F2F2;
+}
+
+.signup {
+  width: 40%;
+  height: 80%;
+  background-color: white;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.signup__form {
+  padding: 5%;
+}
+/*# sourceMappingURL=signup.css.map */
