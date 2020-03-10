@@ -35,3 +35,9 @@
 td{
     height:50px;
 }
+.tableHead{
+    background-color: aliceblue;
+}
+tr:nth-child(2n){
+    background-color: gray;
+}

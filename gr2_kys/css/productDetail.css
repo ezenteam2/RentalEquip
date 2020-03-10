@@ -1,0 +1,115 @@
+#root{
+    margin-left:15%;
+    margin-right:15%;
+    height:auto;
+}
+
+#topTitle{
+    margin-top:50px;
+    width:100%;
+    height:50px;
+    border:1px solid black;
+}
+
+.title{
+    text-align:center;
+    font-size: xx-large;
+    font-family: bold;
+    margin-top: 10px;
+}
+
+.pImg{
+    width:450px;
+    height:250px;
+}
+#productImage{
+    margin-top:50px;
+    float: left;
+    width:60%
+}
+#productSample{
+    margin-top: 50px;
+    float: left;
+    
+    width:39%;
+    height:250px;
+
+}
+
+span{
+    display: block;
+}
+
+.detail_title{
+    font-size: x-large;
+
+}
+
+.btn{
+    width:100px;
+    height:40px;
+    margin-top:80px;
+    background-color: orange;
+    text-align: center;
+    margin-left: 60px;
+    color:white;
+    font: bold;
+}
+
+#detail_product01{
+    display:inline-block;
+    margin-top: 50px;
+    width:100%;
+    border-top:1px solid black;
+}
+
+#detail_product02{
+    margin-top:10px;
+    width: 100%;   
+}
+
+#detail_image{
+    width:60%;
+    margin-left:20%;
+    display: inline-block;
+    
+
+}
+
+.img{
+    /* position: relative;  */
+    display: block;
+    
+}
+
+#detail_product01{
+    display: block;
+    position: relative;
+    float:left;
+}
+#notandum_product{
+    width:100%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+summary {
+    
+    display: block;
+    position: relative;
+    font-size: 1.33em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    details{
+        margin-top: 10px;
+        max-width: calc(100% - 2rem);
+        position: relative;
+        border: 1px solid #78909C;
+        border-radius: 6px;
+        background-color: #ECEFF1;
+        color: #263238;
+        transition: background-color .15s;
+    }
