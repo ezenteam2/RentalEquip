@@ -14,17 +14,16 @@ body{
 
 
 .mainIndexRoot_ht{
-	margin-left:22%;
-	
-	width:1050px;
-
-	
 	}
 	
 .mainIndexTop_ht{
 	font-size:14px;
 	height:45px;
 	padding-top:10px;
+	
+	width:1050px;
+	margin-left:22%;
+	
 
 	}
 	
@@ -44,8 +43,10 @@ body{
 	}
 	
 .mainIndexMiddle_ht{
-	height:140px;
+	margin-left:22%;
+	width:1062px;
 	
+	height:140px;
 	font-size:14px;
 	}
 
@@ -76,19 +77,23 @@ body{
 
 .mainIndexTopMiddle_ht{
 	position:fixed;
-	width:1062px;
+	width:100%;
 	top:0;
-	margin-left:21.5%;
+	
 	background-color:white;
 	}
 
 .mainIndexBottom_ht{
+	
+	width:1050px;
 	text-align:center;
 	background-color:#EBFBFF;
 	padding:20px;
 	}
 	
 .mainIndexFooter_ht{
+	margin-left:22%;
+	width:1050px;
 	font-size:14px;
 	}
 
@@ -101,7 +106,6 @@ body{
 <body>
 
 	
-
 	<header class="mainIndexTopMiddle_ht">
 		<div class="mainIndexTop_ht">			
 				<div class="mainIndexTopContent1_ht"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
