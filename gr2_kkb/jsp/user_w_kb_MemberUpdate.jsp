@@ -65,9 +65,9 @@
         <div id="kb_title">
             <h2>회원정보 수정</h2>
         </div>
-        <form method="post">
+        <form method="post"  action="user_w_kb_MypageMain.jsp">
             <div id="Member_Basic_Div">
-                <div id="Profile_Div"><img src="Image/Profile.png"></div>
+                <div id="Profile_Div"><img src="image/Profile.png"></div>
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
                         <span class="info_Span">아이디 : </span>
@@ -103,10 +103,15 @@
                  </div>
             </div>
             <div id="Update_Btns_Div">
-                <button id="Update_Btns">수정</button>
+                <button id="Update_Btns" onclick="send()">수정</button>
             </div>
         </form>
     </main>
+    <script>
+    	function send(){
+    		submit();
+    	}
+    </script>
   
 </body>
 </html>
