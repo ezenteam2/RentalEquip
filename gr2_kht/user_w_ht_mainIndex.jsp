@@ -17,14 +17,15 @@ body{
 	margin-left:22%;
 	
 	width:1050px;
-	height:1000px;
-	background-color:#BECDFF;
+
+	
 	}
 	
 .mainIndexTop_ht{
 	font-size:14px;
 	height:45px;
 	padding-top:10px;
+
 	}
 	
 .mainIndexTopContent1_ht{
@@ -43,7 +44,7 @@ body{
 	}
 	
 .mainIndexMiddle_ht{
-	height:150px;
+	height:140px;
 	
 	font-size:14px;
 	}
@@ -75,18 +76,19 @@ body{
 
 .mainIndexTopMiddle_ht{
 	position:fixed;
-	width:1048px;
+	width:1062px;
 	top:0;
-	margin-left:22%;
+	margin-left:21.5%;
+	background-color:white;
 	}
 
 .mainIndexBottom_ht{
 	text-align:center;
-	background-color:#FFE3EE;
+	background-color:#EBFBFF;
+	padding:20px;
 	}
 	
 .mainIndexFooter_ht{
-	background-color:#F479DF;
 	font-size:14px;
 	}
 
@@ -113,7 +115,7 @@ body{
 		<div class="mainIndexMiddle_ht">
 			<div style="vertical-align:middle;height:80px;padding-top:20px;">
 				<div style="display:inline-block;vertical-align:top;"><img src="image/mainIndexLogo.jpg" height="50px;"></div>
-				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
+				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;padding-left:20px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
 				<div class="mainIndexMiddleContent1_ht"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
 				<div class="mainIndexMiddleContent2_ht"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
 				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht">번개톡</div>
@@ -125,10 +127,10 @@ body{
 		</div>		
 	</header>
 	
-	<div style="height:210px;"></div>	
+	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		<div class="">
-			<iframe src="" width=100% height=500px></iframe>
+			<iframe src="" width=100% height=1500px style="border:solid 1px;"></iframe>
 		</div>
 		
 		
@@ -142,14 +144,14 @@ body{
 			<span class="mainIndexTopContent_ht">QnA</span>			
 		</div>
 		
-		<img src="image/mainIndexLogo.jpg" width=150px;> 회사소개 <br>
-		모바일 No.1 중고 거래 서비스 번개장터와 중고 컨시어지 서비스 셀잇을 만듭니다. 누구나, 무엇이든 쉽고 편하고 안전하게 거래하는 세상을 꿈꾸고 있습니다.
-		<img src="image/mainIndexFooterFacebookIcon.png">
-		<img src="image/mainIndexFooterInstagramIcon.png">
-		<img src="image/mainIndexFooterNaverBlogIcon.png"> <br>
-		대표이사 : 이재후 개인정보보호담당자 : 이동주 사업자등록정보 : 113-86-45836 통신판매업신고 : 2019-서울서초-1126
-		주소 : 서울특별시 서초구 서초대로38길 12, 7층(서초동, 마제스타시티 타워2) TEL/FAX 02-598-8240/02-598-8241
-		번개장터㈜는 통신판매중개자로서 중고거래마켓 번개장터의 거래 당사자가 아니며, 입점판매가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+		<img src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
+		EZEN에서 만나는 새로운 서비스! 사지말고 빌리세요 ZENTAL! 누구나, 무엇이든 쉽고 편하고 안전하게 렌탈하는 세상을 꿈꾸고 있습니다.</span>
+		<img src="image/mainIndexFooterFacebookIcon.png" width="25px;">
+		<img src="image/mainIndexFooterInstagramIcon.png" width="25px;">
+		<img src="image/mainIndexFooterNaverBlogIcon.png" width="25px;"> <br><br>
+		EZEN GROUP2 권기범 김용승 김현태 유서희 이형준 123-45-678912 사실 사업자 번호는 가짜에여 실제로 하게 되면 제대로 할게여<br>
+		주소 : 서울특별시 종각역 4번출구에서 5초거리 3, 5, 6층  TEL/FAX 번호는 부끄러우니까 다음에 드림 :^)<br>
+		ZENTAL㈜은 통신판매중개자로서 렌탈마켓 ZENTAL의 거래 당사자가 아니며, 입점판매가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.<br>
 		
 		</footer>
 
