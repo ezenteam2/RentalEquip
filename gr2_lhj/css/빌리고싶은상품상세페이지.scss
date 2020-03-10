@@ -1,0 +1,96 @@
+
+main{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .post_area{
+        width:1024px;
+        height:444px;
+        display: flex;
+        .post_left{
+            img{
+                width:428px;
+                height:428px;
+                border:solid 1px #eee;
+            }
+        }
+        .post_right{
+            display: flex;
+            flex-direction: column;
+            width:554px;
+            h1{
+                font-size: 24px;
+            }
+            h2{
+                font-size:40px;
+                span{
+                    font-size:28px;
+                }
+            }
+            .post_info{
+                display: flex;
+                align-items: center;
+                height:30px;
+                .like{
+                    height:30px;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        background: url('../img/좋아요.PNG') no-repeat;
+                        background-size: 30px 30px;
+                        width:30px;
+                        height:30px;
+                        overflow: hidden;
+                        color: transparent;
+                    }
+                    span{
+                        color:#ccc;
+                        font-size: 16px;
+                    }
+                }
+                .views{
+                    margin-left: 15px;
+                    height:30px;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        background: url('../img/조회수.PNG') no-repeat;
+                        background-size: 30px 30px;
+                        width:30px;
+                        height:30px;
+                        overflow: hidden;
+                        color:transparent;
+                    }
+                    span{
+                        color: #ccc;
+                        font-size: 16px;
+                    }
+                }
+                button{
+                    margin: 0 10px 0 auto;
+                    height: 30px;
+                    i{
+                        display: inline-block;
+                        background: url('../img/신고하기.PNG') no-repeat;
+                        background-size: 30px 30px;
+                        width:30px;
+                        height: 30px;
+                        vertical-align: top;
+                    }
+                    span{
+                        color: #ccc;
+                        line-height: 30px;
+                        vertical-align: top;
+                    }
+                    border:none;
+                    background-color: transparent;
+                    
+                }
+            }
+        }
+    }
+}
