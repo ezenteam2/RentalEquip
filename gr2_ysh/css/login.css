@@ -1,0 +1,260 @@
+* {
+  outline: none;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.login {
+  width: 420px;
+  height: 80%;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 60px;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.login__title {
+  text-align: center;
+}
+
+.login .title__logo {
+  width: 80px;
+}
+
+.login .title__main {
+  font-size: 25px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.login .title__sub {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  margin-top: 8px;
+}
+
+.login__naver {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  height: 45px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+  background-color: #1ec800;
+  color: white;
+}
+
+.login__naver--img {
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  right: 56px;
+  width: 25px;
+  top: 10px;
+}
+
+.login__naver--text {
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  left: 16px;
+  color: white;
+  bottom: 25px;
+}
+
+.login__kakao {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  height: 45px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fdec00;
+}
+
+.login__kakao--img {
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  right: 56px;
+  width: 30px;
+  top: 7px;
+}
+
+.login__kakao--text {
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  left: 16px;
+  bottom: 32px;
+}
+
+.login__id {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #A4A4A4;
+  margin-bottom: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.login__id::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.login__id:-ms-input-placeholder {
+  text-align: center;
+}
+
+.login__id::-ms-input-placeholder {
+  text-align: center;
+}
+
+.login__id::placeholder {
+  text-align: center;
+}
+
+.login__id:focus {
+  text-align: center;
+  border: 1.45px solid black;
+}
+
+.login__id:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+.login__id:focus:-ms-input-placeholder {
+  color: white;
+}
+
+.login__id:focus::-ms-input-placeholder {
+  color: white;
+}
+
+.login__id:focus::placeholder {
+  color: white;
+}
+
+.login__pass {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #A4A4A4;
+  margin-bottom: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.login__pass::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.login__pass:-ms-input-placeholder {
+  text-align: center;
+}
+
+.login__pass::-ms-input-placeholder {
+  text-align: center;
+}
+
+.login__pass::placeholder {
+  text-align: center;
+}
+
+.login__pass:focus {
+  text-align: center;
+  border: 1.45px solid black;
+}
+
+.login__pass:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+.login__pass:focus:-ms-input-placeholder {
+  color: white;
+}
+
+.login__pass:focus::-ms-input-placeholder {
+  color: white;
+}
+
+.login__pass:focus::placeholder {
+  color: white;
+}
+
+.login__submit {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  height: 45px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.finding {
+  display: inline;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+
+.finding__id {
+  line-height: 30px;
+  margin-left: 148px;
+  cursor: pointer;
+}
+
+.finding__pass {
+  cursor: pointer;
+}
+
+.signup {
+  display: inline;
+}
+
+.signup--box {
+  width: 541px;
+  background-color: tomato;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+  margin: auto;
+  position: relative;
+  bottom: 50px;
+}
+
+.signup__question {
+  font-size: 14px;
+  margin-left: 160px;
+  line-height: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.signup__question--btn {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+/*# sourceMappingURL=login.css.map */
