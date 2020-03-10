@@ -35,9 +35,12 @@ function qnaChkHandle(event){
     const qnaLi= chkBox.parentNode;
 
     if(chkBox.checked){
-        qnaLi.style.height='auto';
+        qnaLi.style.animation='300ms height_auto';
+        qnaLi.style.maxHeight='500px';
+        
     } else {
-        qnaLi.style.height='75px';
+        qnaLi.style.animation='300ms height_75px';
+        qnaLi.style.maxHeight='75px';
     }
 }
 

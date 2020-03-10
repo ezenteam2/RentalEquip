@@ -83,7 +83,7 @@
   display: -ms-flexbox;
   display: flex;
   background-color: white;
-  border: solid 1px gray;
+  border: solid 1px #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;

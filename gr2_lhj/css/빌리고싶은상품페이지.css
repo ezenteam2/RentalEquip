@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1236px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap header .cate_li {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1024px;
+  overflow: hidden;
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.wrap header .cate_li .cate_el {
+  margin: -1px 0 0 -1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 205.8px;
+  height: 48px;
+  padding: 0 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 1px #eee;
+}
+
+.wrap header .cate_li .cate_el a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.wrap header .cate_li .cate_el i {
+  font-size: 12px;
+  color: #cccccc;
+  margin: 0 0 0 5px;
+  font-style: normal;
+}
+
+.wrap main {
+  width: 1024px;
+}
+
+.wrap main h1 {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin: 50px 0 30px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.wrap main h1 span {
+  color: red;
+}
+
+.wrap main section .item_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrap main section .item_li .item_el {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 196px;
+  height: 290px;
+  background-color: white;
+  margin: 0 0 20px 0;
+  border: 1px solid #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap main section .item_li .item_el img {
+  width: 196px;
+  height: 196px;
+}
+
+.wrap main section .item_li .item_el a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0 20px 0;
+  padding: 0 15px 0 15px;
+  width: 176px;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.wrap main section .item_li .item_el .price_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.wrap main section .item_li .item_el .price_area .price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.wrap main section .item_li .item_el .price_area .unit {
+  font-size: 12px;
+  color: #888888;
+  margin: 0 10px 0 auto;
+}
+/*# sourceMappingURL=빌리고싶은상품페이지.css.map */
