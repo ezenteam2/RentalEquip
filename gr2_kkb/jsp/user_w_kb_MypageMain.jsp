@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td colspan="4" class="grade_td">
-                    <img src="Image/VIP.png"><br>
+                    <img src="image/VIP.png"><br>
                     이젠KB님은 현재 VIP등급입니다.
                 </td>
             </tr>

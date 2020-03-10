@@ -1,0 +1,133 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+main{
+    padding-left:30%;
+    padding-right:30%;
+}
+
+#kb_title{
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-top: 5%;
+}
+
+#Member_Basic_Div{
+    width:100%;
+    height:150px;
+    margin-top:1%;
+    display: inline-block;
+}
+
+#Profile_Div{
+    width:25%;
+    height:100%;
+    float:left;
+}
+
+#Member_Infor_Div{
+    width:73%;
+    height:100%;
+    float:right;
+}
+
+.info_Div{
+    width:100%;
+    height:45%;
+}
+img{
+    width: 90%;
+    height:90%;
+}
+
+.info_Span{
+    font-size: 16pt;
+    margin-left:1%;
+}
+
+#phone_input{
+    width:250px;
+    height:30px;
+    margin-left:4%;
+}
+
+#Certification_Btns{
+    width:120px;
+    height:35px;
+    background-color: red;
+    color:white;
+    border:0;
+    margin-left:3%;
+    border-radius: 5px;
+}
+
+
+#input_email{
+    margin-top: 3%;
+    width:250px;
+    height:30px;
+    margin-left:10%;
+}
+
+#Address_Div{
+    width:100%;
+    height:225px;
+    margin-top: 3%;
+}
+
+.address{
+    margin-top:1%;
+    width:100%;
+    height:50px;
+}
+
+#input_ZipCode{
+    width:250px;
+    height:30px;
+    margin-left:12%;
+}
+
+#Search_Zipcode_Btn{
+    background-color: red;
+    width:120px;
+    height:35px;
+    border:0;
+    border-radius: 5px;
+    color: white;
+    margin-left: 3.5%;
+}
+
+#Address2{
+    width:192px;
+    height:30px;
+    margin-left:21%;
+}
+
+#Address3{
+    width: 192px;
+    height:30px;
+    margin-left:1%;
+}
+
+#Address1{
+    width:300px;
+    height:30px;
+    margin-left:21%;
+}
+
+#Update_Btns_Div{
+    width:100%;
+    margin-top:1%;
+    text-align:center;
+}
+
+#Update_Btns{
+    width:250px;
+    height:45px;
+    background-color: red;
+    color: white;
+    border:0;
+    border-radius: 5px;
+}
