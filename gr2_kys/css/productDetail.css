@@ -71,10 +71,17 @@ span{
 #detail_image{
     width:60%;
     margin-left:20%;
+    display: inline-block;
     
 
 }
 
 .img{
-    position: absolute;
+    /* position: absolute; */
+    display: inline-block;
+}
+
+#notandum_product{
+    width:100%;
+    display: inline-block;
 }
