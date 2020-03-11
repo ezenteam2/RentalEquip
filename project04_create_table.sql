@@ -254,7 +254,7 @@ CREATE TABLE P4rent_item (
 	rent_item_notice    VARCHAR2(1000) NOT NULL, -- 주의사항 및 보증금 정책
 	rent_item_keyword   VARCHAR2(30)   NOT NULL, -- 상품 연관 키워드
 	rent_item_curr      VARCHAR2(30)   NOT NULL, -- 거래상태
-	rent_item_hits      NUMBER         NOT NULL default 0      -- 조회수
+	rent_item_hits      NUMBER         DEFAULT 0      -- 조회수
 );
 
 -- 렌탈 상품 기본키
@@ -754,56 +754,69 @@ ALTER TABLE P4follow
 	
 
 	
+-- 보유쿠폰
+ALTER TABLE P4MEMCOUPON
+	DROP CONSTRAINT FK_TABLE_TO_P4MEMCOUPON; -- 회원 -> 보유쿠폰
 
 -- 보유쿠폰
-ALTER TABLE P4memcoupon
-	DROP CONSTRAINT FK_member_TO_memcoupon; -- 회원 -> 보유쿠폰
+ALTER TABLE P4MEMCOUPON
+	DROP CONSTRAINT FK_TABLE9_TO_P4MEMCOUPON; -- 쿠폰종류 -> 보유쿠폰
 
 -- 보유쿠폰
-ALTER TABLE P4memcoupon
-	DROP CONSTRAINT PK_memcoupon; -- 보유쿠폰 기본키
+ALTER TABLE P4MEMCOUPON
+	DROP CONSTRAINT PK_P4MEMCOUPON; -- 보유쿠폰 기본키
 
 -- 보유쿠폰
-DROP TABLE P4memcoupon;
+DROP TABLE P4MEMCOUPON;
 
 -- 보유쿠폰
-CREATE TABLE P4memcoupon (
-	memcou_code  NUMBER       NOT NULL, -- 쿠폰 코드
-	mem_id       VARCHAR2(30) NOT NULL, -- 회원 ID
-	memcou_sdate DATE         NOT NULL, -- 쿠폰 시작날짜
-	memcou_udate DATE         NULL      -- 쿠폰 사용날짜
+CREATE TABLE P4MEMCOUPON (
+	memcou_code  NUMBER       NOT NULL, -- 보유 쿠폰 코드
+	cou_code     NUMBER       NOT NULL, -- 쿠폰 코드
+	mem_id       VARCHAR2(30) NULL,     -- 회원 ID
+	memcou_sdate DATE         NULL,     -- 쿠폰 시작날짜
+	memcou_fdate DATE         NULL      -- 쿠폰 사용날짜
 );
 
 -- 보유쿠폰 기본키
-CREATE UNIQUE INDEX PK_memcoupon
-	ON memcoupon ( -- 보유쿠폰
-		memcou_code ASC -- 쿠폰 코드
+CREATE UNIQUE INDEX PK_P4MEMCOUPON
+	ON P4MEMCOUPON ( -- 보유쿠폰
+		memcou_code ASC -- 보유 쿠폰 코드
 	);
 
 -- 보유쿠폰
-ALTER TABLE P4memcoupon
+ALTER TABLE P4MEMCOUPON
 	ADD
-		CONSTRAINT PK_memcoupon -- 보유쿠폰 기본키
+		CONSTRAINT PK_P4MEMCOUPON -- 보유쿠폰 기본키
 		PRIMARY KEY (
-			memcou_code -- 쿠폰 코드
+			memcou_code -- 보유 쿠폰 코드
 		);
 
 -- 보유쿠폰
-ALTER TABLE P4memcoupon
+ALTER TABLE P4MEMCOUPON
 	ADD
-		CONSTRAINT FK_member_TO_memcoupon -- 회원 -> 보유쿠폰
+		CONSTRAINT FK_TABLE_TO_P4MEMCOUPON -- 회원 -> 보유쿠폰
 		FOREIGN KEY (
 			mem_id -- 회원 ID
 		)
-		REFERENCES member ( -- 회원
-			mem_id -- 회원 ID
+		REFERENCES TABLE ( -- 회원
+			COL -- 회원 ID
 		)
 		ON DELETE NO ACTION
 		ON UPDATE NO ACTION;
-	
-		
-	
-	
+
+-- 보유쿠폰
+ALTER TABLE P4MEMCOUPON
+	ADD
+		CONSTRAINT FK_TABLE9_TO_P4MEMCOUPON -- 쿠폰종류 -> 보유쿠폰
+		FOREIGN KEY (
+			cou_code -- 쿠폰 코드
+		)
+		REFERENCES TABLE9 ( -- 쿠폰종류
+			COL -- 쿠폰 코드
+		)
+		ON DELETE NO ACTION
+		ON UPDATE NO ACTION;	
 	
 -------------------------------------------------------------------------------------------
 	

@@ -135,7 +135,7 @@ body{
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		<div class="">
-			<iframe src="" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
+			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
 		</div>
 		
 		 
