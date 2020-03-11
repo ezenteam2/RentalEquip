@@ -21,7 +21,7 @@
 	width:1050px;
 	padding-top:30px;
 	padding-bottom:30px;
-	background-color:#EBFBFF;
+	background-color:#F0FFF0;
 	}
 
 .mainEnterRecommendContent{
@@ -65,7 +65,8 @@
 	margin-left:22%;
 	width:1050px;
 	padding-top:10px;
-	padding-bottom:10px;
+	padding-bottom:50px;
+	border-bottom:solid 1px #dcdcdc;
 	}
 
 .mainEnterCategoryContent{
@@ -73,6 +74,7 @@
 	margin-left:3px;
 	width:180px;
 	padding:10px;
+	background-color:white;
 	border:solid 1px #dcdcdc;
 	}
 
@@ -100,6 +102,8 @@
 
 	<div class="mainEnterCarousel"></div>
 
+
+	<div style="background-color:white;padding-bottom:30px;">
 	<div class="mainEnterRecommendTitle">ZENTAL 추천 렌탈 상품</div>
 
 	<div class="mainEnterRecommendContainer">
@@ -118,7 +122,9 @@
 }
 %>
 	</div>
+	</div>
 	
+	<div style="background-color:#F0FFF0;padding-bottom:30px;">
 	<div style="margin-left:22%;width:1050px;font-size:25px;font-weight:bold;padding-top:10px;padding-bottom:10px;">
 	카테고리별 렌탈 상품
 	</div>
@@ -153,6 +159,6 @@
 <%
 	}
 %>
-	
+	</div>
 </body>
 </html>
