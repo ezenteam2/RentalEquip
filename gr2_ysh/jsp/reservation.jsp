@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+request.setCharacterEncoding("utf-8");
+String path = request.getContextPath(); %>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reservation.css">
+    <link rel="stylesheet" href="../css/following.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="myprofile">
+        <img class="myprofile__img" src="https://image.rocketpunch.com/images/user/user.png?s=80x80&t=cover" alt="">
+        <p class="myprofile__username">최준범</p>
+        <hr class="myprofile--hr myprofile--hr-first">
+        <table class="myprofile--table">
+            <tr><td class="myprofile__follower myprofile__follower--num">1</td><td  class="myprofile__following myprofile__following--num">2</td><td class="myprofile__view-cnt myprofile__view-cnt--num">23</td></tr>
+            <tr><td class="myprofile__follower">팔로워</td><td class="myprofile__following">팔로잉</td><td class="myprofile__view-cnt">조회수</td></tr>
+        </table>
+        <hr class="myprofile--hr">
+     </div>
+     <div class="tab tab__follower">빌리기</div>
+     <div class="tab tab__following">빌려주기</div>
+     <div class="black" style="display: block;">
+        <p class="title">찜예약 아이템</p>
+        <div class="container">
+        <div class="item">
+        <img  class="item__img" src="https://media.bunjang.co.kr/product/119104121_1_1583811074_w292.jpg" alt="">
+        <div class="item__info">
+        <p class="item__name">프라다 정품 버킷백</p>
+        <p class="item__price">680,000원</p>
+        </div>
+        <div class="item__info2">
+            <button class="item__alert">알림</button>
+        </div>
+        </div>
+    
+        <div class="item">
+        <img  class="item__img" src="https://media.bunjang.co.kr/product/119179105_1_1583870370_w292.jpg" alt="">
+        <div class="item__info">
+        <p class="item__name">구찌 스니커즈</p>
+        <p class="item__price">500,000원</p>
+        </div>
+        <div class="item__info2">
+            <button class="item__alert">알림</button>
+        </div>
+        </div>
+        
+    
+        <div class="item">
+        <img  class="item__img" src="https://media.bunjang.co.kr/product/119098656_1_1583805117_w292.jpg" alt="">
+        <div class="item__info">
+        <p class="item__name">호카오네오네 본디6</p>
+        <p class="item__price">190,000원</p>
+        </div>
+        <div class="item__info2">
+            <button class="item__alert">알림</button>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

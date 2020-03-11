@@ -7,24 +7,20 @@ main{
     margin-left:25%;
     margin-right:25%;
 }
+
 #kb_title{
     width: 100%;
     border-bottom: 1px solid black;
     margin-top: 3%;
 }
 
-.kb_SubTitle{
-    width: 100%;
-    margin-top: 3%;
-}
-
-.Rental_Member_Info_Div{
+.Borrow_Basic{
     width:100%;
     height:40px;
-    display:inline-block;
+    display: inline-block;
+    margin-top:1%;
 }
-
-.Rental_Basic{
+.Basic_Info{
     width:46%;
     height:40px;
     float:left;
@@ -63,7 +59,6 @@ img{
     width:80%;
     height:80%;
 }
-
 #Tracking_Title{
     font-size:16pt;
     font-weight: bold;
@@ -82,27 +77,17 @@ select{
     width:250px;
     height:30px;
     margin-left:3%;
-
 }
 
-#Btns{
-    text-align:center;
+#Review_Div{
+    width:100%;
+    height:220px;
+    border:1px solid black;
 }
 
-button{
-    background-color: red;
-    width:130px;
-    height:50px;
-    color:white;
-    border:0;
-    border-radius: 5px;
-}
-
-#Check_Complete{
-    padding:1.5%;
-}
-
-#Chk_Box{
-    width:15px;
-    height:15px;
+#Rating_Div{
+    width:100%;
+    height:40px;
+    font-size:16pt;
+    margin-left:2%;
 }

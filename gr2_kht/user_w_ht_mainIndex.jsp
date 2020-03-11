@@ -122,7 +122,7 @@ body{
 				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;padding-left:20px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
 				<div class="mainIndexMiddleContent1_ht"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
 				<div class="mainIndexMiddleContent2_ht"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
-				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht">번개톡</div>
+				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht">젠탈톡</div>
 			<br>
 			</div>
 			<div style="padding-left:20px;">
@@ -134,7 +134,7 @@ body{
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		<div class="">
-			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:solid 1px;"></iframe>
+			<iframe src="" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
 		</div>
 		
 		 
