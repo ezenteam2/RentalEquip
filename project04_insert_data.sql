@@ -68,22 +68,77 @@ INSERT INTO P4MEMBER VALUES ('genius99', '5555', '천재', 'www.ezenimgserver.co
 
 
 
+/*
+point_code_seq;
+ */
+SELECT * FROM P4POINT;
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'apple7878', sysdate, '획득', '아이템 렌탈 완료', 500);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenht', sysdate, '획득', '아이템 반납 완료', 500);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenht', sysdate, '사용', '아이템 렌탈', 6000);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'apple7878', sysdate, '획득', '아이템 렌탈 완료', 300);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenhj11', sysdate, '사용', '아이템 렌탈', 700);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenkb77', sysdate, '사용', '아이템 렌탈', 1000);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenkb77', sysdate, '사용', '아이템 렌탈', 2300);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'genius99', sysdate, '획득', '아이템 반납 완료', 400);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenys11', sysdate, '획득', '아이템 렌탈 완료', 300);
+INSERT INTO P4POINT VALUES (point_code_seq.nextval, 'userezenys11', sysdate, '사용', '아이템 렌탈', 1800);
+
+
+/*
+memcou_code_seq;
+ */
+SELECT * FROM P4MEMCOUPON;
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000001, 'userezenht', sysdate, '');
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000002, 'userezenht', sysdate, sysdate+5);
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000001, 'userezenht', sysdate, '');
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000003, 'genius99', sysdate, '');
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000003, 'userezenkb77', sysdate, sysdate+5);
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000003, 'apple7878', sysdate, sysdate+5);
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000002, 'apple7878', sysdate, sysdate+5);
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000002, 'userezensh56', sysdate, sysdate+5);
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000001, 'userezenhj11', sysdate, '');
+INSERT INTO P4MEMCOUPON VALUES (memcou_code_seq.nextval, 11000002, 'userezensh56', sysdate, '');
 
 
 
-SELECT * FROM P4ALARM;
+/*
+ carou_code_seq;
+ */
 SELECT * FROM P4CAROUSEL;
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 1, 'carouselIMG01.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 2, 'carouselIMG02.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 3, 'carouselIMG03.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 4, 'carouselIMG04.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 5, 'carouselIMG05.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 6, 'carouselIMG06.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 7, 'carouselIMG07.png', 'http://www.naver.com/');
+INSERT INTO P4CAROUSEL VALUES (carou_code_seq.nextval, sysdate, 8, 'carouselIMG08.png', 'http://www.naver.com/');
+
+
+
+SELECT * FROM P4RECOMMEND;
+
+
+
+/*
+ alarm_code_seq;
+ */
+SELECT * FROM P4ALARM;
+
+
+
+
+
+
+
 SELECT * FROM P4EMONEY;
 SELECT * FROM P4FAQ;
 SELECT * FROM P4FAVOR_ITEM;
 SELECT * FROM P4FOLLOW;
 SELECT * FROM P4ITEM_QUERY;
 SELECT * FROM P4MANAGE_INCOME;
-SELECT * FROM P4MEMCOUPON;
 SELECT * FROM P4NOTICE;
-SELECT * FROM P4POINT;
 SELECT * FROM P4QNA;
-SELECT * FROM P4RECOMMEND;
 SELECT * FROM P4RENT_ITEM;
 SELECT * FROM P4RENTAL;
 SELECT * FROM P4REPORT;
