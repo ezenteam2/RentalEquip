@@ -255,4 +255,35 @@ td {
   margin-right: 20px;
   margin-top: 70px;
 }
+
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 560px;
+  top: 25px;
+}
+
+.paging--btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  margin-left: 3px;
+  background-color: gray;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.paging__prev {
+  margin-right: 5px;
+}
+
+.paging__next {
+  margin-left: 8px;
+}
 /*# sourceMappingURL=userinfo.css.map */
