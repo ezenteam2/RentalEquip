@@ -134,10 +134,10 @@ body{
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		<div class="">
-			<iframe src="" width=100% height=1500px style="border:solid 1px;"></iframe>
+			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:solid 1px;"></iframe>
 		</div>
 		
-		
+		 
 		
 		
 		<footer class="mainIndexFooter_ht">
@@ -164,6 +164,18 @@ body{
 </body>
 
 <script type = "text/javascript">
+
+function changeIframeUrl(url){
+	  document.getElementById("main_frame").src = url;	
+	}
+
+function setIFrameHeight(obj){
+if(obj.contentDocument){
+    obj.height = obj.contentDocument.body.offsetHeight + 40;
+} else {
+    obj.height = obj.contentWindow.document.body.scrollHeight;
+}
+}
 
 </script>
 
