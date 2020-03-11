@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 main {
   position: absolute;
   top: 0;
@@ -17,6 +22,7 @@ main {
 }
 
 main .post_area {
+  margin-top: 50px;
   width: 1024px;
   height: 444px;
   display: -webkit-box;
@@ -24,13 +30,18 @@ main .post_area {
   display: flex;
 }
 
+main .post_area .post_left {
+  padding: 20px 0 0 0;
+}
+
 main .post_area .post_left img {
-  width: 428px;
-  height: 428px;
+  width: 420px;
+  height: 420px;
   border: solid 1px #eee;
 }
 
 main .post_area .post_right {
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,17 +54,28 @@ main .post_area .post_right {
 
 main .post_area .post_right h1 {
   font-size: 24px;
+  width: 554px;
+  margin: 20px 0 0 0;
 }
 
 main .post_area .post_right h2 {
+  margin: 25px 0 auto 0;
+  width: 554px;
   font-size: 40px;
+  font-weight: 550;
 }
 
 main .post_area .post_right h2 span {
+  margin: 0 0 0 4px;
   font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
 }
 
 main .post_area .post_right .post_info {
+  border-top: 1px solid #eee;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,8 +137,10 @@ main .post_area .post_right .post_info .views span {
 main .post_area .post_right .post_info button {
   margin: 0 10px 0 auto;
   height: 30px;
+  cursor: pointer;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 main .post_area .post_right .post_info button i {
@@ -132,5 +156,112 @@ main .post_area .post_right .post_info button span {
   color: #ccc;
   line-height: 30px;
   vertical-align: top;
+}
+
+main .post_area .post_right .item_info ul {
+  padding: 0 0 0 30px;
+}
+
+main .post_area .post_right .item_info ul li {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 15px 0;
+}
+
+main .post_area .post_right .item_info ul li span {
+  margin-left: 10px;
+  color: black;
+}
+
+main .post_area .post_right .button_area {
+  margin: auto 0 0 0;
+  height: 56px;
+  width: 554px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .post_area .post_right .button_area button {
+  cursor: pointer;
+  margin: 0;
+  width: 178.56px;
+  height: 56px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+main .post_area .post_right .button_area button:first-child {
+  margin: 0 10px 0 auto;
+  background-color: #ffa425;
+}
+
+main .post_area .post_right .button_area button:last-child {
+  background-color: #f70000;
+}
+
+main h1 {
+  width: 1024px;
+  font-size: 18px;
+  margin: 20px 0 20px 0;
+  font-weight: 500;
+}
+
+main .link_area {
+  width: 1024px;
+}
+
+main .link_area ul {
+  width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main .link_area ul li {
+  padding: 0;
+  width: 159px;
+  height: 183px;
+  margin: 10px 14px 0 0;
+}
+
+main .link_area ul li:nth-child(6n) {
+  margin: 10px 0 0 0;
+}
+
+main .link_area ul li a {
+  width: 159px;
+  height: 183px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+}
+
+main .link_area ul li a img {
+  width: 159px;
+  height: 155px;
+}
+
+main .link_area ul li a span {
+  margin: 10px 0 0 0;
+  font-size: 13px;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=빌리고싶은상품상세페이지.css.map */

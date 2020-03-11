@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZENTAL-사지말고 빌리세요</title>
-    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
     <div class="signup">
@@ -62,11 +62,11 @@
                 
                 </div>
             <input type="checkbox" id="not-must"><label for="not-must"><div class="content allow__not-must"  ><img class="allow--checkbox allow__not-must--checked" src="./img/correct.png" alt=""></div></label><p class="allow__not-must--text" style="color : gray;">(선택)</p><p class="allow__not-must--text" style="position:realative;left :78px; bottom:32px;">이메일, SMS광고 수신 동의</p>
-            <input class="submit" type="submit" value="가입하기" onsubmit="window.location.href='./login.html'">
+            <input class="submit" type="submit" value="가입하기" onsubmit="window.location.href='../login.html'">
         
         </div>
     </form>
     </div>
-    <script src="./js/signup.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 </html>

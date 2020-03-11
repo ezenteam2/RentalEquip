@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/following.css">
+    <link rel="stylesheet" href="../css/following.css">
     <title>Document</title>
 </head>
 <body>
@@ -50,6 +50,6 @@
         </table>
         <hr class="others-profile--hr">
     </div>
-    <script src="./js/following.js"></script>
+    <script src="../js/following.js"></script>
 </body>
 </html>

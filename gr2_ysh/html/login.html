@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZENTAL-사지말고 빌리세요</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <div class="login">
         <div class="login__title">
-            <img class="title__logo" src="../LOGO01.png" alt="">
+            <img class="title__logo" src="../../LOGO01.png" alt="">
             <p class="title__main">ZENTAL로 렌탈거래 시작하기</p>
             <p class="title__sub">15초만에 간편하게 가입하고<br>상품을 확인하세요!</p>
         </div>
@@ -28,6 +28,6 @@
     <div class="signup--box">
     <p class="signup signup__question">아직계정이 없으세요? &nbsp;</p><a class="signup signup__question--btn" href="./signup.html">회원가입하기</a>
     </div>
-    <script src="./js/login.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>
