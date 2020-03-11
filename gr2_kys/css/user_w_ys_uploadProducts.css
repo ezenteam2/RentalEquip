@@ -1,0 +1,57 @@
+#root{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+label{
+    display: inline-block;
+    width:100%
+}
+
+.filebox label {
+    width:20%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    padding: .5em .75em;
+    color: #fff;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #5cb85c;
+    cursor: pointer;
+    border: 1px solid #4cae4c;
+    border-radius: .25em;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    }
+
+    .filebox label:hover {
+    background-color: #6ed36e;
+    }
+
+    .filebox label:active {
+    background-color: #367c36;
+    }
+
+    .filebox input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    }
+
+    #imgFrame{
+        width:100px;
+        height:100px;
+    }
+
+    .pTitle{
+        width:60%;
+        height:30px;
+        margin-top: 15px;
+    }
