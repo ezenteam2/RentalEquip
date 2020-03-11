@@ -254,7 +254,7 @@ CREATE TABLE P4rent_item (
 	rent_item_notice    VARCHAR2(1000) NOT NULL, -- 주의사항 및 보증금 정책
 	rent_item_keyword   VARCHAR2(30)   NOT NULL, -- 상품 연관 키워드
 	rent_item_curr      VARCHAR2(30)   NOT NULL, -- 거래상태
-	rent_item_hits      NUMBER         NULL      -- 조회수
+	rent_item_hits      NUMBER         NOT NULL default 0      -- 조회수
 );
 
 -- 렌탈 상품 기본키
