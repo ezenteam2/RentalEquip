@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/declaration.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/declaration.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/managingprojects.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/managingprojects.css">
     <title>관리자페이지</title>
 </head>
 <body>
@@ -47,8 +47,8 @@
             </div>
     </div>
     <div class="admin-info">
-        <img src="./img/menu.svg" class="admin-info__toggle">
-        <img class="admin-info__profile" src="./img/account.svg" alt="">
+        <img src="../img/menu.svg" class="admin-info__toggle">
+        <img class="admin-info__profile" src="../img/account.svg" alt="">
         <p class="admin-info__admin-name">홍길동</p>
     </div>
 
@@ -89,6 +89,6 @@
     </div>
 </div>
 
-<script src = "./js/index.js"></script>
-<script src="./js/declaration.js"></script>
+<script src = "../js/index.js"></script>
+<script src="../js/declaration.js"></script>
 </html>
