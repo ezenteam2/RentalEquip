@@ -1,33 +1,37 @@
 .title {
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  color: gray;
   font-weight: bold;
-  margin-left: 20px;
-  margin-bottom: 50px;
+  position: relative;
+  bottom: 110px;
+  right: 350px;
 }
 
-.title .container {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  bottom: 80px;
+  left: 40px;
 }
 
-.title .item {
-  margin-left: 25px;
+.item {
+  margin-left: 60px;
 }
 
-.title .item__img {
+.item__img {
   width: 194px;
   height: 194px;
 }
 
-.title .item__info {
+.item__info {
   border: 1px solid #F2F2F2;
   width: 192px;
   margin-top: -6px;
 }
 
-.title .item__info2 {
+.item__info2 {
   margin-top: -3px;
   border: 1px solid #F2F2F2;
   width: 192px;
@@ -35,20 +39,20 @@
   height: 50px;
 }
 
-.title .item__name {
+.item__name {
   font-size: 13px;
   font-weight: bold;
   color: gray;
   text-align: center;
 }
 
-.title .item__price {
+.item__price {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
 
-.title .item__alert {
+.item__alert {
   background-color: #4e61ff;
   color: white;
   font-size: 12px;
@@ -60,7 +64,6 @@
   border-radius: 4px;
   padding-bottom: 23px;
   cursor: pointer;
-  margin-left: 55px;
   margin-top: 10px;
 }
 /*# sourceMappingURL=reservation.css.map */
