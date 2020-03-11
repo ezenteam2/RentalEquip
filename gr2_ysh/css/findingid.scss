@@ -1,0 +1,73 @@
+*{
+    outline: none;
+}
+body{
+    background-color: rgb(249, 249, 249);
+}
+.finding{
+    width : 430px;
+    height : 80%;
+    background-color : white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px 0px;
+    border-radius: 4px;
+    margin : auto;
+    margin-top:230px;
+    padding : 70px;
+    padding-top : 40px;
+   @mixin form(){
+    margin-left : 10px;
+    width : 300px;
+    height : 20px;
+    position: relative;
+    border : none;
+    margin-top : 15px;
+   }
+   @mixin button(){
+    width : 90px;
+    height : 30px;
+    background-color : rgb(179, 179, 179);
+    color : white;
+    float : right;
+    position : relative;
+    border-radius: 2px;
+    border : none;
+    top : 12px;
+    cursor: pointer;
+    margin-top : 15px;
+   }
+    .form{
+        border : none;
+        &__title{
+            font-size: 28px;
+            margin-top : 15px;
+        }
+        &__img{
+            width : 20px;
+            padding : 5px;
+            position : relative;
+            top : 10px;
+            margin-top : 15px;
+        }
+        &__username{
+            @include form();
+        }
+        &__address{
+            @include form();
+            &--btn{
+                @include button();
+                top : 6px;
+            }
+        }
+    }
+}
+
+.submit{
+    width : 100%;
+    height : 45px;
+    background-color: red;
+    color : white;
+    border : none;
+    font-size : 18px;
+    cursor: pointer;
+    margin-top: 35px;
+}

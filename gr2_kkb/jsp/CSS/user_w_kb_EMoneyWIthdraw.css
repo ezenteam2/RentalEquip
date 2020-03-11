@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+main{
+    padding-left:15%;
+    padding-right:15%;
+}
+
+#kb_title{
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-top: 5%;
+}
+
+#Emoney_Balance_Div{
+    font-size:16pt;
+    margin-top:2%;
+}
+#Balance_Span{
+    color:red;
+    font-weight: bold;
+}
+
+#Price_Btns{
+    width:100%;
+    height:100px;
+    margin-top:2%;
+    display:inline-block;
+    margin-left:2%;
+}
+
+.Price_menubar{
+    width:15%;
+    height:100%;
+    border:0.5px solid black;
+    float:left;
+    display:flex;
+    text-align:center;
+    align-items: center;
+    margin-left:1%;
+    background-color: #f6f9fc;
+    cursor:pointer;
+}
+
+.input_Price_Div{
+    width:25%;
+    height:100%;
+    float:left;
+    margin-left:3%;
+}
+
+#Price_radio_Div{
+    width:100%;
+    height:43.6%;
+    font-size:14pt;
+    margin-top:2%;
+
+}
+
+#input_Price_Div{
+    width:100%;
+    height:43.6%;
+}
+
+#input_price{
+    width:60%;
+    height:80%;
+    border-radius: 5px;
+    padding-left:2%;
+}
+
+.Price_text{
+    margin:auto;
+}
+
+#Charge_Price_Text{
+    width:100%;
+    height:50px;
+    margin-top:2%;
+    font-size:16pt;
+    text-align:right;
+
+}
+
+#Price_Span{
+    color:red;
+    font-weight: bold;
+}
+#Bank_Account_input_Div{
+text-align:left;
+}
+
+select{
+    width:140px;
+    height:30px;
+    margin-left:5%;
+}
+
+#input_Account{
+    width:320px;
+    height:30px;
+    text-align:center;
+}
+
+#Withraw_Btn_Div{
+    width:100%;
+    height:60px;
+    text-align:center;
+    margin-top:2%;
+}
+
+#Withraw_Btn{
+    width:240px;
+    height:60px;
+    background-color: red;
+    color: white;
+    border:0;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+}

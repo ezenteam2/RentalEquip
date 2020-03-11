@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/admin_w_ys_editAdmin.css">
+    <title>AdimPage</title>
+</head>
+<body>
+    <div id="root">
+        <div id="modifyAdmin">
+            <input type="button" value="관리자추가" id="plusAdmin" 
+            onclick="add_row()">
+            <input type="button" value="관리자삭제" id="minusAdmin"
+            onclick="delete_row()">   
+        </div>
+        <div id="mainPage" style="margin-top: 50px;">
+            <table id="adminTable" border>
+                <tr class="tableHead">
+                    <th>사번</th>
+                    <th>이름</th>
+                    <th>아이디</th>
+                    <th>권한</th>
+                    <th>수정/삭제</th>
+                </tr>
+                <tbody id="my-tbody">
+                <tr>
+                    <td>20200101</td>
+                    <td>김현태</td>
+                    <td>ezenht</td>
+                    <td>1</td>
+                    <td><input type="button" class="modifyBtn" value="수정">
+                    <input type="button" class="deleteBtn" value="삭제"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function add_row() {
+    var my_tbody = document.getElementById('my-tbody');
+    var row = my_tbody.insertRow( my_tbody.rows.length );
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    
+    cell1.innerHTML = '관리자이름';
+    cell2.innerHTML = '관리자사번';
+    cell3.innerHTML = '관리자아이디';
+    cell4.innerHTML = '관리자권한';
+    cell5.innerHTML = '수정/삭제';
+    
+    }
+
+    function delete_row() {
+    var my_tbody = document.getElementById('my-tbody');
+    if (my_tbody.rows.length < 1) return;
+    my_tbody.deleteRow( my_tbody.rows.length-1 ); 
+    }
+</script>
+</html>

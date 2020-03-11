@@ -71,10 +71,45 @@ span{
 #detail_image{
     width:60%;
     margin-left:20%;
+    display: inline-block;
     
 
 }
 
 .img{
-    position: absolute;
+    /* position: relative;  */
+    display: block;
+    
 }
+
+#detail_product01{
+    display: block;
+    position: relative;
+    float:left;
+}
+#notandum_product{
+    width:100%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+summary {
+    
+    display: block;
+    position: relative;
+    font-size: 1.33em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    details{
+        margin-top: 10px;
+        max-width: calc(100% - 2rem);
+        position: relative;
+        border: 1px solid #78909C;
+        border-radius: 6px;
+        background-color: #ECEFF1;
+        color: #263238;
+        transition: background-color .15s;
+    }

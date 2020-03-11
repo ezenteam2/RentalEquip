@@ -1,0 +1,136 @@
+@charset "UTF-8";
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .post_area {
+  width: 1024px;
+  height: 444px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .post_area .post_left img {
+  width: 428px;
+  height: 428px;
+  border: solid 1px #eee;
+}
+
+main .post_area .post_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 554px;
+}
+
+main .post_area .post_right h1 {
+  font-size: 24px;
+}
+
+main .post_area .post_right h2 {
+  font-size: 40px;
+}
+
+main .post_area .post_right h2 span {
+  font-size: 28px;
+}
+
+main .post_area .post_right .post_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+main .post_area .post_right .post_info .like {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .post_area .post_right .post_info .like i {
+  background: url("../img/좋아요.PNG") no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  color: transparent;
+}
+
+main .post_area .post_right .post_info .like span {
+  color: #ccc;
+  font-size: 16px;
+}
+
+main .post_area .post_right .post_info .views {
+  margin-left: 15px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .post_area .post_right .post_info .views i {
+  background: url("../img/조회수.PNG") no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  color: transparent;
+}
+
+main .post_area .post_right .post_info .views span {
+  color: #ccc;
+  font-size: 16px;
+}
+
+main .post_area .post_right .post_info button {
+  margin: 0 10px 0 auto;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+main .post_area .post_right .post_info button i {
+  display: inline-block;
+  background: url("../img/신고하기.PNG") no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+}
+
+main .post_area .post_right .post_info button span {
+  color: #ccc;
+  line-height: 30px;
+  vertical-align: top;
+}
+/*# sourceMappingURL=빌리고싶은상품상세페이지.css.map */

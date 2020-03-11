@@ -1,0 +1,199 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.myprofile {
+  border: 1px solid #BDBDBD;
+  width: 250px;
+  height: 320px;
+  border-radius: 8px;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+.myprofile__img {
+  border: none;
+  border-radius: 200px;
+  background-color: #F2F2F2;
+  width: 80px;
+  height: 80px;
+  margin: 20px 0 0 85px;
+}
+
+.myprofile__username {
+  position: relative;
+  left: 97px;
+  font-weight: bold;
+}
+
+.myprofile--hr {
+  width: 85%;
+  border: 1px solid #F2F2F2;
+}
+
+.myprofile--hr-first {
+  margin-top: 30px;
+}
+
+.myprofile--table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.myprofile__follower {
+  border-right: 1px solid #F2F2F2;
+  text-align: center;
+  padding: 10px 13px 10px 0;
+  font-size: 13px;
+}
+
+.myprofile__follower--num {
+  font-size: 18px;
+}
+
+.myprofile__following {
+  border-right: 1px solid #F2F2F2;
+  text-align: center;
+  padding: 0 16px 0 16px;
+  font-size: 13px;
+}
+
+.myprofile__following--num {
+  font-size: 18px;
+}
+
+.myprofile__view-cnt {
+  text-align: center;
+  padding-left: 13px;
+  font-size: 13px;
+}
+
+.myprofile__view-cnt--num {
+  font-size: 18px;
+}
+
+.tab {
+  width: 80px;
+  height: 30px;
+  border-bottom: 2px solid #BDBDBD;
+  text-align: center;
+  color: gray;
+  font-size: 13.5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.tab:focus {
+  border-bottom: 2px solid black;
+}
+
+.tab__follower {
+  margin-left: 45px;
+}
+
+.black {
+  display: none;
+  width: 900px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  position: relative;
+  top: 80px;
+  right: 160px;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 110px;
+  color: #424242;
+  line-height: 25px;
+}
+
+.black__rent {
+  background-color: #4e61ff;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  padding-bottom: 23px;
+  margin-top: 15px;
+}
+
+.black__bollow {
+  background-color: #eff2f7;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  padding-bottom: 23px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.filled {
+  display: block;
+  width: 900px;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  position: relative;
+  top: 90px;
+  right: 160px;
+  color: #424242;
+}
+
+.filled .others-profile {
+  font-size: 14px;
+}
+
+.filled .others-profile__img {
+  border: none;
+  border-radius: 200px;
+  background-color: #F2F2F2;
+  width: 80px;
+  height: 80px;
+  margin: 30px 0 0 45px;
+}
+
+.filled .others-profile__table {
+  position: relative;
+  left: 150px;
+  bottom: 80px;
+  line-height: 2px;
+}
+
+.filled .others-profile__id {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filled .others-profile__alert {
+  background-color: #4e61ff;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  padding-bottom: 23px;
+  margin-top: 15px;
+  margin-left: 450px;
+  cursor: pointer;
+}
+
+.filled .others-profile--hr {
+  width: 90%;
+  margin-top: -45px;
+  margin-bottom: 25px;
+  border: 1px solid #F2F2F2;
+}
+/*# sourceMappingURL=following.css.map */
