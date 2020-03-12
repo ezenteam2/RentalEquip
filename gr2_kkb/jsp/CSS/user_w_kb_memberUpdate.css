@@ -131,3 +131,9 @@ img{
     border:0;
     border-radius: 5px;
 }
+
+#nickname{
+	width:150px;
+	height:30px;
+	padding-left:1%;
+}

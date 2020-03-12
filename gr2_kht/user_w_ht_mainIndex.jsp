@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	String path = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,18 +139,18 @@ body{
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		
-		<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
-		
-		
-		 
+
+		<div class="">
+			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0"  id="main_frame" onLoad="setIFrameHeight(this)"></iframe>
+		</div>
 		
 		
 		<footer class="mainIndexFooter_ht">
 		
 		<div class="mainIndexBottom_ht">
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/공지사항.jsp')">공지사항</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/FAQ및이용가이드.jsp')">FAQ 이용가이드</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/Q&A(1_1문의).jsp')">QnA</span>			
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/공지사항.jsp')">공지사항</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/FAQ및이용가이드.jsp')">FAQ 이용가이드</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/Q&A(1_1문의).jsp')">QnA</span>			
 		</div>
 		
 		<img src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
@@ -169,6 +173,11 @@ body{
 function changeIframeUrl(url){
 	  document.getElementById("main_frame").src = url;	
 	}
+	
+function changeIframeUrl2(url){
+	document.getElementById("main_frame").src = url;
+	document.getElementById("main_frame").style.height="950px";
+}
 
 function setIFrameHeight(obj){
 if(obj.contentDocument){
@@ -177,6 +186,8 @@ if(obj.contentDocument){
     obj.height = obj.contentWindow.document.body.scrollHeight;
 }
 }
+
+
 
 </script>
 
