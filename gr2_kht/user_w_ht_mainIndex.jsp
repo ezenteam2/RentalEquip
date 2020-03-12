@@ -111,32 +111,32 @@ body{
 		<div class="mainIndexTop_ht">			
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_coupon.jsp')"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_grade.jsp')"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</div>			
-				<div class="mainIndexTopContent2_ht" style="margin-left:600px;" onclick = "changeIframeUrl('user_w_ht_mainEnter.jsp')">로그인</div>   
-				<div class="mainIndexTopContent2_ht" onclick = "changeIframeUrl('user_w_ht_point.jsp')">회원가입</div>   
-				<div class="mainIndexTopContent2_ht" onclick = "changeIframeUrl('')">내 렌탈</div>			
+				<div class="mainIndexTopContent2_ht" style="margin-left:600px;" onclick = "location.href='../gr2_ysh/jsp/login.jsp'">로그인</div>   
+				<div class="mainIndexTopContent2_ht" onclick = "location.href='../gr2_ysh/jsp/signup.jsp'">회원가입</div>   
+				<div class="mainIndexTopContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')">내 렌탈</div>			
 		</div>
 		
 		
 		<div class="mainIndexMiddle_ht">
 			<div style="vertical-align:middle;height:80px;padding-top:20px;">
-				<div style="display:inline-block;vertical-align:top;"><img src="image/mainIndexLogo.jpg" height="50px;" onclick = "changeIframeUrl('')"></div>
+				<div style="display:inline-block;vertical-align:top;"><img src="image/mainIndexLogo.jpg" height="50px;" onclick = "changeIframeUrl('user_w_ht_mainEnter.jsp')"></div>
 				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;padding-left:20px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
-				<div class="mainIndexMiddleContent1_ht"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht" onclick = "changeIframeUrl('')">렌탈 상품 등록</div>   
-				<div class="mainIndexMiddleContent2_ht"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht" onclick = "changeIframeUrl('')">내 렌탈</div>   
+				<div class="mainIndexMiddleContent1_ht" onclick = "changeIframeUrl('../gr2_kys/user_w_ys_uploadProducts.html')"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
+				<div class="mainIndexMiddleContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
 				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht" onclick = "changeIframeUrl('')">젠탈톡</div>
 			<br>
 			</div>
 			<div style="padding-left:20px;">
-			<img src="image/mainIndexCategoryMenuIcon.png" width="25px">
+			<img src="image/mainIndexCategoryMenuIcon.png" width="25px"  onclick = "changeIframeUrl('../gr2_kys/category.html')">
 			</div>
 		</div>		
 	</header>
 	
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
-		<div class="">
-			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
-		</div>
+		
+		<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
+		
 		
 		 
 		
@@ -144,9 +144,9 @@ body{
 		<footer class="mainIndexFooter_ht">
 		
 		<div class="mainIndexBottom_ht">
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('')">공지사항</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('')">FAQ 이용가이드</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('')">QnA</span>			
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/공지사항.jsp')">공지사항</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/FAQ및이용가이드.jsp')">FAQ 이용가이드</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl('../gr2_lhj/html/Q&A(1_1문의).jsp')">QnA</span>			
 		</div>
 		
 		<img src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
