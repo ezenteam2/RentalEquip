@@ -71,11 +71,11 @@
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
                         <span class="info_Span">아이디 : </span>
-                        <span class="info_Span">EZENKB</span>
+                        <span class="info_Span">userezenkb77</span>
                     </div>
                     <div class="info_Div">
                         <span class="info_Span">닉네임 : </span>
-                        <span class="info_Span">이젠 KB</span>
+                        <input type="text" id="nickname" name="Nickname" value="기범짜응">
                     </div>
                 </div>
             </div>

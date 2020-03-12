@@ -15,8 +15,8 @@
             <nav>
                 <ul>
                     <li><a href="#">공지사항</a></li>
-                    <li><a href="FAQ및이용가이드.html">FAQ및이용가이드</a></li>
-                    <li><a href="Q&A(1_1문의).html">Q&A(1:1문의)</a></li>
+                    <li><a href="FAQ및이용가이드.jsp">FAQ및이용가이드</a></li>
+                    <li><a href="Q&A(1_1문의).jsp">Q&A(1:1문의)</a></li>
                 </ul>
             </nav>
             <main>

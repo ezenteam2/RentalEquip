@@ -30,10 +30,10 @@
             $("#Check_Input").prop("checked", true);
 
             if ($(obj).val() == "") {
-                $("#PAmt").val("0");
+                //$("#PAmt").val("0");
                 $("#Price_Span").text("0");
             } else {
-                $("#PAmt").val($(obj).val());
+                //$("#PAmt").val($(obj).val());
                 $("#Price_Span").text(numberWithCommas($(obj).val()));
             }
         }
