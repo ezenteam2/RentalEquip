@@ -16,8 +16,10 @@
 
 #adminTable{
     margin:0 auto;
-    width:600px;
+    width:1000px;
     text-align: center;
+    border:2px solid black;
+    resize: none;
 }
 
 .deleteBtn {
