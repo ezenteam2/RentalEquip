@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/productDetail.css">
+    <script>
+        function showPopup(){
+            window.open("sirenPopup.html","신고팝업","width:300px; height:300px");
+        }
+    </script>
 </head>
-<script>
 
-</script>
 <body>
     <div id="root">
         <div id="topTitle">
@@ -30,7 +33,7 @@
             <input type="button" value="찜하기" class="btn">
             <a href="">
             <img src="image/siren.png" style="width:40px; height:40px;
-            margin-bottom: -13px; margin-left:10px;">
+            margin-bottom: -13px; margin-left:10px;" onclick="showPopup()">
             </a>
         </div>
         <div id="detail_product01">
@@ -68,7 +71,16 @@
                 </details>
             </div>
         </div>
-        
+            
+        <div id="detail_product01">
+            <span><h2>상품문의</h2></span>
+            <div style="margin: auto;">
+            <textarea placeholder="문의내용을 입력하세요">
+                
+            </textarea>
+            <input type="button" value="입력" class="inputBtn">
+        </div>
+        </div>
     </div>
 
     <script>
