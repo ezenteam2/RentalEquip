@@ -14,7 +14,7 @@ String path = request.getContextPath(); %>
 <body>
     <div class="signup">
            <p class="form form__title">회원가입</p>
-           <form>
+           <form action="./login.jsp">
            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-number@2x.png" alt=""><input class="form form__id" type="text" placeholder="아이디 *8~16자의 영문,숫자,특수문자 사용"><input class="form__isdouble--btn" type="button" value="중복체크"><br><hr>
 
            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-pw@2x.png" alt=""><input class="form form__pwd" type="password" placeholder="비밀번호*8~16자의 영문,숫자,특수문자 사용"><br><hr>
@@ -67,7 +67,7 @@ String path = request.getContextPath(); %>
                 
                 </div>
             <input type="checkbox" id="not-must"><label for="not-must"><div class="content allow__not-must"  ><img class="allow--checkbox allow__not-must--checked" src="./img/correct.png" alt=""></div></label><p class="allow__not-must--text" style="color : gray;">(선택)</p><p class="allow__not-must--text" style="position:realative;left :78px; bottom:32px;">이메일, SMS광고 수신 동의</p>
-            <input class="submit" type="submit" value="가입하기" onsubmit="window.location.href='../login.html'">
+            <input class="submit" type="submit" value="가입하기">
         
         </div>
     </form>

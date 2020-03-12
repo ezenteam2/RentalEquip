@@ -14,11 +14,11 @@ String path = request.getContextPath(); %>
 <body>
     <div class="finding">
            <p class="form form__title">비밀번호 찾기</p>
-            <form> 
+            <form action="./findingpassSecond.jsp"> 
             <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__username"  type="text" placeholder="이름"><br><hr>
             <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__id"  type="text" placeholder="아이디"><br><hr>
             <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__address"  type="text" placeholder="이메일"><br><hr>
-            <input class="submit" type="submit" value="비밀번호 찾기"onClick="location.href='../findingpassSecond.html'">    
+            <input class="submit" type="submit" value="비밀번호 찾기"onClick="location.href='./findingpassSecond.jsp'">    
             </form>
     </div>
     <script src="../js/findingpass.js"></script>

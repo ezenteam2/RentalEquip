@@ -14,7 +14,7 @@ String path = request.getContextPath(); %>
 <body>
     <div class="result--box">
         <p class="result result__username">adsfdafds5315@naver.com</p><p class="result">으로</p><br><p class="result result--second">비밀번호 재설정 메일이 발송되었습니다</p>
-        <button class="submit">이메일 확인하기</button>    
+        <button class="submit" onClick="location.href='./login.jsp'">이메일 확인하기</button>    
     </div>
 </body>
 </html>

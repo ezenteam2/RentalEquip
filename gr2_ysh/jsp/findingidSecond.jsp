@@ -14,7 +14,7 @@ String path = request.getContextPath(); %>
 <body>
     <div class="result--box">
         <p class="result result__username">최준범</p><p class="result">님의 아이디는 </p><p class="result result__id">adsfdafds5315<p class="result"> 입니다</p>
-        <button class="submit" onClick="location.href='../login.html'">로그인하기</button>    
+        <button class="submit" onClick="location.href='./login.jsp'">로그인하기</button>    
     </div>
 </body>
 </html>
