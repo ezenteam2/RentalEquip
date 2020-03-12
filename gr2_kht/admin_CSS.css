@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+.adminTitle{
+	width:970px;
+	font-size:30px;
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:10px;
+	padding-left:30px;
+	border-bottom:solid 3px #dcdcdc;
+	
+	}
+
+.adminTable{
+	width:1000px;
+	border-bottom:solid 3px #dcdcdc;
+
+
+	}
+
+.adminTableTH{
+	width:1000px;
+	padding-top:50px;
+	border-bottom:solid 3px #dcdcdc;
+
+
+	}
+
+.adminTableTH1{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:150px;
+	
+	}
+
+.adminTableTH2{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:100px;
+
+	}
+
+.adminTableTH3{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:200px;
+	
+	}
+
+.adminTableTH4{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:350px;
+
+	}
+
+.adminTableTH5{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:100px;
+
+	}
+
+.adminTableTH6{
+	display:inline-block;
+	text-align:center;	
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:20px;
+	font-weight:bold;
+	width:66px;
+	
+	}
+
+.adminTableTD{
+
+	}
+
+.adminTableTD1{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:15px;
+	font-weight:bold;
+	width:150px;
+
+
+	}
+
+.adminTableTD2{
+	display:inline-block;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:15px;
+	font-weight:bold;
+	width:100px;
+
+
+	}
+
+.adminTableTD3{
+	display:inline-block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	font-size:15px;
+	font-weight:bold;
+	width:190px;
+
+
+	}
+
+.adminTableTD4{
+	display:inline-block;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	font-size:15px;
+	font-weight:bold;
+	width:330px;
+
+	}
+
+.adminTableTD5{
+	display:inline-block;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	width:100px;
+	
+
+	}
+
+.adminTableTD6{
+	display:inline-block;
+	text-align:center;	
+	padding-top:5px;
+	padding-bottom:12px;
+	width:66px;
+	
+
+	}
+
+.adminDeleteBtn{
+	width:50px;
+	height:25px;
+	border:none;
+	}
+
+.adminMoveImg{
+	width:20px;
+
+	
+	}
+
+.adminBannerRegi{
+
+	}
+
+.adminRegiTitle{
+
+	}
+
+.adminRegiImg{
+
+	}
+
+.adminRegiLink{
+
+	}
+
+.adminRegiBtn{
+
+	}

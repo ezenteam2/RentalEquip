@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제페이지</title>
+    <link rel="stylesheet" href="../css/결제페이지.css">
+</head>
+<body>
+    <div class="wrap">
+        <main>
+            <form action="">
+            <h1>주문서</h1>
+            <section class="location">
+                <h1><img src="../img/배송지.PNG" alt="배송지"><span>배송지</span></h1>
+                <div class="name">
+                    <span>수령인</span>
+                    <input type="text" name="name">
+                </div>
+                <div class="tel_num">
+                    <span>연락처</span>
+                    <input type="text" name="tel_num">
+                </div>
+                <div class="loc"></div>
+                <div class="message">
+                    <select>
+                        <option value>배송요청사항선택</option>
+                        <option value="직접 수령하겠습니다.">직접 수령하겠습니다.</option>
+                        <option value="배송 전 연락주세요">배송 전 연락주세요.</option>
+                        <option value="빠른 배송 부탁합니다.">빠른 배송 부탁합니다.</option>
+                        <option value="부재 시 경비실에 맡겨주세요">부재 시 경비실에 맡겨주세요</option>
+                        <option value="문 앞에 놔주세요">문 앞에 놔주세요</option>
+                    </select>
+                    <textarea name="message" cols="30" rows="10" placeholder="요청사항을 입력해주세요"></textarea>
+                </div>
+            </section>
+            <section class="product">
+                <h1><img src="../img/주문상품.PNG" alt="주문상품"><span>주문상품</span></h1>
+                <h2>판매자<span>홀리맨</span></h2>
+                <div class="order_detail">
+                    <div class="top">
+                        <img src="../img/상품이미지/상품2.jpg" alt="">
+                        <div class="prod_name_area">
+                            <span>상품명</span>
+                            <span class="title">[주문폭주♥]발*티노 반팔 맨트맨 후드</span>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span class="amount">하루</span>
+                        <span class="total">13,000원</span>
+                    </div>
+                </div>
+            </section>
+            <section class="payment">
+                <h1><img src="../img/결제금액.PNG" alt=""><span>결제금액</span></h1>
+                <div class="receipt_area">
+                    <div class="price"><span>상품금액</span><span>13,000원</span></div>
+                    <div class="del_fee"><span>배송비</span><span>3,000원</span></div>
+                    <div class="coupon"><span>쿠폰할인</span><span>3,000원</span></div>
+                    <div class="point"><span>포인트사용</span><span>1,000p</span></div>
+                    <div class="tot_price"></div>
+                </div>
+            </section>
+            <section class="agreement">
+                <div class="check_all">
+                    <input type="checkbox">
+                    <img src="" alt="체크박스">
+                    <span>주문 상품정보 및 서비스 이용약관에
+                        모두 동의합니다.</span>
+                    <img src="" alt="슬라이드아이콘">
+                    <div class="check_1">
+                        <input type="checkbox" name="" id="">
+                        <img src="" alt="체크박스">
+                        <span>번개페이 이용약관 동의</span>
+                        <span>자세히</span>
+                        <div class="contents"></div>
+                    </div>
+                    <div class="check_2">
+                        <input type="checkbox" name="" id="">
+                        <img src="" alt="체크박스">
+                        <span>개인정보 수집 및 이용동의</span>
+                        <span>자세히</span>
+                        <div class="contents"></div>
+                    </div>
+                    <div class="check_3">
+                        <input type="checkbox" name="" id="">
+                        <img src="" alt="체크박스">
+                        <span>개인정보 판매자 제공에 동의</span>
+                        <span>자세히</span>
+                        <div class="contents"></div>
+                    </div>
+                </div>
+                
+
+            </section>
+            <button type="submit">결제하기</button>
+            </form>
+        </main>
+    </div>
+    <i class="close_icon"></i>
+    <script src="../js/결제페이지.js"></script>
+</body>
+</html>

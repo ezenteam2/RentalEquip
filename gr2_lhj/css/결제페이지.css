@@ -1,0 +1,298 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+  background-color: #fafafa;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap main {
+  background-color: #f5f5f5;
+  width: 633px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 7px;
+}
+
+.wrap main h1 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  line-height: 44px;
+  border: solid 1px #eee;
+  background-color: white;
+  height: 44px;
+}
+
+.wrap main .location {
+  margin: 44px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.wrap main .location h1 {
+  padding: 13px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 18px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location h1 img {
+  width: 14px;
+  height: 17px;
+}
+
+.wrap main .location h1 span {
+  margin: 0 auto 0 7px;
+}
+
+.wrap main .location .name {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .name span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .name input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
+.wrap main .location .tel_num {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .tel_num span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .tel_num input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
+.wrap main .location .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 5px 0 0 0;
+}
+
+.wrap main .location .message select {
+  padding: 1px 5px;
+  height: 34px;
+  color: #666;
+}
+
+.wrap main .location .message textarea {
+  margin: 1px 0 0 0;
+}
+
+.wrap main .product {
+  margin: 10px 0 0 0;
+  background-color: white;
+}
+
+.wrap main .product h1 {
+  padding: 13px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 18px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .product h1 img {
+  width: 18px;
+  height: 15px;
+}
+
+.wrap main .product h1 span {
+  margin: 0 auto 0 7px;
+}
+
+.wrap main .product h2 {
+  font-size: 14px;
+  color: #808080;
+  margin: 0;
+  padding: 13px 16px;
+  font-weight: 500;
+}
+
+.wrap main .product h2 span {
+  color: black;
+  margin: 0 0 0 5px;
+}
+
+.wrap main .product .order_detail .top {
+  padding: 13px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap main .product .order_detail .top img {
+  width: 50px;
+  height: 50px;
+}
+
+.wrap main .product .order_detail .top .prod_name_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0 0 0 10px;
+}
+
+.wrap main .product .order_detail .top .prod_name_area span:first-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.wrap main .product .order_detail .top .prod_name_area span:last-child {
+  font-size: 16px;
+  color: black;
+}
+
+.wrap main .product .order_detail .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 16px;
+  padding: 13px 16px;
+}
+
+.wrap main .product .order_detail .bottom span:first-child {
+  font-size: 14px;
+  color: #4444db;
+}
+
+.wrap main .product .order_detail .bottom span:last-child {
+  margin-left: auto;
+  font-size: 15px;
+  color: #212121;
+}
+
+.wrap main .payment {
+  margin: 10px 0 0 0;
+  background-color: white;
+}
+
+.wrap main .payment h1 {
+  padding: 13px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 18px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .payment h1 img {
+  width: 18px;
+  height: 18px;
+}
+
+.wrap main .payment h1 span {
+  margin: 0 auto 0 7px;
+}
+
+.wrap main .payment .receipt_area {
+  padding: 20px 16px;
+}
+
+.wrap main .payment .receipt_area .price {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #212121;
+}
+
+.wrap main .payment .receipt_area .price span:last-child {
+  margin: 0 0 0 auto;
+}
+/*# sourceMappingURL=결제페이지.css.map */
