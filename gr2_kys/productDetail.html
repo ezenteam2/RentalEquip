@@ -9,6 +9,9 @@
         function showPopup(){
             window.open("sirenPopup.html","신고팝업","width:300px; height:300px");
         }
+        function imgPopup(){
+            window.open();
+        }
     </script>
 </head>
 
@@ -51,9 +54,9 @@
         <div id="detail_product01">
             <span><h2>상품이미지</h2></span><br> 
             <div id="detail_image">
-                <img src="image/product01.jpeg" class="img" style="width: 500px; height: 300px;">
-                <!-- <img src="image/product02.jpeg" class="img" style="width: 500px; height: 300px;">
-                <img src="image/product03.jpeg" class="img" style="width: 500px; height: 300px;"> -->
+                <img src="image/product01.jpeg" class="img" onclick="imgPopup()">
+                <img src="image/product02.jpeg" class="img" >
+                <img src="image/product03.jpeg" class="img" >
                 
             </div>
         </div>
@@ -74,12 +77,22 @@
             
         <div id="detail_product01">
             <span><h2>상품문의</h2></span>
-            <div style="margin: auto;">
+            
             <textarea placeholder="문의내용을 입력하세요">
                 
             </textarea>
             <input type="button" value="입력" class="inputBtn">
+        
         </div>
+
+        <div id="detail_product01">
+            <span><h2>상품후기</h2></span>
+            
+            <textarea placeholder="상품후기를 입력하세요">
+                
+            </textarea>
+            <input type="button" value="입력" class="inputBtn">
+        
         </div>
     </div>
 

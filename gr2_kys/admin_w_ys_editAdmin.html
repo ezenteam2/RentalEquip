@@ -15,7 +15,7 @@
             onclick="delete_row()">   
         </div>
         <div id="mainPage" style="margin-top: 50px;">
-            <table id="adminTable" border>
+            <table id="adminTable" style="border-collapse: collapse border;">
                 <tr class="tableHead">
                     <th>사번</th>
                     <th>이름</th>
@@ -51,7 +51,8 @@
     cell2.innerHTML = '관리자사번';
     cell3.innerHTML = '관리자아이디';
     cell4.innerHTML = '관리자권한';
-    cell5.innerHTML = '수정/삭제';
+    cell5.innerHTML += '<input type="button" class="modifyBtn" value="수정"> ';
+    cell5.innerHTML += '<input type="button" class="deleteBtn" value="삭제">';
     
     }
 
