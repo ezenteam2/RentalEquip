@@ -21,7 +21,7 @@
 	width:1050px;
 	padding-top:30px;
 	padding-bottom:30px;
-	background-color:#F0FFF0;
+	background-color:white;
 	}
 
 .mainEnterRecommendContent{

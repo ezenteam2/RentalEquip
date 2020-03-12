@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	String path = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,10 +139,10 @@ body{
 	<div style="height:190px;"></div>	
 	<div class="mainIndexRoot_ht">	
 		
-		<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0" id="main_frame" onLoad="setIFrameHeight(this)" style="border:none;"></iframe>
-		
-		
-		 
+
+		<div class="">
+			<iframe src="user_w_ht_mainEnter.jsp" width=100% height=1500px scrolling="no" frameborder="0"  id="main_frame" onLoad="setIFrameHeight(this)"></iframe>
+		</div>
 		
 		
 		<footer class="mainIndexFooter_ht">
