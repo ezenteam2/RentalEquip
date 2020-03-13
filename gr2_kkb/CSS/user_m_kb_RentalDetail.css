@@ -39,9 +39,10 @@ main{
 }
 
 .Picture_Div{
-    width:30%;
+    width:280px;
     height:200px;
     float:left;
+    border:solid;
 
 }
 
@@ -54,14 +55,15 @@ main{
 }
 
 .Image_Div{
-    width:100%;
-    height:100%;
+    width:280px;
+    height:170px;
     text-align: center;
+    position:relative;
 }
 
 img{
     width:80%;
-    height:80%;
+    height:90%;
 }
 
 #Tracking_Title{
