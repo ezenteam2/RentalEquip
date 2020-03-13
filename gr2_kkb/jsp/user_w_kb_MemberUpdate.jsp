@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/user_w_kb_memberUpdate.css">
     <title>Document</title>
-    
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
 
 </head>
 <body>
@@ -27,6 +27,23 @@
     	document.querySelector("#Address3").value = bdNm;
     	
     }
+    
+    function readInputFile(input) {
+        if(input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("#Profile-img").attr('src', reader.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    
+	$("#inputProfile").on('change', function(){
+		readInputFile(this);
+	});
+
+
 
     </script>
     
@@ -36,7 +53,8 @@
         </div>
         <form method="post"  action="#">
             <div id="Member_Basic_Div">
-                <div id="Profile_Div"><img src="Image/Profile.png"></div>
+                <div id="Profile_Div"><img id="Profile-img" src="image/Profile.png">
+                <input type="file" onchange="readInputFile(this)" name="inputProfile" id="inputProfile" accept="image/*" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
                         <span class="info_Span">¾ÆÀÌµð : </span>
