@@ -22,9 +22,10 @@ main{
 }
 
 #Profile_Div{
-    width:25%;
-    height:100%;
+    width:200px;
+    height:150px;
     float:left;
+    position:relative;
 }
 
 #Member_Infor_Div{
