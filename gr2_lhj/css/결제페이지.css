@@ -295,4 +295,203 @@
 .wrap main .payment .receipt_area .price span:last-child {
   margin: 0 0 0 auto;
 }
+
+.wrap main .payment .receipt_area .del_fee {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #212121;
+}
+
+.wrap main .payment .receipt_area .del_fee span:last-child {
+  margin: 0 0 0 auto;
+}
+
+.wrap main .payment .receipt_area .coupon {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #212121;
+}
+
+.wrap main .payment .receipt_area .coupon span:last-child {
+  margin: 0 0 0 auto;
+}
+
+.wrap main .payment .receipt_area .point {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #212121;
+}
+
+.wrap main .payment .receipt_area .point span:last-child {
+  margin: 0 0 0 auto;
+}
+
+.wrap main .payment .receipt_area .tot_price {
+  margin: 20px 0 5px 0;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  color: #212121;
+}
+
+.wrap main .payment .receipt_area .tot_price span:last-child {
+  color: red;
+  margin: 0 0 0 auto;
+}
+
+.wrap main .agreement .check_all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0 0 0;
+}
+
+.wrap main .agreement .check_all input[type=checkbox] {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.wrap main .agreement .check_all span {
+  color: #222;
+  margin: 0 0 0 5px;
+}
+
+.wrap main .agreement .check_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0 0 0;
+  height: 24px;
+  overflow: hidden;
+}
+
+.wrap main .agreement .check_1 input[type=checkbox] {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.wrap main .agreement .check_1 span {
+  font-size: 16px;
+  color: #222;
+  margin: 0 0 0 5px;
+}
+
+.wrap main .agreement .check_1 span:nth-child(3) {
+  margin: 0 16px 0 auto;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wrap main .agreement .check_1 p {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.wrap main .agreement .check_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0 0 0;
+  height: 24px;
+  overflow: hidden;
+}
+
+.wrap main .agreement .check_2 input[type=checkbox] {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.wrap main .agreement .check_2 span {
+  font-size: 16px;
+  color: #222;
+  margin: 0 0 0 5px;
+}
+
+.wrap main .agreement .check_2 span:nth-child(3) {
+  margin: 0 16px 0 auto;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wrap main .agreement .check_2 p {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.wrap main .agreement .check_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0 0 0;
+  height: 24px;
+  overflow: hidden;
+}
+
+.wrap main .agreement .check_3 input[type=checkbox] {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.wrap main .agreement .check_3 span {
+  font-size: 16px;
+  color: #222;
+  margin: 0 0 0 5px;
+}
+
+.wrap main .agreement .check_3 span:nth-child(3) {
+  margin: 0 16px 0 auto;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wrap main .agreement .check_3 p {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
 /*# sourceMappingURL=결제페이지.css.map */
