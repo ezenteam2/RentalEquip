@@ -101,5 +101,22 @@ label{
     }
 
     .secondList{
-        display: hidden;
+        visibility: hidden;
+    }
+
+    .thirdList{
+        visibility: hidden;
+    }
+
+    .showCategory01{
+        display: inline-block;
+    }
+
+    .deliveryOption{
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    div > b{
+        margin-left:100px;
     }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/user_w_ys_uploadProducts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>  
     <title>상품업로드</title>
 </head>
 
@@ -26,9 +30,10 @@
     </div>
     <div id="proCategory">
         <label style="font-size: x-large;">상품 카테고리</label>
+    </div>
             <div class="firstCategory">
                 <ul class="fristList" onclick="">
-                    <li>패션잡화</li>                 
+                    <li id="clickList01">패션잡화</li>                 
                     <li>가전</li>
                     <li>도서</li>
                     <li>IT</li>
@@ -40,7 +45,7 @@
             </div>
             <div class="secondCategory">
             <ul class="secondList">
-                <li>데스크탑</li>
+                <li id="clickList02">데스크탑</li>
                 <li>노트북</li>
                 <li>핸드폰</li>
                 <li>테블릿PC</li>
@@ -49,13 +54,51 @@
                 <li>데스크탑</li>
                 </ul>
             </div>
-            <div class="thirdCategory">56</div>
-    </div>
+            <div class="thirdCategory">
+                <ul class="thirdList">
+                    <li>LG</li>
+                    <li>SAMSUNG</li>
+                    <li>APPLE</li>
+                    <li>LINUX</li>
+                    <li>ETC</li>
+                    </ul>
+            </div>
+            <div class="showCategory01">
+                <span class="showCategory02">
+                    누르는데로 보여질 예정
+                </span>
+            </div>
+            <div id="proCategory">
+                <label style="font-size: x-large;">배송 방법</label>
+            </div>
+            <div>
+                <input type="radio" name="delivery" class="deliveryOption">선불택배
+                <input type="radio" name="delivery" class="deliveryOption">후불택배
+            </div>
+            <div id="proCategory">
+                <label style="font-size: x-large;">대여 기간선택</label>
+            </div>
+            <div id="proDate">
+                시작날짜 :<input type="text" class="testDatepicker"> <br>
+                종료날짜 :<input type="text" class="testDatepicker">
+                <b>최소대여기간 7일이상</b>
+            </div>
     </div>
     <script>
-        function clickList(){
-            onclick.clickLis
-        }
+        $("#clickList01").click(function(){
+            $(".secondList").css('visibility', 'visible')
+        });
+
+        $("#clickList02").click(function(){
+            $(".thirdList").css('visibility','visible')
+        });
+
+        $(function() {
+    $( ".testDatepicker" ).datepicker({
+            dateFormat:"yy-mm-dd",
+            buttonImage:"image/date.jpg"
+    });
+});
     </script>
 </body>
 
