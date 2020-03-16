@@ -81,6 +81,38 @@ $backgroundColor:#fafafa;
                     margin:0 10px 0 auto;
                 }
             }
+            .loc{
+                background-color: white;
+                border:1px solid #eee;
+                height:34px;
+                padding:1px 16px;
+                display: flex;
+                align-items: center;
+                span{
+                    color:#808080;
+                    font-size: 14px;
+                }
+                input{
+                    width:525px;
+                    margin:0 10px 0 auto;
+                }
+            }
+            .loc_det{
+                background-color: white;
+                border:1px solid #eee;
+                height:34px;
+                padding:1px 16px;
+                display: flex;
+                align-items: center;
+                span{
+                    color:#808080;
+                    font-size: 14px;
+                }
+                input{
+                    width:525px;
+                    margin:0 10px 0 auto;
+                }
+            }
             .message{
                 display: flex;
                 flex-direction: column;

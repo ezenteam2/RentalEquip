@@ -125,6 +125,52 @@
   margin: 0 10px 0 auto;
 }
 
+.wrap main .location .loc {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .loc span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .loc input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
+.wrap main .location .loc_det {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .loc_det span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .loc_det input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
 .wrap main .location .message {
   display: -webkit-box;
   display: -ms-flexbox;
