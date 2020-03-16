@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Rental_Borrow_Index.css">
+</head>
+<body>
+    <main>
+        <div id="Main_Div">
+            <div id="Side_Menu_Div">
+               <ul>
+                    <li><div class="li_text" onclick="moveRental()">빌려준 상품</div></li>
+                    <li><div class="li_text" onclick="moveBorrow()">빌린 상품</div></li>
+               </ul>
+            </div>
+            <div id="Content_Div">
+                <iframe src="user_w_kb_RentalList.html"></iframe>
+            </div>
+        </div>
+    </main>
+    <script>
+        function moveRental(){
+            document.querySelector("iframe").src = "user_w_kb_RentalList.html";
+        }
+
+        function moveBorrow(){
+            document.querySelector("iframe").src="user_w_kb_BorrowList.html";
+        }
+
+    </script>
+</body>
+</html>
