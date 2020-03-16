@@ -37,19 +37,19 @@
                 <h1><img src="../img/배송지.PNG" alt="배송지"><span>배송지</span></h1>
                 <div class="name">
                     <span>수령인</span>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                 </div>
                 <div class="tel_num">
                     <span>연락처</span>
-                    <input type="text" name="tel_num">
+                    <input type="text" name="tel_num" required>
                 </div>
                 <div class="loc">
                     <span>주소</span>
-                    <input type="text" id="roadAddrPart1" onclick="goPopup();" name="roadAddrPart1" />
+                    <input type="text" id="roadAddrPart1" onclick="goPopup();" name="roadAddrPart1" required/>
                 </div>
                 <div class="loc_det">
                     <span>상세주소</span>
-                    <input type="text" id="addrDetail"  name="addrDetail" />
+                    <input type="text" id="addrDetail"  name="addrDetail" required/>
                 </div>
                 <div class="message">
                     <select>
@@ -60,7 +60,7 @@
                         <option value="부재 시 경비실에 맡겨주세요">부재 시 경비실에 맡겨주세요</option>
                         <option value="문 앞에 놔주세요">문 앞에 놔주세요</option>
                     </select>
-                    <textarea name="message" cols="30" rows="10" placeholder="요청사항을 입력해주세요"></textarea>
+                    <textarea name="message" cols="30" rows="10" placeholder="요청사항을 입력해주세요" required></textarea>
                 </div>
             </section>
             <section class="product">
@@ -92,13 +92,13 @@
             </section>
             <section class="agreement">
                 <div class="check_all">
-                    <input type="checkbox">
+                    <input type="checkbox" required>
                     
                     <span>주문 상품정보 및 서비스 이용약관에
                         모두 동의합니다.</span>
                 </div>
                 <div class="check_1">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" required>
                     
                     <span>번개페이 이용약관 동의</span>
                     <span id='detail_more'>자세히</span>
@@ -116,7 +116,7 @@
                         5. 안전거래 또는 매매보호서비스 또는 에스크로: 회사가 운영하는 인터넷 사이트에서 회원 상호간의 거래의 안전을 위하여 회사가 물품대금의 입출금을 중개할 목적으로 마련한 절차를 말합니다. 위 항목에서 정의되지 않은 약관상의 용어의 의미는 일반적인 관행에 의합니다.</p>
                 </div>
                 <div class="check_2">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" required>
                     
                     <span>개인정보 수집 및 이용동의</span>
                     <span id='detail_more'>자세히</span>
@@ -136,7 +136,7 @@
                         결제수단에 따른 개인정보 수집.이용 항목이 상이할 수 있음</p>
                 </div>
                 <div class="check_3">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" required>
                     
                     <span>개인정보 판매자 제공에 동의</span>
                     <span id='detail_more'>자세히</span>
@@ -150,7 +150,9 @@
                         - 보유기간 : 구매 확정후 3개월</p>
                 </div>
             </section>
-            <button type="submit">결제하기</button>
+            <div class="submit">
+                <button type="submit">결제하기</button>
+            </div>
             </form>
         </main>
     </div>

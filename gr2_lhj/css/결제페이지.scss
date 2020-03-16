@@ -365,5 +365,24 @@ $backgroundColor:#fafafa;
                 }
             } 
         }
+
+        .submit{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button[type=submit]{
+                border:none;
+                background-color: #fc525c;
+                font-size:14px;
+                color:white;
+                width:102px;
+                height:38px;
+                margin:20px auto 0 auto;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+        
     }
 }
