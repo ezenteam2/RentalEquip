@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
+<%@page import="java.sql.*" %>
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,58 +47,99 @@
 
 
     </script>
-    
+    <%
+    Connection conn=null;
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
+    	
+
+    Statement pstmt = null;
+    ResultSet rs = null;
+    try{
+        Class.forName(driver);
+        conn=DriverManager.getConnection(url,"scott","tiger");
+        String sql = "select mem_id, mem_profileimg, mem_nick, mem_addr, mem_email, mem_phone from p4member where mem_id = 'userezenkb77'";
+        
+        pstmt = conn.createStatement();
+        
+        rs = pstmt.executeQuery(sql);
+        
+        if(rs.next()){
+        	String id = rs.getString(1);
+        	String img = rs.getString(2);
+        	String nick = rs.getString(3);
+        	String addr = rs.getString(4);
+        	String email = rs.getString(5);
+        	String phone = rs.getString(6);
+        	
+        	
+        
+        
+        
+    %>
     <main>
         <div id="kb_title">
             <h2>회원정보 수정</h2>
         </div>
-        <form method="post"  action="#">
-            <div id="Member_Basic_Div">
-                <div id="Profile_Div"><img id="Profile-img" src="image/Profile.png">
-                <input type="file" onchange="readInputFile(this)" name="inputProfile" id="inputProfile" accept="image/*" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
+        <form action="user_w_kb_memberUpdateProc.jsp" method="post"  enctype="multipart/form-data">
+            <div id="Member_Basic_Div">   
+            <div id="Profile_Div">
+            	<% if(img == null){ %>
+                <img id="Profile-img" src="image/Profile.png">
+                <%} else if(img!=null){ %>
+                <img id="Profile-img" src="<%= request.getContextPath()%>\UploadFile\<%=img%>">
+                <%} %>
+                <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
+
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
                         <span class="info_Span">아이디 : </span>
-                        <span class="info_Span">userezenkb77</span>
+                        <span class="info_Span"><%=id %></span>
                     </div>
                     <div class="info_Div">
                         <span class="info_Span">닉네임 : </span>
-                        <input type="text" id="nickname" name="Nickname" value="기범짜응">
+                        <input type="text" id="nickname" name="Nickname" value=<%=nick %>>
                     </div>
                 </div>
             </div>
             <div id="inputPhone_Div">
                 <span class="info_Span">휴대폰번호 : </span>
-                <input type="text" id="phone_input" name="phone" placeholder="휴대폰번호">
+                <input type="text" id="phone_input" name="phone" placeholder="휴대폰번호" value=<%=phone %>>
                 <button id="Certification_Btns">인증</button>
             </div>
             <div>
                 <span class="info_Span">이메일 : </span>
-                <input type="email" name="email" id="input_email" placeholder="이메일">
+                <input type="email" name="emails" id="input_email" placeholder="이메일" value=<%=email %>>
             </div>
+
             <div id="Address_Div">
                 <div class="address">
                     <span class="info_Span">주소 : </span>
                     <input type="text" name="ZipCode" id="input_ZipCode" placeholder="우편번호">
-                    <button id="Search_Zipcode_Btn" onclick="goPopup()">우편번호 검색</button>
+                    <button type="button" id="Search_Zipcode_Btn" onclick="goPopup()">우편번호 검색</button>
                 </div>
                 <div class="address">
-                   <input type="text" name="Address1" id="Address1" placeholder="주소">
+                   <input type="text" name="Address1" id="Address1" placeholder="주소" value=<%=addr %>>
                  </div>
                  <div class="address">
                     <input type="text" name="Address2" id="Address2" placeholder="상세주소1">
                     <input type="text" name="Address3" id="Address3" placeholder="상세주소">
                  </div>
             </div>
+
             <div id="Update_Btns_Div">
-                <button id="Update_Btns" onclick="send()">수정</button>
+                <input type="submit">
             </div>
         </form>
+        <%
+        	}
+    }catch(Exception e){
+    	e.printStackTrace();
+    }
+        %>
     </main>
     <script>
-    	function send(){
-    		submit();
-    	}
+	
     </script>
   
 </body>

@@ -6,11 +6,11 @@ body{
     overflow: hidden;
 }
 main{
-    margin:0;
-    height:0;
+  margin-left:20%;
+  height-left:20%;
 }
 #Side_Menu_Div{
-    width:15%;
+    width:10%;
     height: 100%;
     float:left;
     border-right:1px solid black;
@@ -32,7 +32,7 @@ main{
 }
 
 iframe{
-    width:1625px;
+    width:1000px;
     height:1080px;
     border:0;
 }
