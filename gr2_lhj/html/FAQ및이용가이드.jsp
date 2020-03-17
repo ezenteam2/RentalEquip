@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="java.util.ArrayList,my.List,java.sql.*"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,42 @@
     <link rel="stylesheet" href="../css/FAQ및이용가이드.css">
 </head>
 <body>
-
+<%
+	Connection con=null;
+	Statement stmt=null;
+	ArrayList<List> list = new ArrayList<List>();
+	
+	try{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@192.168.4.90:1521:xe",
+				"scott", "tiger");
+		if(con==null){
+			throw new Exception("데이터베이스 연결 실패");
+		}
+		stmt=con.createStatement();
+		
+		ResultSet rs =stmt.
+				executeQuery("select * from p4faq");
+		if(!rs.next()){
+			out.println("해당하는 정보가 없습니다.");
+		} else {
+			//rs.previous();
+		}
+		
+		while(rs.next()){
+			String title=rs.getString("FAQ_TITLE");
+			String content=rs.getString("FAQ_DETAIL");
+			String img=rs.getString("FAQ_IMG");
+			img=img.substring(0,20)+"PNG";
+			String date=rs.getString("FAQ_DATE");
+			date=date.substring(0,10);
+			List temp = new List(title,content, img, date);
+			list.add(temp);
+		}
+	} catch(Exception e){
+		e.printStackTrace();
+	}
+%>
     <div class="guide_area">
         <div class="wrap">
             <nav>
@@ -29,27 +65,16 @@
                 </div>
                 <div class="guide_content">
                     <ul>
+                        <%for(List li:list){%>
                         <li>
-                            <i>거래금지품목</i>
+                            <i style='background: url("<%=li.getImg() %>") no-repeat;
+                            background-size: 92px 87px;'></i>
                             <div>
-                                <h1>거래 금지 품목 거래시 제재 받을 수 있습니다</h1>
-                                <p>전자 통신판매법 등에 의해 저촉되어 인터넷 거래기준에 적용되는 상품으로 1회 적발시 즉시 이용제한이 될 수 있습니다.</p>
+                                <h1><%=li.getTitle() %></h1>
+                                <p><%=li.getContent() %></p>
                             </div>
                         </li>
-                        <li>
-                            <i>랜덤박스</i>
-                            <div>
-                                <h1>랜덤박스(비공개/반공개)는 분쟁의 원인이 되고 있습니다</h1>
-                                <p>랜덤박스는 상품의 상태 및 내용물을 확인할 수 없거나 모호하여 분쟁과 신고 접수의 원인이 되고 있어 운영자에 의해 제재 받을 수 있습니다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i>욕설</i>
-                            <div>
-                                <h1>욕설, 성희롱 등 비매너 행위는 타인을 불쾌하게 합니다</h1>
-                                <p>비매너 행위에 관한 게시물과 댓글은 운영진에 의해 제재 받을 수 있습니다.</p>
-                            </div>
-                        </li>
+                        <%} %>
                     </ul>
                 </div>
                 

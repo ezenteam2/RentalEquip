@@ -145,19 +145,4 @@
   margin: 15px 0 0 0;
   padding: 0;
 }
-
-.guide_area .wrap main .guide_content ul li:nth-child(1) i {
-  background: url("../img/FAQ리스트아이콘_거래금지품목.PNG") no-repeat;
-  background-size: 92px 87px;
-}
-
-.guide_area .wrap main .guide_content ul li:nth-child(2) i {
-  background: url("../img/FAQ리스트아이콘_랜덤박스.PNG") no-repeat;
-  background-size: 92px 87px;
-}
-
-.guide_area .wrap main .guide_content ul li:nth-child(3) i {
-  background: url("../img/FAQ리스트아이콘_욕설.PNG") no-repeat;
-  background-size: 92px 87px;
-}
 /*# sourceMappingURL=FAQ및이용가이드.css.map */
