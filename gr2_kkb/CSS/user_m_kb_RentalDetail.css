@@ -4,8 +4,8 @@ body{
 }
 
 main{
-    margin-left:25%;
-    margin-right:25%;
+    margin-left:10%;
+    margin-right:10%;
 }
 #kb_title{
     width: 100%;
@@ -35,11 +35,11 @@ main{
 #Rental_Picture_Div{
     width:100%;
     display: inline-block;
-    margin-left:4%;
+    margin-left:2%;
 }
 
 .Picture_Div{
-    width:280px;
+    width:260px;
     height:200px;
     float:left;
     border:solid;

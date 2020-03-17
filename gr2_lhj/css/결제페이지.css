@@ -125,6 +125,52 @@
   margin: 0 10px 0 auto;
 }
 
+.wrap main .location .loc {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .loc span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .loc input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
+.wrap main .location .loc_det {
+  background-color: white;
+  border: 1px solid #eee;
+  height: 34px;
+  padding: 1px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .location .loc_det span {
+  color: #808080;
+  font-size: 14px;
+}
+
+.wrap main .location .loc_det input {
+  width: 525px;
+  margin: 0 10px 0 auto;
+}
+
 .wrap main .location .message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,5 +539,31 @@
   width: 100%;
   margin: 0;
   padding: 15px;
+}
+
+.wrap main .submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap main .submit button[type=submit] {
+  border: none;
+  background-color: #fc525c;
+  font-size: 14px;
+  color: white;
+  width: 102px;
+  height: 38px;
+  margin: 20px auto 0 auto;
+  border-radius: 3px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=결제페이지.css.map */
