@@ -36,7 +36,7 @@
 	
 	<%
 	String recommID [] = {"ezenHT", "ezenYS", "ezenSH", "ezenKB"};
-	String recommTitle [] = {"스키복 빌려드림", "아할탛랕할나ㅏ알", "렌탈 전문업체 이이젠", "끝인걸 알지만 지금이대로"};
+	String recommTitle [] = {"스키복 빌려드림", "아할탛랕할나ㅏ알", "렌탈 전문업체 이이젠", "그랬으면 좋겠네"};
 	for (int idx03=0; idx03<4; idx03++){
 	%>
 	
@@ -53,14 +53,18 @@
 	
 	
 	</div>
+
+	<div class="adminSubmit">
+	<input type="submit" value="완료" class="adminDeleteBtn"/>	
+	</div>
+
 	
 	
 	<div class="adminBannerRegi">
 	
-		<div class="adminRegiTitle"></div>
-		<div class="adminRegiImg"></div>
-		<div class="adminRegiLink"></div>
-		<div class="adminRegiBtn"></div>
+		<div class="adminRegiTitle">추천 프로젝트 등록</div>
+		<div class="adminRegiLink"><div class="adminRegiImgTitle">프로젝트 코드 입력</div><div style="display:inline-block;"><input type="text" class="adminRegiLinkInput"/></div></div>
+		<div class="adminRegiBtnContainer"><input type="submit" class="adminRegiBtn" value="등록"/></div>
 
 	</div>
 

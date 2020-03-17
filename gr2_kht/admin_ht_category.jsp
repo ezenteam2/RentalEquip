@@ -51,14 +51,21 @@
 	
 	
 	</div>
+
+
+
+	<div class="adminSubmit">
+	<input type="submit" value="완료" class="adminDeleteBtn"/>	
+	</div>	
+	
 	
 	
 	<div class="adminBannerRegi">
 	
-		<div class="adminRegiTitle"></div>
-		<div class="adminRegiImg"></div>
-		<div class="adminRegiLink"></div>
-		<div class="adminRegiBtn"></div>
+		<div class="adminRegiTitle">카테고리 등록</div>
+		<div class="adminRegiImg"><div class="adminRegiImgTitle">이미지 등록</div><div style="display:inline-block;"><input type="file" class="adminRegiLinkInput"/></div></div>
+		<div class="adminRegiLink"><div class="adminRegiImgTitle">카테고리 이름</div><div style="display:inline-block;"><input type="text" class="adminRegiLinkInput"/></div></div>
+		<div class="adminRegiBtnContainer"><input type="submit" class="adminRegiBtn" value="등록"/></div>
 
 	</div>
 
