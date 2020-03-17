@@ -15,7 +15,6 @@
 	width:1000px;
 	border-bottom:solid 3px #dcdcdc;
 
-
 	}
 
 .adminTableTH{
@@ -23,8 +22,19 @@
 	padding-top:50px;
 	border-bottom:solid 3px #dcdcdc;
 
-
 	}
+	
+
+.adminSubmit{
+	width:970px;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:30px;
+	text-align:right;
+	border-bottom:solid 3px #dcdcdc;
+
+	}	
+
 
 .adminTableTH1{
 	display:inline-block;
@@ -178,21 +188,60 @@
 	}
 
 .adminBannerRegi{
-
+	margin-top:50px;
+	margin-left:400px;
 	}
 
 .adminRegiTitle{
-
+	width:550px;
+	font-size:20px;
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:10px;
+	padding-left:30px;
+	border-bottom:solid 3px #dcdcdc;
+	
 	}
 
 .adminRegiImg{
+	width:800px;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+	}
+
+.adminRegiImgTitle{
+	 width:150px;
+	 display:inline-block;
+	 font-size:15px;
+
+}
+
+.adminRegiLink{
+	width:800px;
+	font-size:15px;
+	padding-top:10px;
+	padding-bottom:10px;
 
 	}
 
-.adminRegiLink{
+.adminRegiLinkInput{
+	width:350px;
+	height:30px;
+	margin-left:20px;
+	
+	}
+
+.adminRegiBtnContainer{
+	width:580px;
+	text-align:right;
+	padding-top:10px;
+	padding-bottom:10px;
 
 	}
 
 .adminRegiBtn{
-
+	width:50px;
+	height:25px;
+	border:none;
 	}
