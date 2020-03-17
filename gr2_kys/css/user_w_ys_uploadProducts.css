@@ -63,6 +63,11 @@ label{
         margin-top: 15px;
     }
 
+    .pPrice{
+        width:40%;
+        height:30px;
+        margin-top: 15px;
+    }
     .limitText{
         width:65%;
         text-align: right;
@@ -110,6 +115,7 @@ label{
     .ui-datepicker-trigger{  /**데이트피커 이미지크기**/
         width:50px;
         height:50px;
+        
     }
 
     .deliveryOption{
@@ -117,3 +123,25 @@ label{
         font-weight: bold;
     }
 
+    .proDtail{
+        width:65%;
+        height:150px;
+        resize: none;
+    }
+
+    .proHashTag{
+        width:65%;
+        height:50px;
+        resize: none;
+    }
+
+    .subBtn{
+        width:30%;
+        height: 50px;
+        background-color: #5cb85c;
+        cursor: pointer;
+        border: 1px solid #4cae4c;
+        color:white;
+        font-weight: bold;
+        margin-left:20%;
+    }
