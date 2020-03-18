@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>결제페이지</title>
-    <link rel="stylesheet" href="../css/결제페이지.css">
+    <link rel="stylesheet" href="../css/order.css">
     <script language="javascript">
         // opener관련 오류가 발생하는 경우 아래 주석을 해지하고, 사용자의 도메인정보를 입력합니다. ("팝업API 호출 소스"도 동일하게 적용시켜야 합니다.)
         //document.domain = "abc.go.kr";
@@ -157,6 +157,6 @@
         </main>
     </div>
     <i class="close_icon"></i>
-    <script src="../js/결제페이지.js"></script>
+    <script src="../js/payment.js"></script>
 </body>
 </html>
