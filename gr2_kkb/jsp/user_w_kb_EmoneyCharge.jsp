@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +23,7 @@
             var input_Price=  document.querySelector("#Price_Span")
             input_Price.innerHTML=PriceComma;
             $("#Check_Input").prop("checked", false);
+            $("#PriceHidden").val(num);
             console.log(PriceComma);
         }
         function inputPrice(e, obj){
@@ -30,49 +31,69 @@
             $("#Check_Input").prop("checked", true);
 
             if ($(obj).val() == "") {
-                //$("#PAmt").val("0");
+                $("#PriceHidden").val("0");
                 $("#Price_Span").text("0");
             } else {
-                //$("#PAmt").val($(obj).val());
+                $("#PriceHidden").val($(obj).val());
                 $("#Price_Span").text(numberWithCommas($(obj).val()));
             }
+        }
+        
+        function checked(obj){
+        	obj.style.backgroundColor ="#f6f9fc";
         }
     </script>
     <main>
         <div id="kb_title">
-            <h2>E¸Ó´Ï ÃæÀü</h2>
+            <h2>Eë¨¸ë‹ˆ ì¶©ì „</h2>
         </div>
         
-        <h3>°áÁ¦ ¹æ¹ı</h3>
+        <h3>ê²°ì œ ë°©ë²•</h3>
         <div id="Bank_Btns">
-            <div class="bank_menubar"><div class="bank_text">¹®È­»óÇ°±Ç</div></div>
-            <div class="bank_menubar"><div class="bank_text">¸ğ¹ÙÀÏ(ÈŞ´ëÆù)</div></div>
-            <div class="bank_menubar"><div class="bank_text">°èÁÂÀÌÃ¼</div></div>
-            <div class="bank_menubar"><div class="bank_text">½Å¿ëÄ«µå</div></div>
-            <div class="bank_menubar"><div class="bank_text">¹«ÅëÀåÀÔ±İ</div></div>
-            <div class="bank_menubar"><div class="bank_text">ÆíÀÇÁ¡/Æ÷ÀÎÆ®</div></div>
+            <div class="bank_menubar"><div class="bank_text">ë¬¸í™”ìƒí’ˆê¶Œ</div></div>
+            <div class="bank_menubar"><div class="bank_text">ëª¨ë°”ì¼(íœ´ëŒ€í°)</div></div>
+            <div class="bank_menubar"><div class="bank_text">ê³„ì¢Œì´ì²´</div></div>
+            <div class="bank_menubar"><div class="bank_text">ì‹ ìš©ì¹´ë“œ</div></div>
+            <div class="bank_menubar"  onclick="checked(this)"><div class="bank_text">ë¬´í†µì¥ì…ê¸ˆ</div></div>
+            <div class="bank_menubar"><div class="bank_text">í¸ì˜ì /í¬ì¸íŠ¸</div></div>
         </div>
-        <h3>ÃæÀü ±İ¾×</h3>
+        <h3>ì¶©ì „ ê¸ˆì•¡</h3>
         <div id="Price_Btns">
-            <div class="Price_menubar" onclick="clickPrice(10000)"><div class="Price_text">10,000¿ø</div></div>
-            <div class="Price_menubar" onclick="clickPrice(20000)"><div class="Price_text">20,000¿ø</div></div>
-            <div class="Price_menubar" onclick="clickPrice(30000)"><div class="Price_text">30,000¿ø</div></div>
-            <div class="Price_menubar" onclick="clickPrice(50000)"><div class="Price_text">50,000¿ø</div></div>
+            <div class="Price_menubar" onclick="clickPrice(10000)"><div class="Price_text">10,000ì›</div></div>
+            <div class="Price_menubar" onclick="clickPrice(20000)"><div class="Price_text">20,000ì›</div></div>
+            <div class="Price_menubar" onclick="clickPrice(30000)"><div class="Price_text">30,000ì›</div></div>
+            <div class="Price_menubar" onclick="clickPrice(50000)"><div class="Price_text">50,000ì›</div></div>
             <div class="input_Price_Div">
                 <div id="Price_radio_Div">
-                    <input type="radio" value="true" id="Check_Input" name="Check_Input">&nbsp;Á÷Á¢ ÀÔ·Â 
+                    <input type="radio" value="true" id="Check_Input" name="Check_Input">&nbsp;ì§ì ‘ ì…ë ¥ 
                 </div>
                 <div id="input_Price_Div">
-                    <input type="number" name="Price" id="input_price" onkeyup="inputPrice(event, this)" placeholder="ÃæÀü ±İ¾× ÀÔ·Â">
+                    <input type="number" name="Price" id="input_price" onkeyup="inputPrice(event, this)" placeholder="ì¶©ì „ ê¸ˆì•¡ ì…ë ¥">
                 </div>
             </div>
         </div>
+        <form method="post" action="user_w_kb_EmoneyChargeProc.jsp">
         <div id="Charge_Price_Text">
-            <b>ÃæÀü ±İ¾× : </b>&nbsp;<span id="Price_Span">5,000</span>&nbsp;<b>¿ø</b>&nbsp;&nbsp;&nbsp;
+            <b>ì¶©ì „ ê¸ˆì•¡ : </b>&nbsp;<span id="Price_Span">5,000</span>&nbsp;<b>ì›</b>&nbsp;&nbsp;&nbsp;
+            <input type="hidden" id="PriceHidden" name="Prices">
+        </div>
+        <h2>ê²°ì œ í•  ê³„ì¢Œë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”</h2>
+        <div id="Bank_Account_input_Div">
+            <select name="Bank">
+                <option></option>
+                <option>ìš°ë¦¬ì€í–‰</option>
+                <option>ì‹ í•œì€í–‰</option>
+                <option>êµ­ë¯¼ì€í–‰</option>
+                <option>ë†í˜‘</option>
+                <option>í•˜ë‚˜ì€í–‰</option>
+                <option>IBKê¸°ì—…ì€í–‰</option>
+            </select>&nbsp;
+            <input type="text" name="Bank_Account" id="input_Account" placeholder="ê³„ì¢Œë²ˆí˜¸">
         </div>
         <div id="Charge_Btn_Div">
-            <button id="Charge_Btn">ÃæÀüÇÏ±â</button>
+            <button id="Charge_Btn" onclick="submit()">ì¶©ì „í•˜ê¸°</button>
         </div>
+        </form>
     </main>
 </body>
 </html>

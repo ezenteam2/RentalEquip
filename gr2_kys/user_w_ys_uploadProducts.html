@@ -7,11 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
     <title>상품업로드</title>
 </head>
 
 <body>
+    <form>
     <div id="root">
         <div><label style="font-size: x-large;">상품 이미지</label></div>
         <div class="filebox">
@@ -36,11 +38,11 @@
     </div>
         <div>
             <div class="firstCategory">
-                <ul class="fristList" onclick="">
+                <ul class="firstList">
                     <li>패션잡화</li>                 
                     <li>가전</li>
                     <li>도서</li>
-                    <li>IT</li>
+                    <li class="caList">IT</li>
                     <li>스포츠/레져</li>
                     <li>생활</li>
                     <li>문구/완구</li>
@@ -48,10 +50,12 @@
                 </ul>
             </div>
             <div class="proDate">
-                시작날짜 :<input type="text" class="testDatepicker"
-                    style="margin-top: 20%;"> <br>
-                종료날짜 :<input type="text" class="testDatepicker"><br><br>
-                <b>최소대여기간 7일이상</b>
+                <h2 style="text-align: center;">대여기간</h2>
+                시작날짜 : <input type="text" class="testDatepicker"
+                    style="margin-top: 10%;"> <br>
+                종료날짜 : <input type="text" class="testDatepicker"><br>
+                최소대여기간 : <input type="text" class="rentalDate"
+                                size="14">
             </div>
             
         </div>
@@ -68,13 +72,28 @@
             
             
             <div>
-                <labe style="font-size: x-large;">금액</label>
+                <label style="font-size: x-large;">금액</label>
             </div>
             <div>
-                <p id="pPrice"></p>
-                
+                <input type="text" class="pPrice" placeholder="금액입력">
+            </div>
+            <div>
+                <label style="font-size: x-large;">상품설명</label>
+            </div>
+            <div>
+                <textarea class="proDtail"></textarea>
+            </div>
+            <div>
+                <label style="font-size: x-large;">해시태그</label>
+            </div>
+            <div>
+                <textarea class="proHashTag"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="상품등록" class="subBtn">
             </div>
     </div>
+</form>
     <script>
 
         $(function() {
@@ -107,11 +126,11 @@
     }
     title.addEventListener('keyup', titleKey);
 
-    var productPrice = document.querySelector('#pPrice');
-    function inputPrice(event){
-        
-    }
-    productPrice.addEventListener('keyup',inputPrice)
+    $('.caList').click(function(){
+        $('.caList').css('color','red',)
+        .css('font-weight','bold')
+        .css('font-size','x-large')
+        });
     </script>
 </body>
 

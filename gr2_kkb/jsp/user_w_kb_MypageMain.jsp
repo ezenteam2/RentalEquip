@@ -11,6 +11,8 @@
 </head>
 <body>
 <%
+
+
 Connection conn=null;
 String driver = "oracle.jdbc.driver.OracleDriver";
 String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
@@ -22,7 +24,7 @@ try{
     Class.forName(driver);
     conn=DriverManager.getConnection(url,"scott","tiger"); //자신의 아이디와 비밀번호
 	String Query = "select a.mem_id, a.mem_nick, a.mem_point, a.mem_grade, b.grade_img from p4member a, p4grade b where a.mem_id='userezenkb77' and a.mem_grade = b.grade_title";
-	String ids = "userezenkb77";
+
 	pstmt = conn.createStatement();
 
 	
