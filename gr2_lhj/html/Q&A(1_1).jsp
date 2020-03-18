@@ -49,8 +49,8 @@
         <div class="wrap">
             <nav>
                 <ul>
-                    <li><a href="공지사항.jsp">공지사항</a></li>
-                    <li><a href="FAQ및이용가이드.jsp">FAQ및이용가이드</a></li>
+                    <li><a href="notice.jsp">공지사항</a></li>
+                    <li><a href="FAQ.jsp">FAQ및이용가이드</a></li>
                     <li><a href="#">Q&A(1:1문의)</a></li>
                 </ul>
             </nav>
