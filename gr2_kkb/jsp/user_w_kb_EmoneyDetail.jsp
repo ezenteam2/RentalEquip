@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*, java.text.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/user_w_kb_EmoneyDetail.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
 </head>
 <body>
 	<%
+	DecimalFormat df = new DecimalFormat("###,###");
 	Connection conn=null;
   	String driver = "oracle.jdbc.driver.OracleDriver";
   	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
@@ -57,9 +64,11 @@
                 		if(rs.next()){
                 			int ChargePrice = rs.getInt(2);
                 			System.out.println(ChargePrice);
+                			String ChargePriceStr = df.format(ChargePrice);
                 		
                 	%>
-                		<td><%=ChargePrice %>원</td>
+                		
+                		<td id="ChargePrice_Td"><%=ChargePriceStr %>원</td>
                 	<%
                 		}rs.close();
                 	%>
@@ -69,9 +78,10 @@
                	 	
                	 	if(rs.next()){
                	 		int WithrawPrice = rs.getInt(2);
-               	 		System.out.println(WithrawPrice);%>
+               	 		System.out.println(WithrawPrice);
+               	 		String WithrawPriceStr = df.format(WithrawPrice);%>
                	 		
-               	 		<td><%=WithrawPrice %>
+               	 		<td><%=WithrawPriceStr %>원</td>
                	 		<%
                	 			}rs.close(); 
                	 		%>
@@ -81,8 +91,9 @@
                    	 	rs = pstmt.executeQuery();
                    	 if(rs.next()){
                 	 		int Price = rs.getInt(1);
-                	 		System.out.println(Price);%>
-                			<td><%=Price %></td>
+                	 		System.out.println(Price);
+                	 		String PriceStr = df.format(Price);%>
+                			<td><%=PriceStr %>원</td>
                 	<% } rs.close();	%>
                 	
                 </tr>
@@ -99,41 +110,48 @@
       		e.printStackTrace();
       	}
     	%>
-		
+    	<script>
+    		function clickDivide(str){
+    			$("#Divide").val(str);
+    		}
+    		
+    		function checkTheDay(){
+    			$("#TheDay").val("true");
+    			submit();
+    		}
+    		
+    		function SearchDate(){
+    			$("#TheDay").val("false");
+    			submit();
+    		}
+    	</script>
+		<form>
         <div id="Search_Basic_Btns_Div">
-            <div class="Basic_menubar"><div class="Basic_menubar_text">전체내역조회</div></div>
-            <div class="Basic_menubar"><div class="Basic_menubar_text">충전내역조회</div></div>
-            <div class="Basic_menubar"><div class="Basic_menubar_text">출금내역조회</div></div>
+            <div class="Basic_menubar" onclick=""><div class="Basic_menubar_text">전체내역조회</div></div>
+            <div class="Basic_menubar" onclick="clickDivide('Charge')"><div class="Basic_menubar_text">충전내역조회</div></div>
+            <div class="Basic_menubar" onclick="clickDivide('Withraw')"><div class="Basic_menubar_text">출금내역조회</div></div>
+            <input type="hidden" id="Divide" name="Divide" value="all">
         </div>
         <div id="Search_Date_Div">
-            <button id="Today_Btns">당일 조회</button>&nbsp;
-            <input type="date" id="Start_Date_Input">&nbsp;~&nbsp;
-            <input type="date" id="End_Date_Input">
-            <button id="Search_Btn">조회하기</button>
+            <button id="Today_Btns" onclick="checkTheDay()">당일 조회</button>&nbsp;
+            <input type="hidden" id="TheDay" name="TheDay" value="false">
+            <input type="date" name="StartDay" id="Start_Date_Input">&nbsp;~&nbsp;
+            <input type="date" name="EndDay" id="End_Date_Input">
+            <button id="Search_Btn" onclick="SearchDate()">조회하기</button>
         </div>
-
-        <table border style="border-collapse: collapse;">
-            <thead>
-                <tr>
-                    <th>일시</th>
-                    <th>구분</th>
-                    <th>거래금액</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2020.03.05</td>
-                    <td>충전</td>
-                    <td>100,000</td>
-                </tr>
-                <tr>
-                    <td>2020.03.09</td>
-                    <td>출금</td>
-                    <td>10,000</td>
-                </tr>
-                
-            </tbody>
-        </table>
+		</form>
+		<%
+			String Divide = request.getParameter("Divide");
+			String TheDay = request.getParameter("TheDay");
+			String StartDay = request.getParameter("StartDay");
+			String EndDay = request.getParameter("EndDay");
+		%>
+        <jsp:include page="EmoneyDetail_Include.jsp">
+        	<jsp:param name="Divide" value="<%=Divide %>"></jsp:param>
+        	<jsp:param name="TheDay" value="<%=TheDay %>"></jsp:param>
+        	<jsp:param name="StartDay" value="<%=StartDay %>"></jsp:param>
+        	<jsp:param name="EndDay" value="<%=EndDay %>"></jsp:param>
+        </jsp:include>
     </main>
 </body>
 </html> 

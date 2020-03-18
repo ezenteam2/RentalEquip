@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	height:0;
+	
+}
+
+table{
+    width:100%;
+}
+
+th{
+    height:40px;
+    color:white;
+    border-right: 0.5px dotted black;
+}
+tbody{
+    border-bottom: 1px solid black;
+}
+thead{
+    background-color: gray;
+}
+
+td{
+    height:50px;
+    text-align:center;
+    border:0;
+}
