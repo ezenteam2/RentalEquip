@@ -87,7 +87,7 @@
             	<% if(img == null){ %>
                 <img id="Profile-img" src="image/Profile.png">
                 <%} else if(img!=null){ %>
-                <img id="Profile-img" src="<%= request.getContextPath()%>\UploadFile\<%=img%>">
+                <img id="Profile-img" src="UploadFile\<%=img%>">
                 <%} %>
                 <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
 
