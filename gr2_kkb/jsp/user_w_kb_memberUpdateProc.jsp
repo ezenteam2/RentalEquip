@@ -11,6 +11,7 @@
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	
+	
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
 	String nick;
@@ -20,7 +21,8 @@
 	String Addr2;
 	String Addr3;
 	String email;
-	String saveFolder = "C:/a01_javaexp/workspace_jsp/ZENTAL/WebContent/UploadFile";
+	String saveFolder = pageContext.getServletContext().getRealPath("/UploadFile");
+	System.out.println(saveFolder);
 	File isDir = new File(saveFolder);
 	
 	if(!isDir.isDirectory()){
