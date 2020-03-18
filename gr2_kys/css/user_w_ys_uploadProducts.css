@@ -1,3 +1,5 @@
+
+
 #root{
     margin-left: 20%;
     margin-right: 20%;
@@ -64,9 +66,8 @@ label{
     }
 
     .pPrice{
-        width:40%;
+        width:65%;
         height:30px;
-        margin-top: 15px;
     }
     .limitText{
         width:65%;
@@ -83,7 +84,10 @@ label{
         margin-top: 10px;
         padding:2px;
     }
+    .firstList{
+        margin-top:20%;
 
+    }
     .proDate{
         border:1px solid black;
         width:35%;
@@ -97,9 +101,9 @@ label{
     li{
         cursor: pointer;
         list-style-type: none;
-        
         margin-top: 5px;
-        
+        font-family: '돋움';
+        font-size: large;
     }
 
     .deliveryOption{
@@ -144,4 +148,8 @@ label{
         color:white;
         font-weight: bold;
         margin-left:20%;
+    }
+
+    .rentalDate{
+        margin-top:10%;
     }
