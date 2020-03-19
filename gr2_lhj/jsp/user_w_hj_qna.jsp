@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.*,my.QnAList,java.sql.*"%>
+    import="java.util.ArrayList, zental.gr2_lhj.*"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,41 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A(1:1문의)</title>
-    <link rel="stylesheet" href="../css/qna.css.css">
+    <link rel="stylesheet" href="../css/qna.css">
 </head>
 <%
-	
+	QnaLoader loader = new QnaLoader();
+	ArrayList<Qna> list = loader.getQna();
 %>
-<%
-	Connection con=null;
-	Statement stmt=null;
-	ArrayList<QnAList> list = new ArrayList<QnAList>();
-	
-	try{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con=DriverManager.getConnection("jdbc:oracle:thin:@192.168.4.90:1521:xe",
-				"scott", "tiger");
-		if(con==null){
-			throw new Exception("데이터베이스 연결 실패");
-		}
-		stmt=con.createStatement();
-		
-		ResultSet rs =stmt.
-				executeQuery("SELECT QNA_CATE, QNA_TITLE, QNA_CONTENT, QNA_ANSWER FROM p4qna");
-		
-		while(rs.next()){
-			String category=rs.getString("QNA_CATE");
-			String title=rs.getString("QNA_TITLE");
-			String content=rs.getString("QNA_CONTENT");
-			String answer=rs.getString("QNA_ANSWER");
-	
-			QnAList temp = new QnAList(title,category, content, answer);
-			list.add(temp);
-		}
-	} catch(Exception e){
-		e.getMessage();
-	}
-%>
+
 <body>
 
     <div class="qna_area">
@@ -78,7 +50,7 @@
                 <h1>등록된 질문들</h1>
                 <section class="qna_li">
                     <ul>
-                    	<%for (QnAList li:list){ %>
+                    	<%for (Qna li:list){ %>
                         <li>
                             <input type="checkbox">
                             <div class="title">

@@ -1,205 +1,124 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-
-
 $backgroundColor:#fafafa;
 *{
     font-family:'Noto Sans KR', sans-serif;
 }
-main{
+
+.wrap{
     position: absolute;
     top:0;
     left:0;
     width:100%;
+    min-width:1236px;
+    background-color: $backgroundColor;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .post_area{
-        margin-top: 50px;
-        width:1024px;
-        height:444px;
-        display: flex;
-        .post_left{
-            padding:20px 0 0 0;
-            img{
-                width:420px;
-                height:420px;
-                border:solid 1px #eee;
-            }
-        }
-        .post_right{
-            margin-left: auto;
+    header{
+        .cate_li{
+            background-color: white;
             display: flex;
-            flex-direction: column;
-            width:554px;
-            h1{
-                font-size: 24px;
-                width:554px;
-                margin:20px 0 0 0;
-            }
-            h2{
-                margin:25px 0 auto 0;
-                width:554px;
-                font-size:40px;
-                font-weight: 550;
-                span{
-                    margin:0 0 0 4px;
-                    font-size:28px;
-                    line-height: 40px;
-                    font-weight: 400;
-                }
-            }
-            .post_info{
-                border-top: 1px solid #eee;
-                box-sizing: content-box;
+            flex-wrap: wrap;
+            width:1024px;
+            overflow: hidden;
+            margin:20px 0 0 0;
+            padding: 0;
+            list-style: none;
+            justify-content: left;
+            .cate_el{
+                margin:-1px 0 0 -1px;
+                box-sizing: border-box;
+                width:205.8px;
+                height: 48px;
+                padding:0 20px 0 20px;
                 display: flex;
                 align-items: center;
-                height:30px;
-                .like{
-                    height:30px;
-                    display: flex;
-                    align-items: center;
-                    i{
-                        background: url('../img/좋아요.PNG') no-repeat;
-                        background-size: 30px 30px;
-                        width:30px;
-                        height:30px;
-                        overflow: hidden;
-                        color: transparent;
-                    }
-                    span{
-                        color:#ccc;
-                        font-size: 16px;
-                    }
+                border:solid 1px #eee;
+                a{
+                    font-size: 12px;
+                    text-decoration: none;
+                    color:black;
+                    font-weight: 500;
                 }
-                .views{
-                    margin-left: 15px;
-                    height:30px;
-                    display: flex;
-                    align-items: center;
-                    i{
-                        background: url('../img/조회수.PNG') no-repeat;
-                        background-size: 30px 30px;
-                        width:30px;
-                        height:30px;
-                        overflow: hidden;
-                        color:transparent;
-                    }
-                    span{
-                        color: #ccc;
-                        font-size: 16px;
-                    }
-                }
-                button{
-                    margin: 0 10px 0 auto;
-                    height: 30px;
-                    cursor: pointer;
-                    i{
-                        display: inline-block;
-                        background: url('../img/신고하기.PNG') no-repeat;
-                        background-size: 30px 30px;
-                        width:30px;
-                        height: 30px;
-                        vertical-align: top;
-                    }
-                    span{
-                        color: #ccc;
-                        line-height: 30px;
-                        vertical-align: top;
-                    }
-                    border:none;
-                    background-color: transparent;
-                    outline:none;
+                i{
+                    font-size: 12px;
+                    color:#cccccc;
+                    margin:0 0 0 5px;
+                    font-style: normal;
                 }
             }
-            .item_info{
-                ul{
-                    padding:0 0 0 30px;
-                    li{
-                        font-size:14px;
-                        color:#999;
-                        margin:0 0 15px 0;
-                        span{
+        }
+    }
+    main{
+        width:1024px;
+        h1{
+            display: block;
+            width:100%;
+            font-size: 16px;
+            margin:50px 0 30px 0;
+            padding:0;
+            text-align: left;
+            span{
+                color:red;
+            }
+        }
+
+        section{
+            .item_li{
+                display:flex;
+                flex-wrap: wrap;
+                list-style: none;
+                padding:0;
+                margin:0;
+                justify-content: space-between;
+                .item_el{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width:196px;
+                    height:290px;
+                    background-color: white;
+                    margin:0 0 20px 0;
+                    border:1px solid #eeeeee;
+                    box-sizing: border-box;
+                    img{
+                        width:196px;
+                        height:196px;
+                    }
+                    a{
+                        font-size: 14px;
+                        color:black;
+                        text-decoration: none;
+                        margin:10px 0 20px 0;
+                        padding:0 15px 0 15px;
+                        width:176px;
+                        display: inline-block;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: left;
+                    }
+                    .price_area{
+                        display: flex;
+                        align-items: center;
+                        width:100%;
+                        margin:0 0 10px 0;
+                        .price{
+                            font-size:16px;
+                            font-weight: bold;
                             margin-left: 10px;
-                            color:black;
+                        }
+                        .unit{
+                            font-size: 12px;
+                            color:#888888;
+                            margin:0 10px 0 auto;
+                            
                         }
                     }
                 }
             }
-            .button_area{
-                margin:auto 0 0 0;
-                height:56px;
-                width:554px;
-                display: flex;
-
-                button{
-                    cursor: pointer;
-                    margin:0;
-                    width:178.56px;
-                    height:56px;
-                    border:none;
-                    outline: none;
-                    font-size: 16px;
-                    font-weight: 500;
-                    color:white;
-                    text-align: center;
-                    &:first-child{
-                        margin: 0 10px 0 auto;
-                        background-color: #ffa425;
-                    }
-                    &:last-child{
-                        background-color: #f70000;
-                    }
-                }
-            }
         }
-    }
-
-    h1{
-        width:1024px;
-        font-size: 18px;
-        margin:20px 0 20px 0;
-        font-weight: 500;
-    }
-    .link_area{
-        width:1024px;
-        ul{
-            width:1024px;
-            display: flex;
-            flex-wrap: wrap;
-            margin:0;
-            padding:0;
-            list-style: none;
-            li{
-                padding:0;
-                width:159px;
-                height:183px;
-                margin:10px 14px 0 0;
-                &:nth-child(6n){
-                    margin:10px 0 0 0;
-                }
-                a{
-                    width:159px;
-                    height:183px;
-                    display: flex;
-                    flex-direction: column;
-                    text-decoration: none;
-                    img{
-                        width:159px;
-                        height:155px;
-                    }
-                    span{
-                        margin:10px 0 0 0;
-                        font-size: 13px;
-                        color:black;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
-        
-
     }
 }
