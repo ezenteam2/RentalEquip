@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A(1:1문의)</title>
-    <link rel="stylesheet" href="../css/Q&A(1_1문의).css">
+    <link rel="stylesheet" href="../css/qna.css.css">
 </head>
 <%
 	
@@ -49,8 +49,8 @@
         <div class="wrap">
             <nav>
                 <ul>
-                    <li><a href="공지사항.jsp">공지사항</a></li>
-                    <li><a href="FAQ및이용가이드.jsp">FAQ및이용가이드</a></li>
+                    <li><a href="user_w_hj_notice.jsp">공지사항</a></li>
+                    <li><a href="user_w_hj_faq.jsp">FAQ및이용가이드</a></li>
                     <li><a href="#">Q&A(1:1문의)</a></li>
                 </ul>
             </nav>
@@ -94,6 +94,6 @@
             </main>
         </div>
     </div>
-    <script src="../js/Q&A(1_1문의).js"></script>
+    <script src="../js/qna.js"></script>
 </body>
 </html>

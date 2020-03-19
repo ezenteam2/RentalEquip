@@ -71,6 +71,9 @@
 	        
 	        pstmt.executeUpdate();
 	        
+	      	out.println("<script>");
+	      	out.println("alert('헬로우');");
+	      	out.println("</script>");
 	        pstmt.close();
 	        conn.close();
 	        

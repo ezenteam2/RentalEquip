@@ -135,4 +135,32 @@
 .notice_area .wrap main .notice_contents li button:focus {
   outline: none;
 }
-/*# sourceMappingURL=공지사항.css.map */
+
+ul.page_nation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ul.page_nation li {
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: solid 1px #ddd;
+  text-align: center;
+  margin-left: -1px;
+}
+
+ul.page_nation li a {
+  text-decoration: none;
+  color: #888;
+  line-height: 30px;
+}

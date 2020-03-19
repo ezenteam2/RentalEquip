@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ및이용가이드</title>
-    <link rel="stylesheet" href="../css/FAQ및이용가이드.css">
+    <link rel="stylesheet" href="../css/faq.css">
 </head>
 <body>
 <%
 	Connection con=null;
 	Statement stmt=null;
 	ArrayList<List> list = new ArrayList<List>();
+	System.out.println(request.getContextPath()+"/my/ZENTAL/gr2_lhj/css/FAQ및이용가이드.css");
 	
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -37,7 +38,8 @@
 			String title=rs.getString("FAQ_TITLE");
 			String content=rs.getString("FAQ_DETAIL");
 			String img=rs.getString("FAQ_IMG");
-			img=img.substring(0,20)+"PNG";
+			img=img.substring(0,20)+"jpg";
+			System.out.println(img);
 			String date=rs.getString("FAQ_DATE");
 			date=date.substring(0,10);
 			List temp = new List(title,content, img, date);
@@ -51,9 +53,9 @@
         <div class="wrap">
             <nav>
                 <ul>
-                    <li><a href="공지사항.jsp">공지사항</a></li>
+                    <li><a href="notice.jsp">공지사항</a></li>
                     <li><a href="#">FAQ및이용가이드</a></li>
-                    <li><a href="Q&A(1_1문의).jsp">Q&A(1:1문의)</a></li>
+                    <li><a href="Q&A(1_1).jsp">Q&A(1:1문의)</a></li>
                 </ul>
             </nav>
             <main>
@@ -67,6 +69,7 @@
                     <ul>
                         <%for(List li:list){%>
                         <li>
+                    
                             <i style='background: url("<%=li.getImg() %>") no-repeat;
                             background-size: 92px 87px;'></i>
                             <div>

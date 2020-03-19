@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>빌리고싶은상품페이지</title>
-    <link rel="stylesheet" href="../css/빌리고싶은상품페이지.css">
+    <link rel="stylesheet" href="../css/want_rental.css">
 </head>
 <body>
     <div class="wrap">
