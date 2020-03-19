@@ -127,7 +127,7 @@ body{
 				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;padding-left:20px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
 				<div class="mainIndexMiddleContent1_ht" onclick = "changeIframeUrl('../gr2_kys/user_w_ys_uploadProducts.html')"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
 				<div class="mainIndexMiddleContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
-				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht" onclick = "changeIframeUrl('')">젠탈톡</div>
+				<div onclick = "changeIframeUrl('../gr2_lhj/jsp/user_w_hj_board_want.jsp')" class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht" >빌려요</div>
 			<br>
 			</div>
 			<div style="padding-left:20px;">
@@ -153,7 +153,7 @@ body{
 			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/jsp/user_w_hj_qna.jsp')">QnA</span>			
 		</div>
 		
-		<img src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
+		<img onclick = "location.href='../gr2_ysh/jsp/userinfo.jsp'" src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
 		EZEN에서 만나는 새로운 서비스! 사지말고 빌리세요 ZENTAL! 누구나, 무엇이든 쉽고 편하고 안전하게 렌탈하는 세상을 꿈꾸고 있습니다.</span>
 		<img src="image/mainIndexFooterFacebookIcon.png" width="25px;">
 		<img src="image/mainIndexFooterInstagramIcon.png" width="25px;">
@@ -173,11 +173,13 @@ body{
 function changeIframeUrl(url){
 	  document.getElementById("main_frame").src = url;
 	  document.getElementById("main_frame").style.height="1500px";
+	  window.scrollTo(0, 0);
 	}
 	
 function changeIframeUrl2(url){
 	document.getElementById("main_frame").src = url;
 	document.getElementById("main_frame").style.height="1500px";
+	window.scrollTo(0, 0);
 }
 
 function setIFrameHeight(obj){
