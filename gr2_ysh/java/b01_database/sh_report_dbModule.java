@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import ZENTAL.z01_vo.Report;            					
 
 
-public class A01_Database {  									
+public class sh_report_dbModule {  									
 	
 	private Connection con;
 	private Statement stmt;
@@ -63,7 +63,7 @@ public class A01_Database {
 	}
 
 	public static void main(String[] args) {
-		A01_Database db = new A01_Database();
+		sh_report_dbModule db = new sh_report_dbModule();
 	}
 }
 

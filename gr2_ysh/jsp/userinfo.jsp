@@ -7,10 +7,10 @@
 String path = request.getContextPath();%>  
 <!DOCTYPE html>
 <%
-	Userinfo_db db = new Userinfo_db();
+	sh_userinfo_dbModule db = new sh_userinfo_dbModule();
 %>
 <%
-	Userinfo_item db1 = new Userinfo_item();
+
 %>
 <html lang="en">
 <head>
@@ -78,19 +78,6 @@ String path = request.getContextPath();%>
 		<th>상태</th>
 		<th>쿠폰</th>
 		</tr>
-	<%
-	for(Userinfo r:db.getUserinfo()){
-	%>	
-	<tr>
-		<td><input type="checkbox"></td>
-		<td class="table__userid"><%=r.getMem_id() %></td>	
-		<td class="table__username"><%=r.getMem_name() %></td>	
-		<td class="table__itemlist">상품목록</td>	
-		<td class="table__ranking"><%=r.getMem_grade() %></td>	
-		<td class="table__state"><%=r.getMem_curr() %></td>	
-		<td class="table__coupon">쿠폰</td>	
-		</tr>	
-	<%}%>
 
 	</table>
     <div class="paging">

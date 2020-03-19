@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import ZENTAL.z01_vo.Userinfo;
 
-public class Userinfo_db {
+public class sh_userinfo_dbModule {
 	private Connection con;
 	private Statement stmt;
 	private PreparedStatement pstmt;
@@ -60,7 +60,7 @@ public class Userinfo_db {
 	}
 
 	public static void main(String[] args) {
-		Userinfo_db db = new Userinfo_db();
+		sh_userinfo_dbModule db = new sh_userinfo_dbModule();
 	}
 }
 
