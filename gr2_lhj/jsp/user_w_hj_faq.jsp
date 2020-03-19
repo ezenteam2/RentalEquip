@@ -19,9 +19,9 @@
         <div class="wrap">
             <nav>
                 <ul>
-                    <li><a href="notice.jsp">공지사항</a></li>
+                    <li><a href="user_w_hj_notice.jsp">공지사항</a></li>
                     <li><a href="#">FAQ및이용가이드</a></li>
-                    <li><a href="Q&A(1_1).jsp">Q&A(1:1문의)</a></li>
+                    <li><a href="user_w_hj_qna.jsp">Q&A(1:1문의)</a></li>
                 </ul>
             </nav>
             <main>

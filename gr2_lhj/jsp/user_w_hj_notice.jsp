@@ -20,8 +20,8 @@
 	
 	NoticeLoader loader=new NoticeLoader();
 	
-	loader.getConnection(pageNum);
-	ArrayList<Notice> list=loader.getNotice();
+	loader.getConnection();
+	ArrayList<Notice> list=loader.getNotice(pageNum);
 	totalPage=loader.getTotal();
 	
 %>
