@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
-<%@page import="java.sql.*,ZENTAL.*" %>
+    pageEncoding="UTF-8"%>
+<%@page import="java.sql.*,zental.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +14,11 @@
 <body>
     <script language="javascript">
     function goPopup(){
-    	// �ּҰ˻��� ������ �˾� �������� ȣ���մϴ�.
-    	// ȣ��� ������(jusopopup.jsp)���� ���� �ּҰ˻�URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)�� ȣ���ϰ� �˴ϴ�.
+    	// 주소검색을 수행할 팝업 페이지를 호출합니다.
+    	// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
     	var pop = window.open("jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
     	
-    	// ����� ���� ���, ȣ��� ������(jusopopup.jsp)���� ���� �ּҰ˻�URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)�� ȣ���ϰ� �˴ϴ�.
+    	// 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
         //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
     }
     function jusoCallBack(roadFullAddr){
@@ -64,7 +64,7 @@
   	%>
     <main>
         <div id="kb_title">
-            <h2>ȸ������ ����</h2>
+            <h2>회원정보 수정</h2>
         </div>
         <form action="user_w_kb_memberUpdateProc.jsp" method="post"  enctype="multipart/form-data">
             <div id="Member_Basic_Div">   
@@ -80,36 +80,36 @@
 
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
-                        <span class="info_Span">���̵� : </span>
+                        <span class="info_Span">아이디 : </span>
                         <span class="info_Span"><%=id %></span>
                     </div>
                     <div class="info_Div">
-                        <span class="info_Span">�г��� : </span>
+                        <span class="info_Span">닉네임 : </span>
                         <input type="text" id="nickname" name="Nickname" value="<%=nick%>">
                     </div>
                 </div>
             </div>
             <div id="inputPhone_Div">
-                <span class="info_Span">�޴�����ȣ : </span>
-                <input type="text" id="phone_input" name="phone" placeholder="�޴�����ȣ" value="<%=phone%>">
-                <button id="Certification_Btns">����</button>
+                <span class="info_Span">휴대폰번호 : </span>
+                <input type="text" id="phone_input" name="phone" placeholder="휴대폰번호" value="<%=phone%>">
+                <button id="Certification_Btns">인증</button>
             </div>
             <div>
-                <span class="info_Span">�̸��� : </span>
-                <input type="email" name="emails" id="input_email" placeholder="�̸���" value="<%=email%>">
+                <span class="info_Span">이메일 : </span>
+                <input type="email" name="emails" id="input_email" placeholder="이메일" value="<%=email%>">
             </div>
 
             <div id="Address_Div">
                 <div class="address">
-                    <span class="info_Span">�ּ� : </span>
+                    <span class="info_Span">주소 : </span>
                     <input type="text" name="Address" id="input_Address" value="<%=addr %>">
-                    <button type="button" id="Search_Zipcode_Btn" onclick="goPopup()">�ּ�ã��</button>
+                    <button type="button" id="Search_Zipcode_Btn" onclick="goPopup()">주소찾기</button>
                 </div>
                 
             </div>
 
             <div id="Update_Btns_Div">
-                <button id="Update_Btns">����</button>
+                <button id="Update_Btns">수정</button>
             </div>
         </form>
    
