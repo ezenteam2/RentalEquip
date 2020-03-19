@@ -53,12 +53,7 @@
                     
                 </ul>
                 <ul class="page_nation">
-                <%if(totalPage%10==0){
-                	totalPage/=10;
-                	} else {
-                	totalPage=totalPage/10+1;
-                	}
-                	for(int i=0; i<totalPage; i++){%>
+                <%for(int i=0; i<totalPage; i++){%>
                     <li><a href="?page=<%=i+1 %>" ><%=i+1 %></a></li>
                     <%} %>
                 </ul>
