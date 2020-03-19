@@ -1,14 +1,15 @@
-@charset "UTF-8";
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-main {
+.wrap {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 1236px;
+  background-color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,226 +22,85 @@ main {
           align-items: center;
 }
 
-main .post_area {
-  margin-top: 50px;
-  width: 1024px;
-  height: 444px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .post_area .post_left {
-  padding: 20px 0 0 0;
-}
-
-main .post_area .post_left img {
-  width: 420px;
-  height: 420px;
-  border: solid 1px #eee;
-}
-
-main .post_area .post_right {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 554px;
-}
-
-main .post_area .post_right h1 {
-  font-size: 24px;
-  width: 554px;
-  margin: 20px 0 0 0;
-}
-
-main .post_area .post_right h2 {
-  margin: 25px 0 auto 0;
-  width: 554px;
-  font-size: 40px;
-  font-weight: 550;
-}
-
-main .post_area .post_right h2 span {
-  margin: 0 0 0 4px;
-  font-size: 28px;
-  line-height: 40px;
-  font-weight: 400;
-}
-
-main .post_area .post_right .post_info {
-  border-top: 1px solid #eee;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 30px;
-}
-
-main .post_area .post_right .post_info .like {
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .post_area .post_right .post_info .like i {
-  background: url("../img/좋아요.PNG") no-repeat;
-  background-size: 30px 30px;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  color: transparent;
-}
-
-main .post_area .post_right .post_info .like span {
-  color: #ccc;
-  font-size: 16px;
-}
-
-main .post_area .post_right .post_info .views {
-  margin-left: 15px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .post_area .post_right .post_info .views i {
-  background: url("../img/조회수.PNG") no-repeat;
-  background-size: 30px 30px;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  color: transparent;
-}
-
-main .post_area .post_right .post_info .views span {
-  color: #ccc;
-  font-size: 16px;
-}
-
-main .post_area .post_right .post_info button {
-  margin: 0 10px 0 auto;
-  height: 30px;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  outline: none;
-}
-
-main .post_area .post_right .post_info button i {
-  display: inline-block;
-  background: url("../img/신고하기.PNG") no-repeat;
-  background-size: 30px 30px;
-  width: 30px;
-  height: 30px;
-  vertical-align: top;
-}
-
-main .post_area .post_right .post_info button span {
-  color: #ccc;
-  line-height: 30px;
-  vertical-align: top;
-}
-
-main .post_area .post_right .item_info ul {
-  padding: 0 0 0 30px;
-}
-
-main .post_area .post_right .item_info ul li {
-  font-size: 14px;
-  color: #999;
-  margin: 0 0 15px 0;
-}
-
-main .post_area .post_right .item_info ul li span {
-  margin-left: 10px;
-  color: black;
-}
-
-main .post_area .post_right .button_area {
-  margin: auto 0 0 0;
-  height: 56px;
-  width: 554px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .post_area .post_right .button_area button {
-  cursor: pointer;
-  margin: 0;
-  width: 178.56px;
-  height: 56px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-}
-
-main .post_area .post_right .button_area button:first-child {
-  margin: 0 10px 0 auto;
-  background-color: #ffa425;
-}
-
-main .post_area .post_right .button_area button:last-child {
-  background-color: #f70000;
-}
-
-main h1 {
-  width: 1024px;
-  font-size: 18px;
-  margin: 20px 0 20px 0;
-  font-weight: 500;
-}
-
-main .link_area {
-  width: 1024px;
-}
-
-main .link_area ul {
-  width: 1024px;
+.wrap header .cate_li {
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0;
+  width: 1024px;
+  overflow: hidden;
+  margin: 20px 0 0 0;
   padding: 0;
   list-style: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
-main .link_area ul li {
+.wrap header .cate_li .cate_el {
+  margin: -1px 0 0 -1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 205.8px;
+  height: 48px;
+  padding: 0 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 1px #eee;
+}
+
+.wrap header .cate_li .cate_el a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.wrap header .cate_li .cate_el i {
+  font-size: 12px;
+  color: #cccccc;
+  margin: 0 0 0 5px;
+  font-style: normal;
+}
+
+.wrap main {
+  width: 1024px;
+}
+
+.wrap main h1 {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin: 50px 0 30px 0;
   padding: 0;
-  width: 159px;
-  height: 183px;
-  margin: 10px 14px 0 0;
+  text-align: left;
 }
 
-main .link_area ul li:nth-child(6n) {
-  margin: 10px 0 0 0;
+.wrap main h1 span {
+  color: red;
 }
 
-main .link_area ul li a {
-  width: 159px;
-  height: 183px;
+.wrap main section .item_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrap main section .item_li .item_el {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,19 +108,57 @@ main .link_area ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 196px;
+  height: 290px;
+  background-color: white;
+  margin: 0 0 20px 0;
+  border: 1px solid #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-main .link_area ul li a img {
-  width: 159px;
-  height: 155px;
+.wrap main section .item_li .item_el img {
+  width: 196px;
+  height: 196px;
 }
 
-main .link_area ul li a span {
-  margin: 10px 0 0 0;
-  font-size: 13px;
+.wrap main section .item_li .item_el a {
+  font-size: 14px;
   color: black;
+  text-decoration: none;
+  margin: 10px 0 20px 0;
+  padding: 0 15px 0 15px;
+  width: 176px;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  text-align: left;
+}
+
+.wrap main section .item_li .item_el .price_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.wrap main section .item_li .item_el .price_area .price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.wrap main section .item_li .item_el .price_area .unit {
+  font-size: 12px;
+  color: #888888;
+  margin: 0 10px 0 auto;
 }
