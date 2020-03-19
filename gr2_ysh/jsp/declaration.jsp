@@ -7,7 +7,7 @@
 String path = request.getContextPath();%> 
 
 <%
-	A01_Database db = new A01_Database();
+	sh_report_dbModule db = new sh_report_dbModule();
 %>
 
 <!DOCTYPE html>
