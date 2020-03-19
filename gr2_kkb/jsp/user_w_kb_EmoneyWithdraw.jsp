@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.sql.*, java.text.*,ZENTAL.*" %>
+<%@page import="java.sql.*, java.text.*,zental.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
