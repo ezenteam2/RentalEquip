@@ -1,8 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<% 
-request.setCharacterEncoding("utf-8");
-String path = request.getContextPath(); %>  
+    pageEncoding="UTF-8"
+    import="java.util.ArrayList,ZENTAL.z01_vo.*"
+    import="ZENTAL.b01_database.*"
+    %>
+<%request.setCharacterEncoding("utf-8");
+String path = request.getContextPath();%> 
+
+<%
+	A01_Database db = new A01_Database();
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +21,7 @@ String path = request.getContextPath(); %>
 </head>
 <body>
     <!DOCTYPE html>
+    
 <html lang="en">
 <head>
     <!-- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -->
@@ -61,15 +69,28 @@ String path = request.getContextPath(); %>
     <div class="article">
     <p class="title">신고 관리</p>
     <table>
-        <tr><td><input type="checkbox"></td><td>신고분류</td><td>신고자 ID</td><td>내용보기</td><td>처리상태</td><td>신고일시</td></tr>
-        <tr><td><input type="checkbox"></td><td>허위 상품</td><td>wnsqja6545</td><td>허위 상품 신고 합니다</td><td class="table__state table--deco">처리완료</td><td>2020-02-12</td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr>
+		<th><input type="checkbox"></th>
+		<th>신고자 ID</th>
+		<th>아이템코드</th>
+		<th>신고일시</th>
+		<th>신고분류</th>
+		<th>내용보기</th>
+		<th>처리상태</th>
+		</tr>
+	<%
+	for(Report r:db.getReport()){
+	%>	
+	<tr>
+		<td><input type="checkbox"></td>
+		<td><%=r.getMem_id() %></td>	
+		<td><%=r.getRent_item_code() %></td>	
+		<td><%=r.getReport_date() %></td>	
+		<td><%=r.getReport_cate() %></td>	
+		<td><%=r.getReport_reason() %></td>	
+		<td class="table__state table--deco"><%=r.getReport_curr() %></td>	
+		</tr>	
+	<%}%>
     </table>
     <div class="paging">
         <div class="paging__prev paging--btn">&lt;</div><div class="paging__1 paging--btn">1</div><div class="paging__2 paging--btn">2</div><div class="paging__3 paging--btn">3</div><div class="paging__4 paging--btn">4</div><div class="paging__5 paging--btn">5</div><div class="paging__next paging--btn">&gt;</div>
