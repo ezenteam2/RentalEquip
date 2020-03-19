@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.sql.*" %>
+<%@page import="java.sql.*, java.text.*,ZENTAL.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,28 +44,15 @@
 
   </script>
   	<%
-  	Connection conn=null;
-  	String driver = "oracle.jdbc.driver.OracleDriver";
-  	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
-  		
-
-  	Statement pstmt = null;
-  	ResultSet rs = null;
-  	int Emoney;
-
-  	try{
-  	    Class.forName(driver);
-  	    conn=DriverManager.getConnection(url,"scott","tiger");
-  	    
-  	    String Query = "select mem_emoney from p4member where mem_id='userezenkb77'";
-  	    pstmt = conn.createStatement();
-  	    
-  	    rs = pstmt.executeQuery(Query);
-  	    
-  	    if(rs.next()){
-  	    	Emoney = rs.getInt(1);
-
-  	    
+  		DecimalFormat df = new DecimalFormat("###,###");
+  	  	  	kb_Database db = new kb_Database();
+  	  	  	int Emoney;
+  	  	  	String Price = null;
+  	  	  	String Query = "select mem_emoney from p4member where mem_id='userezenkb77'";
+  	  	  	for(kb_EmoneyPrice emo : db.EmoneyNow(Query)){
+  	  	  		Emoney = emo.getEmoney();
+  	  	  		 Price = df.format(Emoney);
+  	  	  	}
   	%>
   	
     <main>
@@ -74,7 +61,7 @@
         </div>
         
         <div id="Emoney_Balance_Div">
-            <b>현재 잔액 : </b><span id="Balance_Span"></span>&nbsp;<b>원</b>
+            <b>현재 잔액 : </b><span id="Balance_Span"><%=Price %></span>&nbsp;<b>원</b>
         </div>
         <div id="Price_Btns">
             <div class="Price_menubar" onclick="clickPrice(10000)"><div class="Price_text">10,000원</div></div>
@@ -91,10 +78,7 @@
             </div>
         </div>
         <script>
-        	var num = numberWithCommas(<%=Emoney%>);
-        	var span = document.getElementById("Balance_Span");
-        	span.innerHTML=num;
-        	console.log(span);
+        	
     </script>
         <form method="post" action="user_w_kb_EmoneyWithrawProc.jsp">
         <div id="Charge_Price_Text">
@@ -120,14 +104,6 @@
         </div>
         </form>
     </main>
-    <%
-  	    }
-    	pstmt.close();
-    	conn.close();
-    	
-  	}catch(Exception e){
-  		System.out.println(e);
-  	}
-    %>
+  
 </body>
 </html>

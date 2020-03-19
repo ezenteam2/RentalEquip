@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import="java.sql.*, java.text.*" %>
+<%@ page import="java.sql.*, java.text.*,ZENTAL.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,34 +17,18 @@
 </head>
 <body>
 	<%
-	DecimalFormat df = new DecimalFormat("###,###");
-	Connection conn=null;
-  	String driver = "oracle.jdbc.driver.OracleDriver";
-  	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
-  		
-
-  	PreparedStatement pstmt = null;
-
-  	ResultSet rs = null;
-  	
- 
-  	try{
-  		 Class.forName(driver);
-    	 conn=DriverManager.getConnection(url,"scott","tiger");
-    	 
-    	 String Query = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
-    			 +" where mem_id='userezenkb77' and emo_cate ='충전' group by emo_cate";
-    	 String Query2 = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
-    			 +" where mem_id='userezenkb77' and  emo_cate='출금' group by emo_cate";
-    	 String Query3 = "select mem_emoney from p4member where mem_id='userezenkb77'";
-    	 System.out.println(Query2);
-    	 pstmt = conn.prepareStatement(Query);
-    	 
-    	 rs = pstmt.executeQuery();
-    	
-    
- 		 
-   %>
+		DecimalFormat df = new DecimalFormat("###,###");
+		
+	 
+	  		 kb_Database db = new kb_Database();
+	    	 String Query = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
+	    			 +" where mem_id='userezenkb77' and emo_cate ='충전' group by emo_cate";
+	    	 String Query2 = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
+	    			 +" where mem_id='userezenkb77' and  emo_cate='출금' group by emo_cate";
+	    	 String Query3 = "select mem_emoney from p4member where mem_id='userezenkb77'";
+	    	 
+	    	String Price = null;
+	%>
     <main>
         <div id="kb_title">
             <h2>E머니 내역 조회</h2>
@@ -60,56 +44,29 @@
             </thead>
             <tbody>
                 <tr>
-                	<%
-                		if(rs.next()){
-                			int ChargePrice = rs.getInt(2);
-                			System.out.println(ChargePrice);
-                			String ChargePriceStr = df.format(ChargePrice);
-                		
-                	%>
-                		
-                		<td id="ChargePrice_Td"><%=ChargePriceStr %>원</td>
-                	<%
-                		}rs.close();
-                	%>
-                	<%
-                	pstmt = conn.prepareStatement(Query2);
-               	 	rs = pstmt.executeQuery();
-               	 	
-               	 	if(rs.next()){
-               	 		int WithrawPrice = rs.getInt(2);
-               	 		System.out.println(WithrawPrice);
-               	 		String WithrawPriceStr = df.format(WithrawPrice);%>
-               	 		
-               	 		<td><%=WithrawPriceStr %>원</td>
-               	 		<%
-               	 			}rs.close(); 
-               	 		%>
-               	 	
-                		<%
-                		pstmt = conn.prepareStatement(Query3);
-                   	 	rs = pstmt.executeQuery();
-                   	 if(rs.next()){
-                	 		int Price = rs.getInt(1);
-                	 		System.out.println(Price);
-                	 		String PriceStr = df.format(Price);%>
-                			<td><%=PriceStr %>원</td>
-                	<% } rs.close();	%>
-                	
+                <%
+                	for(kb_EmoneyPrice emo : db.ChargeAll(Query)){
+                                		Price = df.format(emo.getEmoney());
+                %>
+                	<td id="ChargePrice_Td"><%=Price%> 원</td>
+                <%
+                	} for(kb_EmoneyPrice emo: db.ChargeAll(Query2)){
+                                		 Price = df.format(emo.getEmoney());
+                %>
+                		<td id="ChargePrice_Td"><%=Price%> 원</td>
+                <%
+                	}
+                                	for(kb_EmoneyPrice emo : db.EmoneyNow(Query3)){
+                                		 Price = df.format(emo.getEmoney());
+                %>
+                		 <td id="ChargePrice_Td"><%=Price %> 원</td>
+                	<% 	 
+                	}
+                %>
                 </tr>
             </tbody>
         </table><br>
-		<%
-     	
-    	 
-    	
-    	 
-    	 pstmt.close();
-    	 conn.close();
-      	}catch(Exception e){
-      		e.printStackTrace();
-      	}
-    	%>
+		
     	<script>
     		function clickDivide(str){
     			$("#Divide").val(str);

@@ -16,10 +16,7 @@
 	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
 	String nick;
 	String phone;
-	String Zipcode;
-	String Addr1;
-	String Addr2;
-	String Addr3;
+	String addr;
 	String email;
 	String saveFolder = pageContext.getServletContext().getRealPath("/UploadFile");
 	System.out.println(saveFolder);
@@ -51,22 +48,15 @@
 			nick = multi.getParameter("Nickname");
 			phone = multi.getParameter("phone");
 			email = multi.getParameter("email");
-			Zipcode = multi.getParameter("ZipCode");
-			Addr1 = multi.getParameter("Address1");
-			Addr2 = multi.getParameter("Address2");
-			Addr3 = multi.getParameter("Address3");
-			if(Zipcode == null) Zipcode = "";
-		 	if(Addr1 == null) Addr1 = "";
-		 	if(Addr2 == null) Addr2 = "";
-		 	if(Addr3 == null) Addr3 = "";		
+			addr = multi.getParameter("Address");
 			filedd = saveFolder + "/" + filename;
 			
-			String Address = "("+Zipcode + ")" + Addr1 + " " + Addr2 + " " + Addr3;
+			
 	        String sql = "update p4member set mem_profileimg=?, mem_nick=?, mem_addr=?, mem_phone=? where mem_id='userezenkb77'";
 	        pstmt = conn.prepareStatement(sql);
 	        pstmt.setString(1, filename);
 	        pstmt.setString(2, nick);
-	        pstmt.setString(3, Address);
+	        pstmt.setString(3, addr);
 	        pstmt.setString(4, phone);
 	        
 	        pstmt.executeUpdate();
