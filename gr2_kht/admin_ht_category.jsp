@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+	import="java.util.ArrayList,jspexp.z01_vo.*,jspexp.b01_database.*"%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,25 +31,25 @@
 	
 	</div>
 
+<%
+	AdminCategory a1 = new AdminCategory();
+%>
 
+<% for (AdminCategoryVO a:a1.getAdminCategory()){ %>
 	
 	<div class="adminTableTD">
 	
-	<%
-	String cate [] = {"가전", "가구", "유아용품", "도서", "IT", "의류", "스포츠", "레저", "캠핑"};
-	for (int idx02=0; idx02<cate.length; idx02++){ %>
 	
-		<div class="adminTableTD1">2020-03-05</div>
-		<div class="adminTableTD2"><%=idx02+1 %></div>
-		<div class="adminTableTD3">cateImg<%=idx02+300 %>.png</div>
-		<div class="adminTableTD4"><%=cate[idx02] %></div>
+		<div class="adminTableTD1"><%=a.getCate_date() %></div>
+		<div class="adminTableTD2"><%=a.getCate_order() %></div>
+		<div class="adminTableTD3"><%=a.getCate_img() %></div>
+		<div class="adminTableTD4"><%=a.getCate_title() %></div>
 		<div class="adminTableTD5"><input type="button" class="adminDeleteBtn" value="삭제"/></div>
 		<div class="adminTableTD6"><img src="image/mainIndexCategoryMenuIcon.png" class="adminMoveImg"/></div>
 	
-	<%} %>
-	
 	</div>
 	
+	<%}%>
 	
 	</div>
 
