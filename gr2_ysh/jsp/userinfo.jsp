@@ -78,7 +78,20 @@ String path = request.getContextPath();%>
 		<th>상태</th>
 		<th>쿠폰</th>
 		</tr>
-
+		<%
+		for(Userinfo info:db.getUserinfo()){
+		%>	
+		<tr>
+			<td><input type="checkbox"></td>
+			<td><%=info.getMem_id() %></td>	
+			<td><%=info.getMem_name() %></td>	
+			<td>상품목록</td>	
+			<td><%=info.getMem_grade() %></td>	
+			<td><%=info.getMem_curr() %></td>	
+			<td>쿠폰</td>	
+			</tr>	
+		<%}%>
+    </table>
 	</table>
     <div class="paging">
         <div class="paging__prev paging--btn">&lt;</div><div class="paging__1 paging--btn">1</div><div class="paging__2 paging--btn">2</div><div class="paging__3 paging--btn">3</div><div class="paging__4 paging--btn">4</div><div class="paging__5 paging--btn">5</div><div class="paging__next paging--btn">&gt;</div>
