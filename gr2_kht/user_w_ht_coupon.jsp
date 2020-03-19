@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+	import="java.util.ArrayList,jspexp.z01_vo.*,jspexp.b01_database.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +19,7 @@
 	}
 
 .couponContainer{
+	display:inline-block;
 	margin-left:22%;
 	width:1050px;
 	padding-top:30px;
@@ -67,43 +69,61 @@
 
 <body>
 
+	<%
+		UserCoupon_ht u1 = new UserCoupon_ht();
+		UserCoupon_ht u2 = new UserCoupon_ht();
+		ArrayList<UserCouponVO_ht> list=u1.getCurrCoupon();
+		ArrayList<UserCouponVO_ht> list2=u1.getUsedCoupon();
+	%>
+
+
 	<div class="couponTitleContainer">보유한 쿠폰
 	</div>
 
+
+
+			
 	<div class="couponContainer">
-		<%for (int idx01=0; idx01<3; idx01++){ %>
+
+<%for(UserCouponVO_ht u:list){ %>
 		<div class="coupon">
+
 			<div class="couponContent">
 				<div class="couponPrice">
-				생일 쿠폰<br>
-				10,000<br>
+				<%=u.getCou_title() %><br>
+				<%=u.getCou_price() %>원<br>
 				</div>
 				<div class="couponDuration">
-				2020년 3월 26일까지
+				<%=u.getMemcou_sdate() %>까지
 				</div>
-			</div>				
+			</div>
+					
 		</div>
-		<%} %>
+<%} %>	
 	</div>
+	
+	
 
 	<div class="couponTitleContainer">사용한 쿠폰
 	</div>
 
 	<div class="couponContainer">
 		
-		<%for (int idx01=0; idx01<3; idx01++){ %>
+	<%for(UserCouponVO_ht u3:list2){ %>
+
 		<div class="coupon">
 			<div class="couponContent">
 				<div class="couponPrice">
-				생일 쿠폰<br>
-				10,000<br>
+				<%=u3.getCou_title() %><br>
+				<%=u3.getCou_price() %><br>
 				</div>
 				<div class="couponDuration">
-				2020년 3월 26일까지
+				<%=u3.getMemcou_sdate() %> <br>
+				사용완료
 				</div>
 			</div>				
 		</div>
-		<%} %>
+		<%} %>	
 	</div>
 
 </body>
