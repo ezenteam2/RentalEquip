@@ -1,4 +1,4 @@
-package ZENTAL.z01_vo;
+package .z01_vo;
 import java.util.Date;
 
 public class Report {

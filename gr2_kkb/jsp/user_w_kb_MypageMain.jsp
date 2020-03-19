@@ -51,7 +51,7 @@
                     	<%=nick %>님은 현재<%=grade %>등급입니다.
                 </td>
             </tr>
-            <tr>
+            <tr onclick="location.href='../../gr2_kht/user_w_ht_grade.jsp'">
                 <td colspan="4" class="moveGrade_Td">
                     등급별 혜택 보기
                 </td>
@@ -62,7 +62,7 @@
             <div class="menubar"  onclick="location.href='user_w_kb_MemberUpdate.jsp'"><div class="vertical_div">회원정보 수정</div></div>
             <div class="menubar" onclick="location.href='user_w_kb_EmoneyIndex.jsp'"><div class="vertical_div">E머니 충전 /<br>
             E머니 출금</div></div>
-            <div class="menubar"><div class="vertical_div">쿠폰목록</div></div>
+            <div class="menubar" onclick="location.href='../../gr2_kht/user_w_ht_coupon.jsp'"><div class="vertical_div">쿠폰목록</div></div>
             <div class="menubar" ><div class="vertical_div">팔로우 회원</div></div>
             <div class="menubar"><div class="vertical_div">찜예약 상품</div></div>
             <div class="menubar"><div class="vertical_div">렌탈 상품 확인</div></div>

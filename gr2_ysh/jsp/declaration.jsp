@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.ArrayList,ZENTAL.z01_vo.*"
-    import="ZENTAL.b01_database.*"
+    import="java.util.ArrayList,zental.z01_vo.*"
+    import="zental.b01_database.*"
     %>
 <%request.setCharacterEncoding("utf-8");
 String path = request.getContextPath();%> 
