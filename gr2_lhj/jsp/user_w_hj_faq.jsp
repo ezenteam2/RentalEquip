@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.ArrayList,my.List,java.sql.*"%>
+    import="java.util.ArrayList,java.sql.*,zental.gr2_lhj.*"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,42 +12,8 @@
 </head>
 <body>
 <%
-	Connection con=null;
-	Statement stmt=null;
-	ArrayList<List> list = new ArrayList<List>();
-	System.out.println(request.getContextPath()+"/my/ZENTAL/gr2_lhj/css/FAQ및이용가이드.css");
-	
-	try{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con=DriverManager.getConnection("jdbc:oracle:thin:@192.168.4.90:1521:xe",
-				"scott", "tiger");
-		if(con==null){
-			throw new Exception("데이터베이스 연결 실패");
-		}
-		stmt=con.createStatement();
-		
-		ResultSet rs =stmt.
-				executeQuery("select * from p4faq");
-		if(!rs.next()){
-			out.println("해당하는 정보가 없습니다.");
-		} else {
-			//rs.previous();
-		}
-		
-		while(rs.next()){
-			String title=rs.getString("FAQ_TITLE");
-			String content=rs.getString("FAQ_DETAIL");
-			String img=rs.getString("FAQ_IMG");
-			img=img.substring(0,20)+"jpg";
-			System.out.println(img);
-			String date=rs.getString("FAQ_DATE");
-			date=date.substring(0,10);
-			List temp = new List(title,content, img, date);
-			list.add(temp);
-		}
-	} catch(Exception e){
-		e.printStackTrace();
-	}
+	FaqLoader loader=new FaqLoader();
+	ArrayList<Faq> list = loader.getFaq();
 %>
     <div class="guide_area">
         <div class="wrap">
@@ -67,14 +33,14 @@
                 </div>
                 <div class="guide_content">
                     <ul>
-                        <%for(List li:list){%>
+                        <%for(Faq li:list){%>
                         <li>
                     
                             <i style='background: url("<%=li.getImg() %>") no-repeat;
                             background-size: 92px 87px;'></i>
                             <div>
                                 <h1><%=li.getTitle() %></h1>
-                                <p><%=li.getContent() %></p>
+                                <p><%=li.getDetail() %></p>
                             </div>
                         </li>
                         <%} %>
