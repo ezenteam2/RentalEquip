@@ -33,7 +33,7 @@ String path = request.getContextPath();%>
 		</tr>
 	<%
 	for(Report r:db.getReport()){
-	%>	
+	--%>	
 	<tr>
 		<td><input type="checkbox"></td>
 		<td><%=r.getMem_id() %></td>	
