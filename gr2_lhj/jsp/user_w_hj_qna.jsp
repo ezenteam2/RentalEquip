@@ -10,9 +10,25 @@
     <title>Q&A(1:1문의)</title>
     <link rel="stylesheet" href="../css/qna.css">
 </head>
+<script type="text/javascript">
+	
+window.onload=function(){
+	if(window.location.href.includes('?')){
+		window.location=window.location.pathname;
+	}
+}
+</script>
 <%
+	String title = request.getParameter("content");
+	String cate=request.getParameter("cate");
+	
 	QnaLoader loader = new QnaLoader();
 	ArrayList<Qna> list = loader.getQna();
+	if(title!=null&&cate!=null){
+		Qna q0=new Qna(cate, title, title);
+		loader.insertQna(q0);
+	}
+	loader.closeConnection();
 %>
 
 <body>
@@ -27,23 +43,23 @@
                 </ul>
             </nav>
             <main>
-                <form action="#" class="reg_qna">
+                <form method="get" class="reg_qna">
                     <div class="sel_cate">
-                        <input type="checkbox" name="카테고리" id="cate_check">
+                        <input type="checkbox" name="cate" id="cate_check">
                         <h1><span>카테고리를 선택해주세요</span><i></i></h1>
                         <div class="cate_li" hidden='true'>
                             <ul>
-                                <li><input type="radio" name="선택한카테고리" value="계정문의">계정문의</li>
-                                <li><input type="radio" name="선택한카테고리" value="차단/제재">차단/제재</li>
-                                <li><input type="radio" name="선택한카테고리" value="거래신고">거래신고</li>
-                                <li><input type="radio" name="선택한카테고리" value="서비스기능">서비스기능</li>
-                                <li><input type="radio" name="선택한카테고리" value="광고전문상점">광고전문상점</li>
-                                <li><input type="radio" name="선택한카테고리" value="서비스장애">서비스장애</li>
-                                <li><input type="radio" name="선택한카테고리" value="제안">제안</li>
+                                <li><input type="radio" name="cate" value="계정문의">계정문의</li>
+                                <li><input type="radio" name="cate" value="차단/제재">차단/제재</li>
+                                <li><input type="radio" name="cate" value="거래신고">거래신고</li>
+                                <li><input type="radio" name="cate" value="서비스기능">서비스기능</li>
+                                <li><input type="radio" name="cate" value="광고전문상점">광고전문상점</li>
+                                <li><input type="radio" name="cate" value="서비스장애">서비스장애</li>
+                                <li><input type="radio" name="cate" value="제안">제안</li>
                             </ul>
                         </div>
                     </div>
-                    <textarea rows="20" name="내용"></textarea>
+                    <textarea rows="20" name="content"></textarea>
                     <button type="submit">등록하기</button>
                 </form>
 
