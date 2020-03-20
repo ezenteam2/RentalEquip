@@ -112,7 +112,7 @@
 	for (int idx=0; idx<4; idx++){
 		%>
 	
-		<div class="mainEnterRecommendContent">
+		<div class="mainEnterRecommendContent" onclick="location.href='../gr2_kys/productDetail.html'">
 			<div class="RecommendContentImageContainer"><img src="image/rentalItem<%=idx+1%>.png" class="RecommendContentImage"></div>
 			<div class="RecommendContentTitle">꼼데가르송 티셔츠</div>
 			<div class="RecommendContentPrice">23000원/1일</div>
@@ -124,7 +124,7 @@
 	</div>
 	</div>
 	
-	<div style="background-color:#F0FFF0;padding-bottom:30px;">
+	<div style="padding-bottom:30px;">
 	<div style="margin-left:22%;width:1050px;font-size:25px;font-weight:bold;padding-top:10px;padding-bottom:10px;">
 	카테고리별 렌탈 상품
 	</div>
@@ -146,7 +146,7 @@
 	<%
 		for (int idx03=0; idx03<5; idx03++){
 	%>
-		<div class="mainEnterCategoryContent">
+		<div class="mainEnterCategoryContent" onclick="location.href='../gr2_kys/productDetail.html'">
 			<div><img src="image/rentalItem<%=idx03+1%>.png" class="mainEnterCategoryContentImage"></div>
 			<div class="mainEnterCategoryContentTitle">꼼데가르송 티셔츠</div>
 			<div class="mainEnterCategoryContentPrice">23000원/1일</div>			
