@@ -43,7 +43,8 @@
             </tr>
             <tr>
                 <th class="th">보유 포인트</th>
-                <td colspan="3"><%=Points %> 포인트</td>
+                <td colspan="2"><%=Points %> 포인트</td>
+                <td style="cursor:pointer;" onclick="location.href='../../gr2_kht/user_w_ht_point.jsp'">포인트 조회</td>
             </tr>
             <tr>
                 <td colspan="4" class="grade_td">

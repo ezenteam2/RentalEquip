@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.ArrayList,ZENTAL.z01_vo.*"
-    import="ZENTAL.b01_database.*"
+    import="java.util.ArrayList,zental.z01_vo.*"
+    import="zental.b01_database.*"
     %>
 <%request.setCharacterEncoding("utf-8");
 String path = request.getContextPath();%>  
@@ -46,7 +46,7 @@ String path = request.getContextPath();%>
             <p class = "menu__inner">신고 프로젝트 관리</p>
         </div>
         <div class = "menu__category">결제 관리</div>
-        <div class = "menu__category category__community">커뮤니티 관리<img class="category--button" src="./img/bottom.svg" alt=""></div>
+        <div class = "menu__category category__community" onclick="location.href='declaration.jsp'">커뮤니티 관리<img class="category--button" src="./img/bottom.svg" alt=""></div>
             <div class = "menu__inner--community">    
                 <p class = "menu__inner">공지사항 관리</p>
                 <p class = "menu__inner">Q&amp;A 관리</p>

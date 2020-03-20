@@ -45,6 +45,8 @@
 
     </script>
   	<%
+  		request.setCharacterEncoding("utf-8");
+  		String saveFolder = pageContext.getServletContext().getRealPath("/UploadFile/");
   		kb_Database db = new kb_Database();
   	  	  		String id = null;
   	  	  		String img = null;
@@ -52,7 +54,7 @@
   	  	  		String addr = null;
   	  	  		String email = null;
   	  	  		String phone = null;
-  	  	  		
+  	  	  		String url= null;
   	  	  		for(kb_MemberUpdate mem : db.UpdateList()){
   	  	  			id = mem.getId();
   	  	  			img = mem.getMem_profileImg();
@@ -60,6 +62,8 @@
   	  	  			addr = mem.getAddr();
   	  	  			email = mem.getEmail();
   	  	  			phone = mem.getPhone();
+  	  	  			url = saveFolder + img;
+  	  	  			System.out.println("경로 테스트 : " + url);
   	  	  		}
   	%>
     <main>
@@ -73,8 +77,9 @@
             		if(img == null){
             	%>
                 <img id="Profile-img" src="image/Profile.png">
-                 <%} else if(img!=null){ %>
-                <img id="Profile-img" src="UploadFile\<%=img%>">
+                 <%} else if(img!=null){ 
+                 System.out.println(saveFolder+img);%>
+                <img id="Profile-img" src="../../../../UploadFile/<%=img%>">
                 <%} %>
                 <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" value="<%=img %>" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
 
