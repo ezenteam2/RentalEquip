@@ -77,8 +77,9 @@
             		if(img == null){
             	%>
                 <img id="Profile-img" src="image/Profile.png">
-                 <%} else if(img!=null){ %>
-                <img id="Profile-img" src="UploadFile/<%=img%>">
+                 <%} else if(img!=null){ 
+                 System.out.println(saveFolder+img);%>
+                <img id="Profile-img" src="../../UploadFile/<%=img%>">
                 <%} %>
                 <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" value="<%=img %>" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
 
