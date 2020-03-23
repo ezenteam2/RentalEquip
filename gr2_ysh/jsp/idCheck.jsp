@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<jsp:useBean id="mMgr" class="practice.SignupDBModule"/>
+<jsp:useBean id="mMgr" class="zental.dbModule"/>
 <%
 request.setCharacterEncoding("UTF-8");
 String id = request.getParameter("id");
-boolean result = (boolean)mMgr.checkId(id);
+boolean result = mMgr.checkId(id);
 %>
 <!DOCTYPE html>
 <html>

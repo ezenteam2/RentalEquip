@@ -18,9 +18,9 @@ String path = request.getContextPath(); %>
             <p class="title__main">ZENTAL로 렌탈거래 시작하기</p>
             <p class="title__sub">15초만에 간편하게 가입하고<br>상품을 확인하세요!</p>
         </div>
-        <form class="login__form" action="../../gr2_kht/user_w_ht_mainIndex.jsp">
-            <input class="login__id" type="text" placeholder="아이디"><br>
-            <input class="login__pass" type="password" placeholder="비밀번호"><br>
+        <form class="login__form" name="loginFrm" method="post" action="loginproc.jsp">
+            <input class="login__id" type="text" placeholder="아이디" name="MEM_ID"><br>
+            <input class="login__pass" type="password" placeholder="비밀번호" name="MEM_PW"><br>
             <input class="login__submit" type="submit" value="ZENTAL 이용하기">
             <hr>
             <button class="login__naver"><img class="login__naver--img"src="../img/naver.png"><p class="login__naver--text">네이버로 이용하기</p></button><br>

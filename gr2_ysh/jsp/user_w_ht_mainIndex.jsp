@@ -5,6 +5,7 @@
 	String path = request.getContextPath();
 	String id = (String)session.getAttribute("idkey");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,21 +111,20 @@ body{
 </head>
 
 <body>
-
 	
 	<header class="mainIndexTopMiddle_ht">
 		<div class="mainIndexTop_ht">			
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_coupon.jsp')"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_grade.jsp')"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</div>			
-				<div class="mainIndexTopContent2_ht" style="margin-left:355px; width : 300px; text-align:right;padding-right:20px;">
+				<div class="mainIndexTopContent2_ht" style="margin-left:300px; width : 250px; text-align:right;padding-right:20px;" >
 				
 				<%
 				if(id!=null){
 				%>
 				<%=id %>님 환영합니다
-				<a href="logout.jsp" style="color : black">로그아웃</a>
+				<a href="logout.jsp">로그아웃</a>
 				<%}else{%>
-				<a href="../gr2_ysh/jsp/login.jsp" class="mainIndexTopContent2_ht" style="color : black">로그인</a>
+				<a href="login.jsp" class="mainIndexTopContent2_ht" style="color : black">로그인</a>
 				<% } %>
 				
 				</div>   
@@ -170,6 +170,9 @@ body{
 		<img src="image/mainIndexFooterFacebookIcon.png" width="25px;">
 		<img src="image/mainIndexFooterInstagramIcon.png" width="25px;">
 		<img src="image/mainIndexFooterNaverBlogIcon.png" width="25px;"> <br><br>
+		
+	
+	
 		EZEN GROUP2 권기범 김용승 김현태 유서희 이형준 123-45-678912 사실 사업자 번호는 가짜에여 실제로 하게 되면 제대로 할게여<br>
 		주소 : 서울특별시 종각역 4번출구에서 5초거리 3, 5, 6층  TEL/FAX 번호는 부끄러우니까 다음에 드림 :^)<br>
 		ZENTAL㈜은 통신판매중개자로서 렌탈마켓 ZENTAL의 거래 당사자가 아니며, 입점판매가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.<br>
