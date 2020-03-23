@@ -112,7 +112,8 @@
     <Button
         android:layout_width="130dp"
         android:layout_height="match_parent"
-        android:text="E머니충전/출금"/>
+        android:text="E머니충전/출금"
+        android:id="@+id/moveEmoney"/>
     <Button
         android:layout_width="130dp"
         android:layout_height="match_parent"
