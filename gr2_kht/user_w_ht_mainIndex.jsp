@@ -122,7 +122,7 @@ body{
 				if(id!=null){
 				%>
 				<%=id %>님 환영합니다
-				<a href="logout.jsp" style="color : black">로그아웃</a>
+				<a href="../gr2_ysh/jsp/logout.jsp" style="color : black">로그아웃</a>
 				<%}else{%>
 				<a href="../gr2_ysh/jsp/login.jsp" class="mainIndexTopContent2_ht" style="color : black">로그인</a>
 				<% } %>
