@@ -14,20 +14,20 @@ String path = request.getContextPath(); %>
 <body>
     <div class="signup">
            <p class="form form__title">회원가입</p>
-           <form action="./login.jsp">
-           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-number@2x.png" alt=""><input class="form form__id" type="text" placeholder="아이디 *8~16자의 영문,숫자,특수문자 사용"><input class="form__isdouble--btn" type="button" value="중복체크"><br><hr>
+           <form name = "regFrm" action="signupSuccess.jsp" method="post">
+           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-number@2x.png" alt=""><input class="form form__id" type="text" placeholder="아이디 *8~16자의 영문,숫자,특수문자 사용" name="MEM_ID"><input class="form__isdouble--btn" type="button" value="중복체크" onClick="idCheck(this.form.MEM_ID.value)"><br><hr>
 
-           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-pw@2x.png" alt=""><input class="form form__pwd" type="password" placeholder="비밀번호*8~16자의 영문,숫자,특수문자 사용"><br><hr>
+           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-pw@2x.png" alt=""><input class="form form__pwd" type="password" placeholder="비밀번호*8~16자의 영문,숫자,특수문자 사용" name="MEM_PW"><br><hr>
 
            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-pw@2x.png" alt=""><input class="form form__pwd form__pwd--check" type="password" placeholder="비밀번호 확인"><br><hr>
 
-           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__username"  type="text" placeholder="이름"><br><hr>
+           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__username"  type="text" placeholder="이름" name="MEM_NAME"><br><hr>
 
-           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__nickname"  type="text" placeholder="닉네임"><br><hr>
+           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__nickname"  type="text" placeholder="닉네임" name="MEM_NICK"><br><hr>
 
-           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__address"  type="text" placeholder="주소"><input class="form__address--btn" type="button" value="주소검색"><br><hr>
+           <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__address"  type="text" placeholder="주소" name="MEM_ADDR"><input class="form__address--btn" type="button" value="주소검색"><br><hr>
     
-            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-number@2x.png" alt=""><input class="form__phone"  type="text" placeholder="휴대폰번호 *숫자만 허용"><input class="form__phone--request" type="button" value="인증번호요청"><br><hr>
+            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-number@2x.png" alt=""><input class="form__phone"  type="text" placeholder="휴대폰번호 *숫자만 허용"  name="MEM_PHONE"><input class="form__phone--request" type="button" value="인증번호요청"><br><hr>
     
             <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-comfirm@2x.png" alt=""><input class="form__requst-number"  type="text" placeholder="인증번호"><br><hr>
     
@@ -72,6 +72,18 @@ String path = request.getContextPath(); %>
         </div>
     </form>
     </div>
+    <script>
+	function idCheck(id){
+		var frm = document.regFrm;
+		if(id==""){
+			alert('id를 입력해주세요');
+			frm.id.focus();
+			return;
+		} 
+		url = "idCheck.jsp?id="+id;
+		window.open(url,"idCheck","width=300px,height=150px");
+	}
+	</script>
     <script src="../js/signup.js"></script>
 </body>
 </html>

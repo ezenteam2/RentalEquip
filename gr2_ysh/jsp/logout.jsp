@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<%
 	session.invalidate();
 	%>
 <script>
-	alert("로그아웃 되었습니다");
-	location.href="login.jsp";
+	alert("로그아웃되었습니다");
+	location.href="../../gr2_kht/user_w_ht_mainIndex.jsp";
 </script>
 </body>
 </html>

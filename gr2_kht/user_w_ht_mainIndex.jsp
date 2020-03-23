@@ -3,6 +3,7 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	String path = request.getContextPath();
+	String id = (String)session.getAttribute("idkey");
 %>
 <!DOCTYPE html>
 <html>
@@ -115,7 +116,18 @@ body{
 		<div class="mainIndexTop_ht">			
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_coupon.jsp')"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_grade.jsp')"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</div>			
-				<div class="mainIndexTopContent2_ht" style="margin-left:600px;" onclick = "location.href='../gr2_ysh/jsp/login.jsp'">로그인</div>   
+				<div class="mainIndexTopContent2_ht" style="margin-left:355px; width : 300px; text-align:right;padding-right:20px;">
+				
+				<%
+				if(id!=null){
+				%>
+				<%=id %>님 환영합니다
+				<a href="../gr2_ysh/jsp/logout.jsp" style="color : black">로그아웃</a>
+				<%}else{%>
+				<a href="../gr2_ysh/jsp/login.jsp" class="mainIndexTopContent2_ht" style="color : black">로그인</a>
+				<% } %>
+				
+				</div>   
 				<div class="mainIndexTopContent2_ht" onclick = "location.href='../gr2_ysh/jsp/signup.jsp'">회원가입</div>   
 				<div class="mainIndexTopContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')">내 렌탈</div>			
 		</div>

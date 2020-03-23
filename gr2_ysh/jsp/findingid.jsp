@@ -20,6 +20,18 @@ String path = request.getContextPath(); %>
             <input class="submit" type="submit" value="아이디 찾기">    
             </form>
     </div>
+    <script>
+    function findinIdCheck(id){
+		var frm = document.regFrm;
+		if(id==""){
+			alert('id를 입력해주세요');
+			frm.id.focus();
+			return;
+		} 
+		url = "idCheck.jsp?id="+id;
+		window.open(url,"idCheck","width=300px,height=150px");
+	}
+    </script>
     <script src="../js/findingid.js"></script>
 </body>
 </html>
