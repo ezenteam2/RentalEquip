@@ -1,69 +1,43 @@
-package .z01_vo;
+package zental;
 import java.util.Date;
-
 public class Report {
-	private int report_code;
-	private String mem_id;
-	private int rent_item_code;
-	private Date report_date;
-	private String report_cate;
-	private String report_reason;
-	private String report_curr;
-	public Report() { 
+	private String REPORT_CATE;
+	private String MEM_ID;
+	private String REPORT_CURR;
+	private Date REPORT_DATE;
+	public Report() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Report(int report_code, String mem_id, int rent_item_code, Date report_date, String report_cate,
-			String report_reason, String report_curr) { 
+	public Report(String rEPORT_CATE, String mEM_ID, String rEPORT_CURR, Date rEPORT_DATE) {
 		super();
-		this.report_code = report_code;
-		this.mem_id = mem_id;
-		this.rent_item_code = rent_item_code;
-		this.report_date = report_date;
-		this.report_cate = report_cate;
-		this.report_reason = report_reason;
-		this.report_curr = report_curr;
+		this.REPORT_CATE = REPORT_CATE;
+		this.MEM_ID = MEM_ID;
+		this.REPORT_CURR = REPORT_CURR;
+		this.REPORT_DATE = REPORT_DATE;
 	}
-	public int getReport_code() {
-		return report_code;
+	public String getREPORT_CATE() {
+		return REPORT_CATE;
 	}
-	public void setReport_code(int report_code) {
-		this.report_code = report_code;
+	public void setREPORT_CATE(String REPORT_CATE) {
+		this.REPORT_CATE = REPORT_CATE;
 	}
-	public String getMem_id() {
-		return mem_id;
+	public String getMEM_ID() {
+		return MEM_ID;
 	}
-	public void setMem_id(String mem_id) {
-		this.mem_id = mem_id;
+	public void setMEM_ID(String MEM_ID) {
+		this.MEM_ID = MEM_ID;
 	}
-	public int getRent_item_code() {
-		return rent_item_code;
+	public String getREPORT_CURR() {
+		return REPORT_CURR;
 	}
-	public void setRent_item_code(int rent_item_code) {
-		this.rent_item_code = rent_item_code;
+	public void setREPORT_CURR(String REPORT_CURR) {
+		this.REPORT_CURR = REPORT_CURR;
 	}
-	public Date getReport_date() {
-		return report_date;
+	public Date getREPORT_DATE() {
+		return REPORT_DATE;
 	}
-	public void setReport_date(Date report_date) {
-		this.report_date = report_date;
-	}
-	public String getReport_cate() {
-		return report_cate;
-	}
-	public void setReport_cate(String report_cate) {
-		this.report_cate = report_cate;
-	}
-	public String getReport_reason() {
-		return report_reason;
-	}
-	public void setReport_reason(String report_reason) {
-		this.report_reason = report_reason;
-	}
-	public String getReport_curr() {
-		return report_curr;
-	}
-	public void setReport_curr(String report_curr) {
-		this.report_curr = report_curr;
+	public void setREPORT_DATE(Date REPORT_DATE) {
+		this.REPORT_DATE = REPORT_DATE;
 	}
 }
