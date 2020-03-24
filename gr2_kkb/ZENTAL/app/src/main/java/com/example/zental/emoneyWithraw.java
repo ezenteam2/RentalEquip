@@ -34,6 +34,15 @@ public class emoneyWithraw extends AppCompatActivity {
             }
         });
 
+        Button moveDetail2 = (Button)findViewById(R.id.moveEmoneyDetail2);
+        moveDetail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emoneyWithraw.this, emoneyDetail.class);
+                startActivity(intent);
+            }
+        });
+
         Button Withraw10000 = (Button)findViewById(R.id.Withraw10000);
         Withraw10000.setOnClickListener(new View.OnClickListener() {
             @Override
