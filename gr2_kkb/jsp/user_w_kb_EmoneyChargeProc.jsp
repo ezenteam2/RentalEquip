@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*, ZENTAL.*" %>
 <%
 
 	request.setCharacterEncoding("UTF-8");
 	String Price = request.getParameter("Prices");
 	String Bank = request.getParameter("Bank");
 	String Account = request.getParameter("Bank_Account");
+	String emo_cate = "충전";
+	Boolean isSuccess = false;
 	
 	int price = 0;
 	if(Price == null) price = 0;
@@ -15,35 +17,27 @@
 	
 	price = Integer.parseInt(Price);
 	
-	Connection conn=null;
-  	String driver = "oracle.jdbc.driver.OracleDriver";
-  	String url = "jdbc:oracle:thin:@192.168.4.90:1521:XE";
-  		
-
-  	PreparedStatement pstmt = null;
-  	ResultSet rs = null;
-  	ResultSet rs2 = null;
+	kb_EmoneyInsert emo = new kb_EmoneyInsert();
+	
+	emo.setEmo_cate(emo_cate);
+	emo.setBank(Bank);
+	emo.setAccount(Account);
+	emo.setPrice(price);
+	
+	kb_Database db = new kb_Database();
+	db.InsertEmoney(emo);
+  	isSuccess = true;
   	
-  	try{
-  		 Class.forName(driver);
-   	    conn=DriverManager.getConnection(url,"scott","tiger");
-   	    
-   	    String Query ="Insert into p4emoney values(emo_code_seq.nextval,'userezenkb77','충전', ?, ?, ?, sysdate)";
-   	    pstmt = conn.prepareStatement(Query);
-   	    pstmt.setString(1, Bank);
-   	    pstmt.setString(2, Account);
-   	    pstmt.setInt(3, price);
-   	    pstmt.executeUpdate();
-   	    
-   	    String Query2 = "update p4member set mem_emoney = mem_emoney + ? where mem_id='userezenkb77'";
-   	    pstmt = conn.prepareStatement(Query2);
-   	    pstmt.setInt(1, price);
-   	    pstmt.executeUpdate();
-   	    
-   	    pstmt.close();
-   	    conn.close();
-   	    response.sendRedirect("user_w_kb_EmoneyCharge.jsp");
-  	} catch(Exception e){
-  		System.out.println(e);
-  	}
+  	%>
+  	<script>
+  		var isSuccess= <%=isSuccess%>;
+  		if(isSuccess){
+  			alert("충전되었습니다");
+  		} else {
+  			isSuccess("충전에 실패하였습니다");
+  		}
+  	</script>
+  	<%
+   	response.sendRedirect("user_w_kb_EmoneyCharge.jsp");
+  	
 %>

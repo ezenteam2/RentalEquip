@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:text="2020.03.20"
+            android:textSize="10pt"
+            android:id="@+id/TextViewDate"
+            />
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:text="충전"
+            android:textSize="10pt"
+            android:textAlignment="center"
+            android:id="@+id/emo_cate_TextView"
+            />
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:text="100,000원"
+            android:textSize="10pt"
+            android:textAlignment="gravity"
+            android:gravity="right"
+            android:id="@+id/Emoney_TextView"
+            />
+    </LinearLayout>
+</LinearLayout>

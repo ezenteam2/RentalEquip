@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.ArrayList,zental.z01_vo.*"
+    import="java.util.ArrayList,zental.*"
     import="zental.b01_database.*"
     %>
 <%request.setCharacterEncoding("utf-8");

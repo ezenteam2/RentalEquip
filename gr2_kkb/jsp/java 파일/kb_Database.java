@@ -187,4 +187,79 @@ public class kb_Database {
 		}
 		return memUpdateList;
 	}
+	
+	public void updateMember(kb_MemberUpdate mem) {
+		try {
+			SetCon();
+			String Query = "update p4member set mem_profileimg=?, mem_nick=?, mem_addr=?, mem_phone=?, mem_email=? where mem_id='userezenkb77'";
+			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1,  mem.getMem_profileImg());
+			pstmt.setString(2, mem.getNick());
+			pstmt.setString(3,  mem.getAddr());
+			pstmt.setString(4,  mem.getPhone());
+			pstmt.setString(5,  mem.getEmail());
+			
+			conn.setAutoCommit(false);
+			pstmt.executeUpdate();
+			conn.commit();
+			pstmt.close();
+			conn.close();
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+			try {
+				conn.rollback();
+			} catch(Exception el) {
+				el.printStackTrace();
+			}
+		}
+	}
+	
+	public void InsertEmoney(kb_EmoneyInsert emo) {
+		try {
+			SetCon();
+			String Query ="Insert into p4emoney values(emo_code_seq.nextval,'userezenkb77',?, ?, ?, ?, sysdate)";
+			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1, emo.getEmo_cate());
+			pstmt.setString(2,  emo.getBank());
+			pstmt.setString(3,  emo.getAccount());
+			pstmt.setInt(4,  emo.getPrice());
+			
+			conn.setAutoCommit(false);
+			pstmt.executeUpdate();
+			conn.commit();
+
+			System.out.println(emo.getEmo_cate());
+			String Query2 = null;
+			
+			
+			if(emo.getEmo_cate().equals("충전")) {
+				Query2 = "update p4member set mem_emoney = mem_emoney + ? where mem_id='userezenkb77'";
+				System.out.println("충전 쿼리");
+			} else if(emo.getEmo_cate().equals("출금")) {
+				Query2 = "update p4member set mem_emoney = mem_emoney - ? where mem_id='userezenkb77'";
+				System.out.println("출금 쿼리");
+			}
+			
+			pstmt = conn.prepareStatement(Query2);
+			pstmt.setInt(1, emo.getPrice());
+			conn.setAutoCommit(false);
+			pstmt.executeUpdate();
+			conn.commit();
+			
+			pstmt.close();
+			conn.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+			try {
+				conn.rollback();
+			} catch(Exception el) {
+				el.printStackTrace();
+			}
+		}
+	}
 }
+
+
