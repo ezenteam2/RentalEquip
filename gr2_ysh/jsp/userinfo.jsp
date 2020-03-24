@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     import="java.util.ArrayList,zental.*"
-    import="zental.b01_database.*"
     %>
 <%request.setCharacterEncoding("utf-8");
 String path = request.getContextPath();%>  
 <!DOCTYPE html>
 <%
-	sh_userinfo_dbModule db = new sh_userinfo_dbModule();
+	dbModule db = new dbModule();
 %>
 <%
 
@@ -83,11 +82,11 @@ String path = request.getContextPath();%>
 		%>	
 		<tr>
 			<td><input type="checkbox"></td>
-			<td><%=info.getMem_id() %></td>	
-			<td><%=info.getMem_name() %></td>	
-			<td>상품목록</td>	
-			<td><%=info.getMem_grade() %></td>	
-			<td><%=info.getMem_curr() %></td>	
+			<td><%=info.getMEM_ID() %></td>	
+			<td><%=info.getMEM_NAME() %></td>	
+			<td class="table__itemlist">상품목록</td>
+			<td><%=info.getMEM_GRADE() %></td>	
+			<td><%=info.getMEM_CURR() %></td>	
 			<td>쿠폰</td>	
 			</tr>	
 		<%}%>
@@ -112,17 +111,6 @@ String path = request.getContextPath();%>
         <tr><td>공기청정기</td><td>미세먼지를 대비해 공기청..</td><td>대여가능</td></tr>
         <tr><td>공기청정기</td><td>미세먼지를 대비해 공기청..</td><td>대여가능</td></tr>
         </table>
-        
-    <table>
-	<tr>
-		<th><input type="checkbox"></th>
-		<th>상품명</th>
-		<th>글제목</th>
-		<th>거래상태</th>
-		</tr>
-	
-
-</table>
         
     </div>
 </div>
@@ -183,3 +171,5 @@ String path = request.getContextPath();%>
 <script src = "../js/index.js"></script>
 <script src="../js/userinfo.js"></script>
 </html>
+
+

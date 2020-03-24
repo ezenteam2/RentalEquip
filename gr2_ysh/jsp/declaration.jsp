@@ -7,7 +7,7 @@
 String path = request.getContextPath();%> 
 
 <%
-	sh_report_dbModule db = new sh_report_dbModule();
+	dbModule db = new dbModule();
 %>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ String path = request.getContextPath();%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/declaration.css">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Document</title>
+    <title>관리자페이지</title>
 </head>
 <body>
     <!DOCTYPE html>
@@ -71,24 +71,22 @@ String path = request.getContextPath();%>
     <table>
         <tr>
 		<th><input type="checkbox"></th>
-		<th>신고자 ID</th>
-		<th>아이템코드</th>
-		<th>신고일시</th>
 		<th>신고분류</th>
+		<th>신고자 ID</th>
 		<th>내용보기</th>
 		<th>처리상태</th>
+		<th>신고일시</th>	
 		</tr>
 	<%
 	for(Report r:db.getReport()){
 	%>	
 	<tr>
 		<td><input type="checkbox"></td>
-		<td><%=r.getMem_id() %></td>	
-		<td><%=r.getRent_item_code() %></td>	
-		<td><%=r.getReport_date() %></td>	
-		<td><%=r.getReport_cate() %></td>	
-		<td><%=r.getReport_reason() %></td>	
-		<td class="table__state table--deco"><%=r.getReport_curr() %></td>	
+		<td><%=r.getREPORT_CATE() %></td>	
+		<td><%=r.getMEM_ID() %></td>	
+		<td>내용보기</td>
+		<td class="table__state table--deco"><%=r.getREPORT_CURR() %></td>	
+		<td><%=r.getREPORT_DATE() %></td>		
 		</tr>	
 	<%}%>
     </table>
