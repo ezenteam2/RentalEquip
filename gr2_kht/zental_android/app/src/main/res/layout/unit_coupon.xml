@@ -2,13 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="210px"
-    android:layout_marginTop="15dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/couponimg"
         android:layout_width="400px"
         android:layout_height="210px"
         android:layout_weight="1"
@@ -21,7 +19,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/coupontitle"
             android:layout_width="match_parent"
             android:layout_height="105px"
             android:gravity="bottom|center_vertical"
@@ -30,7 +28,7 @@
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/coupondur"
             android:layout_width="match_parent"
             android:layout_height="105px"
             android:gravity="top"
@@ -38,4 +36,5 @@
             android:text="TextView"
             android:textSize="14sp" />
     </LinearLayout>
+
 </LinearLayout>
