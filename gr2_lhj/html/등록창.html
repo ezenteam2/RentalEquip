@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록창</title>
+</head>
+<body>
+<%=
+
+    <form style="border:solid; display:flex; flex-direction: column; width:500px; align-items: flex-start;">
+        <div style=" width:500px; margin-bottom: 20px;"><span style="margin-right: 10px;">제목</span><input style="width:350px;" type="text" name="title"></div>
+        <span style="margin-bottom: 5px;">내용</span>
+        <textarea style="margin:0 0 20px 5px;" name="content" cols="60" rows="10"></textarea>
+        <input type="hidden" name="admin" value="ezenadhj">
+        <input type="file" style="margin-bottom: 10px;">
+        <button type="submit">등록하기</button>
+    </form>
+</body>
+</html>

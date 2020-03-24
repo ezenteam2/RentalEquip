@@ -23,6 +23,7 @@ window.onload=function(){
 	String cate=request.getParameter("cate");
 	
 	QnaLoader loader = new QnaLoader();
+	loader.getConnection();
 	ArrayList<Qna> list = loader.getQna();
 	if(title!=null&&cate!=null){
 		Qna q0=new Qna(cate, title, title);

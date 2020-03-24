@@ -157,6 +157,6 @@
         </main>
     </div>
     <i class="close_icon"></i>
-    <script src="../js/payment.js"></script>
+    <script src="../js/order.js"></script>
 </body>
 </html>
