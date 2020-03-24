@@ -19,7 +19,8 @@
         <Button
             android:layout_width="130dp"
             android:layout_height="match_parent"
-            android:text="E머니 내역"/>
+            android:text="E머니 내역"
+            android:id="@+id/moveEmoneyDetail"/>
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

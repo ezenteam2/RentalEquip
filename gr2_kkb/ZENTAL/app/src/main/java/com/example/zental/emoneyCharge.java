@@ -95,6 +95,15 @@ public class emoneyCharge extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button moveDetail = (Button)findViewById(R.id.moveEmoneyDetail);
+        moveDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(emoneyCharge.this, emoneyDetail.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

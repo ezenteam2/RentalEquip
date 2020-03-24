@@ -19,6 +19,7 @@
         <activity android:name=".memberUpdate"></activity>
         <activity android:name=".emoneyCharge"></activity>
         <activity android:name=".emoneyWithraw"></activity>
+        <activity android:name=".emoneyDetail"></activity>
     </application>
 
 </manifest>

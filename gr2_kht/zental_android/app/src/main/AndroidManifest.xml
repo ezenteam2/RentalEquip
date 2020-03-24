@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity_coupon"></activity>
+        <activity android:name=".Activity_grade"></activity>
+        <activity android:name=".Activity_point"></activity>
     </application>
 
 </manifest>
