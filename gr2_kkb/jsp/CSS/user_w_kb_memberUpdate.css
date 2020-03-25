@@ -29,9 +29,11 @@ main{
 }
 
 #Member_Infor_Div{
-    width:73%;
+    width:300px;
     height:100%;
-    float:right;
+    
+    float:left;
+    
 }
 
 .info_Div{
@@ -116,6 +118,7 @@ img{
 	width:150px;
 	height:30px;
 	padding-left:1%;
+
 }
 
 #input_Address{

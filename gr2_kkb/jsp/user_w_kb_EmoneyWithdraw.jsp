@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.sql.*, java.text.*,zental.*" %>
+<%@page import="java.sql.*, java.text.*,ZENTAL.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,6 +104,8 @@
         </div>
         </form>
     </main>
+    
+	
   
 </body>
 </html>

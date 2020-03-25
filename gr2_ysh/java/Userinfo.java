@@ -1,43 +1,43 @@
-package ZENTAL.z01_vo;
+package zental;
 
 public class Userinfo {
-	private String mem_id; 
-	private String mem_name;
-	private String mem_grade;
-	private String mem_curr;
+	private String MEM_ID;
+	private String MEM_NAME;
+	private String MEM_GRADE;
+	private String MEM_CURR;
 	public Userinfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Userinfo(String mem_id, String mem_name, String mem_grade, String mem_curr) {
+	public Userinfo(String mEM_ID, String mEM_NAME, String mEM_GRADE, String mEM_CURR) {
 		super();
-		this.mem_id = mem_id;
-		this.mem_name = mem_name;
-		this.mem_grade = mem_grade;
-		this.mem_curr = mem_curr;
+		MEM_ID = mEM_ID;
+		MEM_NAME = mEM_NAME;
+		MEM_GRADE = mEM_GRADE;
+		MEM_CURR = mEM_CURR;
 	}
-	public String getMem_id() {
-		return mem_id;
+	public String getMEM_ID() {
+		return MEM_ID;
 	}
-	public void setMem_id(String mem_id) {
-		this.mem_id = mem_id;
+	public void setMEM_ID(String mEM_ID) {
+		MEM_ID = mEM_ID;
 	}
-	public String getMem_name() {
-		return mem_name;
+	public String getMEM_NAME() {
+		return MEM_NAME;
 	}
-	public void setMem_name(String mem_name) {
-		this.mem_name = mem_name;
+	public void setMEM_NAME(String mEM_NAME) {
+		MEM_NAME = mEM_NAME;
 	}
-	public String getMem_grade() {
-		return mem_grade;
+	public String getMEM_GRADE() {
+		return MEM_GRADE;
 	}
-	public void setMem_grade(String mem_grade) {
-		this.mem_grade = mem_grade;
+	public void setMEM_GRADE(String mEM_GRADE) {
+		MEM_GRADE = mEM_GRADE;
 	}
-	public String getMem_curr() {
-		return mem_curr;
+	public String getMEM_CURR() {
+		return MEM_CURR;
 	}
-	public void setMem_curr(String mem_curr) {
-		this.mem_curr = mem_curr;
+	public void setMEM_CURR(String mEM_CURR) {
+		MEM_CURR = mEM_CURR;
 	}
 }

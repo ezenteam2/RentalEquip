@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*,java.text.*,zental.*" %>
+<%@ page import="java.sql.*,java.text.*,ZENTAL.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="CSS/EmoneyDetailInclude.css">
+<style>
+ .price{text-align:right; padding-right:2%;}
+</style>
 </head>
 <body>
 	<table border style="border-collapse: collapse;">
@@ -48,7 +51,7 @@
          <tr>
              <td><%=emo.getDate()%></td>
              <td><%=emo.getEmo_cate()%></td>
-             <td><%=Price%></td>
+             <td class="price"><%=Price%>원</td>
          </tr>
     	 <%
     	 	}
@@ -68,7 +71,7 @@
 			         <tr>
 			             <td><%=emo.getDate()%></td>
 			             <td><%=emo.getEmo_cate()%></td>
-			             <td><%=Price%></td>
+			             <td class="price"><%=Price%>원</td>
 			         </tr>
 			    	 <%
 			    	 	}
@@ -89,7 +92,7 @@
 	         <tr>
 	             <td><%=emo.getDate()%></td>
 	             <td><%=emo.getEmo_cate()%></td>
-	             <td><%=Price%></td>
+	             <td class="price"><%=Price%>원</td>
 	         </tr>
 	    	 <%
 	    	 	}
@@ -107,7 +110,7 @@
 			         <tr>
 			             <td><%=emo.getDate()%></td>
 			             <td><%=emo.getEmo_cate()%></td>
-			             <td><%=Price%></td>
+			             <td class="price"><%=Price%>원</td>
 			         </tr>
 			    	 <%
 			    	 	}
@@ -126,7 +129,7 @@
 	         <tr>
 	             <td><%=emo.getDate()%></td>
 	             <td><%=emo.getEmo_cate()%></td>
-	             <td><%=Price%></td>
+	             <td class="price"><%=Price%>원</td>
 	         </tr>
 	    	 <%
 	    	 	}
@@ -146,7 +149,7 @@
 			         <tr>
 			             <td><%=emo.getDate() %></td>
 			             <td><%=emo.getEmo_cate() %></td>
-			             <td><%=Price %></td>
+			             <td class="price"><%=Price %>원</td>
 			         </tr>
 			    	 <%} %>
     		 
