@@ -13,7 +13,7 @@
 <body>
 <%
 	FaqLoader loader=new FaqLoader();
-	ArrayList<Faq> list = loader.getFaq();
+	ArrayList<Faq> list = loader.getList();
 %>
     <div class="guide_area">
         <div class="wrap">

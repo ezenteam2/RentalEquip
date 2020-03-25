@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>등록창</title>
+    <title>공지사항등록</title>
     
 </head>
 <%
@@ -28,6 +28,7 @@ if(regOn!=null&&regOn.equals("on")){
     		let reg=<%=regStatus%>
     		if(reg){
     			alert("등록이 완료되었습니다.");
+    			opener.parent.location.href=opener.parent.location.pathname;
     			window.close();
     		}
     	}
@@ -39,7 +40,7 @@ if(regOn!=null&&regOn.equals("on")){
         <span style="margin-bottom: 5px;">내용</span>
         <textarea style="margin:0 0 20px 5px;" name="content" cols="60" rows="10" required></textarea>
         <input type="hidden" name="admin" value="ezenadhj" required>
-        <input type="file" style="margin-bottom: 10px;">
+        <input type="file" name="img" style="margin-bottom: 10px;">
         <button type="submit">등록하기</button>
     </form>
     
