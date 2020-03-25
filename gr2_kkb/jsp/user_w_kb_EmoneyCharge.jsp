@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="ZENTAL.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +42,7 @@
         function checked(obj){
         	obj.style.backgroundColor ="#f6f9fc";
         }
+        
     </script>
     <main>
         <div id="kb_title">
@@ -72,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <form method="post" action="user_w_kb_EmoneyChargeProc.jsp">
+        <form method="post">
         <div id="Charge_Price_Text">
             <b>충전 금액 : </b>&nbsp;<span id="Price_Span">5,000</span>&nbsp;<b>원</b>&nbsp;&nbsp;&nbsp;
             <input type="hidden" id="PriceHidden" name="Prices">
@@ -95,5 +96,45 @@
         </div>
         </form>
     </main>
+    <%
+
+	request.setCharacterEncoding("UTF-8");
+	String Price = request.getParameter("Prices");
+	String Bank = request.getParameter("Bank");
+	String Account = request.getParameter("Bank_Account");
+	String emo_cate = "충전";
+	Boolean isSuccess = false;
+	
+	int price = 0;
+	if(Price != null) price = Integer.parseInt(Price); else price = 0;
+	if(Bank == null) Bank = "";
+	if(Account == null) Account = "";
+	
+	
+	
+	kb_EmoneyInsert emo = new kb_EmoneyInsert();
+	if(Price != null && Bank != null && Account != null){
+	emo.setEmo_cate(emo_cate);
+	emo.setBank(Bank);
+	emo.setAccount(Account);
+	emo.setPrice(price);
+	
+	kb_Database db = new kb_Database();
+	db.InsertEmoney(emo);
+  	
+  	isSuccess = true;
+	} else {
+		isSuccess = false;
+	}
+  	%>
+  	<script>
+  		console.log(isSuccess);
+  		var isSuccess = <%=isSuccess%>
+		console.log(isSuccess);
+  		if(isSuccess){
+  			alert("충전완료");
+  		}
+  	</script>
+ 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@page import="java.sql.*,zental.*" %>
+    pageEncoding="EUC-KR"%>
+<%@page import="java.sql.*,ZENTAL.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +14,11 @@
 <body>
     <script language="javascript">
     function goPopup(){
-    	// ì£¼ì†Œê²€ìƒ‰ì„ ìˆ˜í–‰í•  íŒì—… í˜ì´ì§€ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤.
-    	// í˜¸ì¶œëœ í˜ì´ì§€(jusopopup.jsp)ì—ì„œ ì‹¤ì œ ì£¼ì†Œê²€ìƒ‰URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)ë¥¼ í˜¸ì¶œí•˜ê²Œ ë©ë‹ˆë‹¤.
+    	// ÁÖ¼Ò°Ë»öÀ» ¼öÇàÇÒ ÆË¾÷ ÆäÀÌÁö¸¦ È£ÃâÇÕ´Ï´Ù.
+    	// È£ÃâµÈ ÆäÀÌÁö(jusopopup.jsp)¿¡¼­ ½ÇÁ¦ ÁÖ¼Ò°Ë»öURL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)¸¦ È£ÃâÇÏ°Ô µË´Ï´Ù.
     	var pop = window.open("jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
     	
-    	// ëª¨ë°”ì¼ ì›¹ì¸ ê²½ìš°, í˜¸ì¶œëœ í˜ì´ì§€(jusopopup.jsp)ì—ì„œ ì‹¤ì œ ì£¼ì†Œê²€ìƒ‰URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)ë¥¼ í˜¸ì¶œí•˜ê²Œ ë©ë‹ˆë‹¤.
+    	// ¸ğ¹ÙÀÏ À¥ÀÎ °æ¿ì, È£ÃâµÈ ÆäÀÌÁö(jusopopup.jsp)¿¡¼­ ½ÇÁ¦ ÁÖ¼Ò°Ë»öURL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)¸¦ È£ÃâÇÏ°Ô µË´Ï´Ù.
         //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
     }
     function jusoCallBack(roadFullAddr){
@@ -45,8 +45,6 @@
 
     </script>
   	<%
-  		request.setCharacterEncoding("utf-8");
-  		String saveFolder = pageContext.getServletContext().getRealPath("/UploadFile/");
   		kb_Database db = new kb_Database();
   	  	  		String id = null;
   	  	  		String img = null;
@@ -54,7 +52,7 @@
   	  	  		String addr = null;
   	  	  		String email = null;
   	  	  		String phone = null;
-  	  	  		String url= null;
+  	  	  		
   	  	  		for(kb_MemberUpdate mem : db.UpdateList()){
   	  	  			id = mem.getId();
   	  	  			img = mem.getMem_profileImg();
@@ -62,13 +60,11 @@
   	  	  			addr = mem.getAddr();
   	  	  			email = mem.getEmail();
   	  	  			phone = mem.getPhone();
-  	  	  			url = saveFolder + img;
-  	  	  			System.out.println("ê²½ë¡œ í…ŒìŠ¤íŠ¸ : " + url);
   	  	  		}
   	%>
     <main>
         <div id="kb_title">
-            <h2>íšŒì›ì •ë³´ ìˆ˜ì •</h2>
+            <h2>È¸¿øÁ¤º¸ ¼öÁ¤</h2>
         </div>
         <form action="user_w_kb_memberUpdateProc.jsp" method="post"  enctype="multipart/form-data">
             <div id="Member_Basic_Div">   
@@ -77,44 +73,43 @@
             		if(img == null){
             	%>
                 <img id="Profile-img" src="image/Profile.png">
-                 <%} else if(img!=null){ 
-                 System.out.println(saveFolder+img);%>
-                <img id="Profile-img" src="../../../../UploadFile/<%=img%>">
+                 <%} else if(img!=null){ %>
+                <img id="Profile-img" src="UploadFile\<%=img%>">
                 <%} %>
                 <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" value="<%=img %>" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
 
                 <div id="Member_Infor_Div">
                     <div class="info_Div">
-                        <span class="info_Span">ì•„ì´ë”” : </span>
+                        <span class="info_Span">¾ÆÀÌµğ : </span>
                         <span class="info_Span"><%=id %></span>
                     </div>
                     <div class="info_Div">
-                        <span class="info_Span">ë‹‰ë„¤ì„ : </span>
+                        <span class="info_Span">´Ğ³×ÀÓ : </span>
                         <input type="text" id="nickname" name="Nickname" value="<%=nick%>">
                     </div>
                 </div>
             </div>
             <div id="inputPhone_Div">
-                <span class="info_Span">íœ´ëŒ€í°ë²ˆí˜¸ : </span>
-                <input type="text" id="phone_input" name="phone" placeholder="íœ´ëŒ€í°ë²ˆí˜¸" value="<%=phone%>">
-                <button id="Certification_Btns">ì¸ì¦</button>
+                <span class="info_Span">ÈŞ´ëÆù¹øÈ£ : </span>
+                <input type="text" id="phone_input" name="phone" placeholder="ÈŞ´ëÆù¹øÈ£" value="<%=phone%>">
+                <button id="Certification_Btns">ÀÎÁõ</button>
             </div>
             <div>
-                <span class="info_Span">ì´ë©”ì¼ : </span>
-                <input type="email" name="emails" id="input_email" placeholder="ì´ë©”ì¼" value="<%=email%>">
+                <span class="info_Span">ÀÌ¸ŞÀÏ : </span>
+                <input type="email" name="emails" id="input_email" placeholder="ÀÌ¸ŞÀÏ" value="<%=email%>">
             </div>
 
             <div id="Address_Div">
                 <div class="address">
-                    <span class="info_Span">ì£¼ì†Œ : </span>
+                    <span class="info_Span">ÁÖ¼Ò : </span>
                     <input type="text" name="Address" id="input_Address" value="<%=addr %>">
-                    <button type="button" id="Search_Zipcode_Btn" onclick="goPopup()">ì£¼ì†Œì°¾ê¸°</button>
+                    <button type="button" id="Search_Zipcode_Btn" onclick="goPopup()">ÁÖ¼ÒÃ£±â</button>
                 </div>
                 
             </div>
 
             <div id="Update_Btns_Div">
-                <button id="Update_Btns">ìˆ˜ì •</button>
+                <button id="Update_Btns">¼öÁ¤</button>
             </div>
         </form>
    

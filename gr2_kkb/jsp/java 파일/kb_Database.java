@@ -182,6 +182,10 @@ public class kb_Database {
 				
 				memUpdateList.add(mem);
 			}
+
+			rs.close();
+			pstmt.close();
+			conn.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

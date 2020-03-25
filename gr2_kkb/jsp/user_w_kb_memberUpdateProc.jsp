@@ -27,7 +27,7 @@
 	String encType = "utf-8";
 	int maxSize = 5 * 1024 * 1024;
 	String filedd = null;
-	
+	Boolean isSuccess = false;
 	
 	
 	try{
@@ -58,10 +58,15 @@
 			
 	      	kb_Database db = new kb_Database();
 	      	db.updateMember(mem);
-	        
-	        response.sendRedirect("user_w_kb_MypageMain.jsp");
+	        isSuccess = true;
+	        //response.sendRedirect("user_w_kb_MypageMain.jsp");
 		}
- 	
+ 		%>
+ 		<script>
+ 			alert("수정되었습니다");
+ 			location.href="user_w_kb_MypageMain.jsp";
+ 		</script>
+ 		<%
 	    	
 	} catch(Exception e){
 		e.printStackTrace();
