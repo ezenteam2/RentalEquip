@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         dataSetting();
 
 
-        Intent intent = new Intent(this, Activity_point.class);
+        Intent intent = new Intent(this, Activity_coupon.class);
         startActivity(intent);
     }
 
