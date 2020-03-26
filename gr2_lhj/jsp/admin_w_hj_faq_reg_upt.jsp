@@ -53,7 +53,7 @@ if(type!=null&&type.equals("upt")){
 if(type!=null&&type.equals("regfin")){
 	String title = request.getParameter("title");
 	String content = request.getParameter("content");
-	String img = "../img/faq_img_img1.png";
+	String img = "../img/faq_img/img4.png";
 	loader.insertFaq(title, content, img);
 	finish=true;
 }
