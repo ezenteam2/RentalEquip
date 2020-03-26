@@ -20,12 +20,20 @@
             app:srcCompat="@drawable/mainindexcategorymenuicon" />
 
         <LinearLayout
-            android:layout_width="500px"
+            android:layout_width="300px"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="내렌탈" />
+
 
         <Button
             android:id="@+id/button"
