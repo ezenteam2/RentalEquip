@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-	import="java.util.*,jspexp.z01_vo.*,jspexp.b01_database.*"%>    
+	import="java.util.*,zental.gr2_kht.*"%>    
 <%
 	request.setCharacterEncoding("utf-8");
 	String path = request.getContextPath();
