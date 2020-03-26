@@ -15,7 +15,7 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/nextlast"
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginLeft="43dp"

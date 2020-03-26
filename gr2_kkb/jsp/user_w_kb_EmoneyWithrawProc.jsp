@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, ZENTAL.*" %>
+<%@ page import="java.sql.*, zental.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String Price = request.getParameter("PriceHidden");
 	String Bank = request.getParameter("Bank");
 	String Account = request.getParameter("Bank_Account");
 	Boolean isSuccess = false;
+	String LoginId = (String)session.getAttribute("idkey");
+	System.out.println("E머니 충전 id : " + LoginId);
 	int price = 0;
 	if(Price == null) price = 0;
 	if(Bank == null) Bank = "";
@@ -22,7 +24,7 @@
 	emo.setPrice(price);
 	
 	kb_Database db = new kb_Database();
-	db.InsertEmoney(emo);
+	db.InsertEmoney(emo, LoginId);
 	isSuccess = true;
 	System.out.println(isSuccess);
 	

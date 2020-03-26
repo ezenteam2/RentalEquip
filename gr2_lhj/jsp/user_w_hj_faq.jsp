@@ -13,7 +13,10 @@
 <body>
 <%
 	FaqLoader loader=new FaqLoader();
-	ArrayList<Faq> list = loader.getList();
+	String pageStr = request.getParameter("page");
+	pageStr=(pageStr==null)? "1":pageStr;
+	int pageInt = Integer.parseInt(pageStr);
+	ArrayList<Faq> list = loader.getList(pageInt);
 %>
     <div class="guide_area">
         <div class="wrap">

@@ -68,6 +68,7 @@ String path = request.getContextPath();%>
     <!-- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -->
     <div class="article">
     <p class="title">신고 관리</p>
+    
     <table>
         <tr>
 		<th><input type="checkbox"></th>

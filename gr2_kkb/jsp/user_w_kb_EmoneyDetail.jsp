@@ -17,15 +17,15 @@
 </head>
 <body>
 	<%
-		DecimalFormat df = new DecimalFormat("###,###");
-		
-	 
+			DecimalFormat df = new DecimalFormat("###,###");
+			String LoginId = (String)session.getAttribute("idkey");
+			System.out.println("E머니 충전 id : " + LoginId);
 	  		 kb_Database db = new kb_Database();
 	    	 String Query = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
-	    			 +" where mem_id='userezenkb77' and emo_cate ='충전' group by emo_cate";
+	    			 +" where mem_id=? and emo_cate ='충전' group by emo_cate";
 	    	 String Query2 = "select emo_cate, sum(emo_amount) as cnt from p4emoney"
-	    			 +" where mem_id='userezenkb77' and  emo_cate='출금' group by emo_cate";
-	    	 String Query3 = "select mem_emoney from p4member where mem_id='userezenkb77'";
+	    			 +" where mem_id=? and  emo_cate='출금' group by emo_cate";
+	    	 String Query3 = "select mem_emoney from p4member where mem_id=?";
 	    	 
 	    	String Price = null;
 	%>
@@ -45,18 +45,18 @@
             <tbody>
                 <tr>
                 <%
-                	for(kb_EmoneyPrice emo : db.ChargeAll(Query)){
+                	for(kb_EmoneyPrice emo : db.ChargeAll(Query, LoginId)){
                                 		Price = df.format(emo.getEmoney());
                 %>
                 	<td id="ChargePrice_Td"><%=Price%> 원</td>
                 <%
-                	} for(kb_EmoneyPrice emo: db.ChargeAll(Query2)){
+                	} for(kb_EmoneyPrice emo: db.ChargeAll(Query2, LoginId)){
                                 		 Price = df.format(emo.getEmoney());
                 %>
                 		<td id="ChargePrice_Td"><%=Price%> 원</td>
                 <%
                 	}
-                                	for(kb_EmoneyPrice emo : db.EmoneyNow(Query3)){
+                                	for(kb_EmoneyPrice emo : db.EmoneyNow(Query3, LoginId)){
                                 		 Price = df.format(emo.getEmoney());
                 %>
                 		 <td id="ChargePrice_Td"><%=Price %> 원</td>

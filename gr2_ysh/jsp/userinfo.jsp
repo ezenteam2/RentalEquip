@@ -168,6 +168,7 @@ String path = request.getContextPath();%>
     </form>
     </div>
 </div>
+
 <script src = "../js/index.js"></script>
 <script src="../js/userinfo.js"></script>
 </html>
