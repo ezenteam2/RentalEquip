@@ -1,4 +1,4 @@
-package ZENTAL;
+package zental;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,7 +29,7 @@ public class kb_Database {
 		}
 	}
 	
-	public ArrayList<kb_Emoney> EmoneyList(String Query){
+	public ArrayList<kb_Emoney> EmoneyList(String Query, String id){
 		emoneyList = new ArrayList<kb_Emoney>();
 		
 		kb_Emoney emo = null;
@@ -38,6 +38,7 @@ public class kb_Database {
 			SetCon();
 			
 			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1,  id);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -60,7 +61,7 @@ public class kb_Database {
 		return emoneyList;
 	}
 	
-	public ArrayList<kb_Emoney> EmoneyListDate(String Query, String StartDay, String EndDay){
+	public ArrayList<kb_Emoney> EmoneyListDate(String Query, String StartDay, String EndDay, String id){
 		 emoneyList= new ArrayList<kb_Emoney>();
 		kb_Emoney emo = null;
 		
@@ -68,8 +69,9 @@ public class kb_Database {
 			SetCon();
 			
 			pstmt = conn.prepareStatement(Query);
-			pstmt.setString(1, StartDay);
-			pstmt.setString(2, EndDay);
+			pstmt.setString(1,  id);
+			pstmt.setString(2, StartDay);
+			pstmt.setString(3, EndDay);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -91,12 +93,13 @@ public class kb_Database {
 		return emoneyList;
 	}
 	
-	public ArrayList<kb_EmoneyPrice> ChargeAll(String Query){
+	public ArrayList<kb_EmoneyPrice> ChargeAll(String Query, String id){
 		emoneyPriceList= new ArrayList<kb_EmoneyPrice>();
 		kb_EmoneyPrice emo = null;
 		try {
 			SetCon();
 			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1,id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -111,12 +114,13 @@ public class kb_Database {
 		return emoneyPriceList;
 	}
 	
-	public ArrayList<kb_EmoneyPrice> EmoneyNow(String Query){
+	public ArrayList<kb_EmoneyPrice> EmoneyNow(String Query, String id){
 		emoneyPriceList= new ArrayList<kb_EmoneyPrice>();
 		kb_EmoneyPrice emo = null;
 		try {
 			SetCon();
 			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1,  id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -131,15 +135,16 @@ public class kb_Database {
 		return emoneyPriceList;
 	}
 	
-	public ArrayList<kb_Member1> MemberInfo(){
+	public ArrayList<kb_Member1> MemberInfo(String id){
 		memberInfoList = new ArrayList<kb_Member1>();
 		kb_Member1 mem = null;
 		try {
 			SetCon();
 			
 			String Query = "select a.mem_id, a.mem_nick, a.mem_point, a.mem_grade, b.grade_img from p4member a, "
-					+ "p4grade b where a.mem_id='userezenkb77' and a.mem_grade = b.grade_title";
+					+ "p4grade b where a.mem_id=? and a.mem_grade = b.grade_title";
 			pstmt = conn.prepareStatement(Query);
+			pstmt.setString(1,  id);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -161,14 +166,15 @@ public class kb_Database {
 		return memberInfoList;
 	}
 	
-	public ArrayList<kb_MemberUpdate> UpdateList(){
+	public ArrayList<kb_MemberUpdate> UpdateList(String id){
 		memUpdateList = new ArrayList<kb_MemberUpdate>();
 		
 		kb_MemberUpdate mem = null;
 		try {
 			SetCon();
-			String sql = "select mem_id, mem_profileimg, mem_nick, mem_addr, mem_email, mem_phone from p4member where mem_id = 'userezenkb77'";
+			String sql = "select mem_id, mem_profileimg, mem_nick, mem_addr, mem_email, mem_phone from p4member where mem_id =?";
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,  id);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -192,16 +198,17 @@ public class kb_Database {
 		return memUpdateList;
 	}
 	
-	public void updateMember(kb_MemberUpdate mem) {
+	public void updateMember(kb_MemberUpdate mem, String id) {
 		try {
 			SetCon();
-			String Query = "update p4member set mem_profileimg=?, mem_nick=?, mem_addr=?, mem_phone=?, mem_email=? where mem_id='userezenkb77'";
+			String Query = "update p4member set mem_profileimg=?, mem_nick=?, mem_addr=?, mem_phone=?, mem_email=? where mem_id=?";
 			pstmt = conn.prepareStatement(Query);
 			pstmt.setString(1,  mem.getMem_profileImg());
 			pstmt.setString(2, mem.getNick());
 			pstmt.setString(3,  mem.getAddr());
 			pstmt.setString(4,  mem.getPhone());
 			pstmt.setString(5,  mem.getEmail());
+			pstmt.setString(6,  id);
 			
 			conn.setAutoCommit(false);
 			pstmt.executeUpdate();
@@ -221,15 +228,16 @@ public class kb_Database {
 		}
 	}
 	
-	public void InsertEmoney(kb_EmoneyInsert emo) {
+	public void InsertEmoney(kb_EmoneyInsert emo, String id) {
 		try {
 			SetCon();
-			String Query ="Insert into p4emoney values(emo_code_seq.nextval,'userezenkb77',?, ?, ?, ?, sysdate)";
+			String Query ="Insert into p4emoney values(emo_code_seq.nextval,?,?, ?, ?, ?, sysdate)";
 			pstmt = conn.prepareStatement(Query);
-			pstmt.setString(1, emo.getEmo_cate());
-			pstmt.setString(2,  emo.getBank());
-			pstmt.setString(3,  emo.getAccount());
-			pstmt.setInt(4,  emo.getPrice());
+			pstmt.setString(1,  id);
+			pstmt.setString(2, emo.getEmo_cate());
+			pstmt.setString(3,  emo.getBank());
+			pstmt.setString(4,  emo.getAccount());
+			pstmt.setInt(5,  emo.getPrice());
 			
 			conn.setAutoCommit(false);
 			pstmt.executeUpdate();
@@ -240,15 +248,16 @@ public class kb_Database {
 			
 			
 			if(emo.getEmo_cate().equals("충전")) {
-				Query2 = "update p4member set mem_emoney = mem_emoney + ? where mem_id='userezenkb77'";
+				Query2 = "update p4member set mem_emoney = mem_emoney + ? where mem_id=?";
 				System.out.println("충전 쿼리");
 			} else if(emo.getEmo_cate().equals("출금")) {
-				Query2 = "update p4member set mem_emoney = mem_emoney - ? where mem_id='userezenkb77'";
+				Query2 = "update p4member set mem_emoney = mem_emoney - ? where mem_id=?";
 				System.out.println("출금 쿼리");
 			}
 			
 			pstmt = conn.prepareStatement(Query2);
 			pstmt.setInt(1, emo.getPrice());
+			pstmt.setString(2,  id);
 			conn.setAutoCommit(false);
 			pstmt.executeUpdate();
 			conn.commit();

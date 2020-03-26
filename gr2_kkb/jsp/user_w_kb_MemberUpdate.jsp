@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
-<%@page import="java.sql.*,ZENTAL.*" %>
+<%@page import="java.sql.*,zental.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +45,8 @@
 
     </script>
   	<%
+	  	String LoginId = (String)session.getAttribute("idkey");
+		System.out.println("회원정보수정 id : " + LoginId);
   		kb_Database db = new kb_Database();
   	  	  		String id = null;
   	  	  		String img = null;
@@ -53,7 +55,7 @@
   	  	  		String email = null;
   	  	  		String phone = null;
   	  	  		
-  	  	  		for(kb_MemberUpdate mem : db.UpdateList()){
+  	  	  		for(kb_MemberUpdate mem : db.UpdateList(LoginId)){
   	  	  			id = mem.getId();
   	  	  			img = mem.getMem_profileImg();
   	  	  			nick = mem.getNick();
@@ -74,7 +76,7 @@
             	%>
                 <img id="Profile-img" src="image/Profile.png">
                  <%} else if(img!=null){ %>
-                <img id="Profile-img" src="UploadFile\<%=img%>">
+                <img id="Profile-img" src="../../UploadFile\<%=img%>">
                 <%} %>
                 <input type="file" onchange="readInputFile(this)" name="file" id="inputProfile" accept="image/*" value="<%=img %>" style="opacity:0.0; position:absolute; top:0; bottom:0; right:0;width:100%; height:100%;"></div>
 

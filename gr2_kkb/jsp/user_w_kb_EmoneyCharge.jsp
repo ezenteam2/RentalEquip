@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="ZENTAL.*"%>
+    pageEncoding="UTF-8" import="zental.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,6 +104,8 @@
 	String Account = request.getParameter("Bank_Account");
 	String emo_cate = "충전";
 	Boolean isSuccess = false;
+	String LoginId = (String)session.getAttribute("idkey");
+	System.out.println("E머니 충전 id : " + LoginId);
 	
 	int price = 0;
 	if(Price != null) price = Integer.parseInt(Price); else price = 0;
@@ -120,7 +122,7 @@
 	emo.setPrice(price);
 	
 	kb_Database db = new kb_Database();
-	db.InsertEmoney(emo);
+	db.InsertEmoney(emo, LoginId);
   	
   	isSuccess = true;
 	} else {

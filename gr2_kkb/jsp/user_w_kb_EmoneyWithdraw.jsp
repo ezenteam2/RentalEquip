@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.sql.*, java.text.*,ZENTAL.*" %>
+<%@page import="java.sql.*, java.text.*,zental.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,14 +44,16 @@
 
   </script>
   	<%
-  		DecimalFormat df = new DecimalFormat("###,###");
+  			DecimalFormat df = new DecimalFormat("###,###");
   	  	  	kb_Database db = new kb_Database();
   	  	  	int Emoney;
   	  	  	String Price = null;
-  	  	  	String Query = "select mem_emoney from p4member where mem_id='userezenkb77'";
-  	  	  	for(kb_EmoneyPrice emo : db.EmoneyNow(Query)){
+  	  	  	String Query = "select mem_emoney from p4member where mem_id=?";
+	  	  	String LoginId = (String)session.getAttribute("idkey");
+	  		System.out.println("E머니 충전 id : " + LoginId);
+  	  	  	for(kb_EmoneyPrice emo : db.EmoneyNow(Query, LoginId)){
   	  	  		Emoney = emo.getEmoney();
-  	  	  		 Price = df.format(Emoney);
+  	  	  		Price = df.format(Emoney);
   	  	  	}
   	%>
   	

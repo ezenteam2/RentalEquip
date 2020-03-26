@@ -3,7 +3,7 @@
 <%@ page import="java.sql.*"%>
 <%@page import="com.oreilly.servlet.MultipartRequest" %>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
-<%@page import="java.util.*, java.io.*, ZENTAL.*"%>
+<%@page import="java.util.*, java.io.*, zental.*"%>
 
 
 
@@ -35,6 +35,8 @@
 		multi = new MultipartRequest(request, saveFolder,maxSize, encType,
 				new DefaultFileRenamePolicy());
 		Enumeration files = multi.getFileNames();
+		String LoginId = (String)session.getAttribute("idkey");
+		System.out.println("회원정보수정(proc) id : " + LoginId);
 		
 		while(files.hasMoreElements()){
 			String name=(String) files.nextElement();
@@ -57,7 +59,7 @@
 			mem.setEmail(email);
 			
 	      	kb_Database db = new kb_Database();
-	      	db.updateMember(mem);
+	      	db.updateMember(mem, LoginId);
 	        isSuccess = true;
 	        //response.sendRedirect("user_w_kb_MypageMain.jsp");
 		}
