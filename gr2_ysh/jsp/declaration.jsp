@@ -37,20 +37,20 @@ String path = request.getContextPath();%>
     <div class = "menu">
         <div class = "menu__title">관리자 페이지</div>
         <div class = "menu__category">통계</div>
-        <div class = "menu__category">회원 관리</div>
+        <div class = "menu__category" onclick="location.href='userinfo.jsp'">회원 관리</div>
         <div class = "menu__category category__project">프로젝트 관리<img class="category--button" src="./img/bottom.svg" alt=""></div>
         <div class = "menu__inner--project">
             <p class = "menu__inner">등록 신청 프로젝트 관리</p>
             <p class = "menu__inner">프로젝트 현황 관리</p>
             <p class = "menu__inner">카테고리 관리</p>
-            <p class = "menu__inner">신고 프로젝트 관리</p>
+            <p class = "menu__inner" onclick="location.href='declaration.jsp'">신고 프로젝트 관리</p>
         </div>
         <div class = "menu__category">결제 관리</div>
         <div class = "menu__category category__community">커뮤니티 관리<img class="category--button" src="./img/bottom.svg" alt=""></div>
             <div class = "menu__inner--community">    
-                <p class = "menu__inner">공지사항 관리</p>
+                <p class = "menu__inner" onclick="location.href='../../gr2_lhj/jsp/admin_w_hj_notice_manage.jsp'">공지사항 관리</p>
                 <p class = "menu__inner">Q&amp;A 관리</p>
-                <p class = "menu__inner">FAQ 관리</p>
+                <p class = "menu__inner" onclick="location.href='../../gr2_lhj/jsp/admin_w_hj_faq_manage.jsp'">FAQ 관리</p>
             </div>    
         <div class = "menu__category category__main">메인화면 관리<img class="category--button" src="./img/bottom.svg" alt=""></div>
             <div class = "menu__inner--main">
