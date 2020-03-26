@@ -3,7 +3,6 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	String path = request.getContextPath();
-	String id = (String)session.getAttribute("idkey");
 %>
 <!DOCTYPE html>
 <html>
@@ -116,18 +115,7 @@ body{
 		<div class="mainIndexTop_ht">			
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_coupon.jsp')"><img src="image/mainIndexTopAppLink.jpg" style="width:25px;vertical-align:middle;">앱다운로드</div>
 				<div class="mainIndexTopContent1_ht" onclick = "changeIframeUrl('user_w_ht_grade.jsp')"><img src="image/mainIndexTopFavorite.jpg" style="width:25px;vertical-align:middle;">즐겨찾기</div>			
-				<div class="mainIndexTopContent2_ht" style="margin-left:355px; width : 300px; text-align:right;padding-right:20px;">
-				
-				<%
-				if(id!=null){
-				%>
-				<%=id %>님 환영합니다
-				<a href="../gr2_ysh/jsp/logout.jsp" style="color : black">로그아웃</a>
-				<%}else{%>
-				<a href="../gr2_ysh/jsp/login.jsp" class="mainIndexTopContent2_ht" style="color : black">로그인</a>
-				<% } %>
-				
-				</div>   
+				<div class="mainIndexTopContent2_ht" style="margin-left:600px;" onclick = "location.href='../gr2_ysh/jsp/login.jsp'">로그인</div>   
 				<div class="mainIndexTopContent2_ht" onclick = "location.href='../gr2_ysh/jsp/signup.jsp'">회원가입</div>   
 				<div class="mainIndexTopContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')">내 렌탈</div>			
 		</div>
@@ -139,7 +127,7 @@ body{
 				<div style="display:inline-block;vertical-align:top;"><input style="width:500px;height:40px;border:solid 2px red;margin-left:70px;padding-left:20px;" type="text" placeholder="상품명, 카테고리 입력" ></div>
 				<div class="mainIndexMiddleContent1_ht" onclick = "changeIframeUrl('../gr2_kys/user_w_ys_uploadProducts.html')"><img src="image/registRentalEquip.png" class="mainIndexMiddleContentImage_ht">렌탈 상품 등록</div>   
 				<div class="mainIndexMiddleContent2_ht" onclick = "changeIframeUrl('../gr2_kkb/jsp/user_w_kb_MypageMain.jsp')"><img src="image/myRental.png" class="mainIndexMiddleContentImage_ht">내 렌탈</div>   
-				<div onclick = "changeIframeUrl('../gr2_lhj/jsp/user_w_hj_board_want.jsp')" class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht" >빌려요</div>
+				<div class="mainIndexMiddleContent2_ht"><img src="image/talk.png" class="mainIndexMiddleContentImage_ht" onclick = "changeIframeUrl('')">젠탈톡</div>
 			<br>
 			</div>
 			<div style="padding-left:20px;">
@@ -160,12 +148,12 @@ body{
 		<footer class="mainIndexFooter_ht">
 		
 		<div class="mainIndexBottom_ht">
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/jsp/user_w_hj_notice.jsp')">공지사항</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/jsp/user_w_hj_faq.jsp')">FAQ 이용가이드</span> ||
-			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/jsp/user_w_hj_qna.jsp')">QnA</span>			
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/공지사항.jsp')">공지사항</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/FAQ및이용가이드.jsp')">FAQ 이용가이드</span> ||
+			<span class="mainIndexTopContent_ht" onclick = "changeIframeUrl2('../gr2_lhj/html/Q&A(1_1문의).jsp')">QnA</span>			
 		</div>
 		
-		<img onclick = "location.href='../gr2_ysh/jsp/userinfo.jsp'" src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
+		<img src="image/mainIndexLogo.jpg" width="100px" style="margin-right:10px;margin-top:10px;margin-left:10px;"><span style="font-weight:bold;">회사소개<br>
 		EZEN에서 만나는 새로운 서비스! 사지말고 빌리세요 ZENTAL! 누구나, 무엇이든 쉽고 편하고 안전하게 렌탈하는 세상을 꿈꾸고 있습니다.</span>
 		<img src="image/mainIndexFooterFacebookIcon.png" width="25px;">
 		<img src="image/mainIndexFooterInstagramIcon.png" width="25px;">
@@ -183,15 +171,12 @@ body{
 <script type = "text/javascript">
 
 function changeIframeUrl(url){
-	  document.getElementById("main_frame").src = url;
-	  document.getElementById("main_frame").style.height="1500px";
-	  window.scrollTo(0, 0);
+	  document.getElementById("main_frame").src = url;	
 	}
 	
 function changeIframeUrl2(url){
 	document.getElementById("main_frame").src = url;
-	document.getElementById("main_frame").style.height="1500px";
-	window.scrollTo(0, 0);
+	document.getElementById("main_frame").style.height="950px";
 }
 
 function setIFrameHeight(obj){
