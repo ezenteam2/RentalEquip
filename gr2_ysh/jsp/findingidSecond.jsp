@@ -19,12 +19,7 @@ String path = request.getContextPath(); %>
 <body>
     <div class="result--box">
         <p class="result result__username">최준범</p><p class="result">님의 아이디는 </p><p class="result result__id">
-        
-        <%
-		for(Userinfo r:db.findingId(name,email)){
-		%>
-        <td><%=r.getMEM_ID() %></td>
-        <%} %>
+       
         <p class="result"> 입니다</p>
         <button class="submit" onClick="location.href='login.jsp'">로그인하기</button>    
     </div>
