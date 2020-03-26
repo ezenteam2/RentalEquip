@@ -12,6 +12,8 @@
 <body>
 
 	<%
+		String LoginId = (String)session.getAttribute("idkey");
+		System.out.println("·Î±×ÀÎ id : " + LoginId);
 		kb_Database db = new kb_Database();
 		DecimalFormat df = new DecimalFormat("###,###");
 		String id = null;
@@ -21,7 +23,7 @@
 		int Point = 0;
 		String Points = null;
 		
-		for(kb_Member1 mem : db.MemberInfo()){
+		for(kb_Member1 mem : db.MemberInfo(LoginId)){
 			id = mem.getId();
 			nick = mem.getNick();
 			grade = mem.getGrade();

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*,java.text.*,ZENTAL.*" %>
+<%@ page import="java.sql.*,java.text.*,zental.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +22,8 @@
             </thead>
             <tbody>
 	<%
+		String LoginId = (String)session.getAttribute("idkey");
+		System.out.println("E머니 충전 id : " + LoginId);
 		kb_Database db = new kb_Database();
 		DecimalFormat df = new DecimalFormat("###,###");
 	  	String Divide = request.getParameter("Divide");
@@ -40,12 +42,12 @@
 	    	
 	    	 if(Divide.equals("all") && TheDay.equals("true")){
 	    	 String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-	    			 +" where mem_id='userezenkb77' and to_date(emo_date, 'YYYY-MM-DD')"
+	    			 +" where mem_id=? and to_date(emo_date, 'YYYY-MM-DD')"
 	    			 + "= to_date(sysdate, 'YYYY-MM-DD')";
 	%>
     	 
          <%
-    	          	for(kb_Emoney emo : db.EmoneyList(Query)){
+    	          	for(kb_Emoney emo : db.EmoneyList(Query, LoginId)){
     	                  	 String Price = df.format(emo.getEmoney());
     	          %>
          <tr>
@@ -60,12 +62,12 @@
 		<%
     			} else if(Divide.equals("all") && TheDay.equals("false")){
     		    		 String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-    		    				 + " where mem_id='userezenkb77' and emo_date between to_date(?, 'YYYY-MM-DD') and "
+    		    				 + " where mem_id=? and emo_date between to_date(?, 'YYYY-MM-DD') and "
     		    				 + "to_date(?, 'YYYY-MM-DD')";
     		%>
     				 
     				  <%
-    				     				  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay)){
+    				     				  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay, LoginId)){
     				     				  	        	String Price = df.format(emo.getEmoney());
     				     				  %>
 			         <tr>
@@ -81,12 +83,12 @@
     		     		 	
     		     		   } else if(Divide.equals("Charge") && TheDay.equals("true")){
     		     		     	String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-    		     		         			+" where mem_id='userezenkb77' and to_date(emo_date, 'YYYY-MM-DD')"
+    		     		         			+" where mem_id=? and to_date(emo_date, 'YYYY-MM-DD')"
     		     		         			 + "= to_date(sysdate, 'YYYY-MM-DD') and emo_cate='충전'";
     		     		 %>
     		 
     		 <%
-    		     		 	for(kb_Emoney emo : db.EmoneyList(Query)){
+    		     		 	for(kb_Emoney emo : db.EmoneyList(Query, LoginId)){
     		     		         	 String Price = df.format(emo.getEmoney());
     		     		 %>
 	         <tr>
@@ -100,11 +102,11 @@
     	 <%
     	 	} else if(Divide.equals("Charge") && TheDay.equals("false")){
     	     		String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-    	     				 + " where mem_id='userezenkb77' and emo_date between to_date(?, 'YYYY-MM-DD') and "
+    	     				 + " where mem_id=? and emo_date between to_date(?, 'YYYY-MM-DD') and "
     	     				 + "to_date(?, 'YYYY-MM-DD') and emo_cate='충전'";
     	 %>
     				  <%
-    				  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay)){
+    				  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay, LoginId)){
     				  	        	String Price = df.format(emo.getEmoney());
     				  %>
 			         <tr>
@@ -119,11 +121,11 @@
     		<%
     		     			} else if(Divide.equals("Withraw") && TheDay.equals("true")){
     		     		    		String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-    		     		        			 +" where mem_id='userezenkb77' and to_date(emo_date, 'YYYY-MM-DD')"
+    		     		        			 +" where mem_id=? and to_date(emo_date, 'YYYY-MM-DD')"
     		     		        			 + "= to_date(sysdate, 'YYYY-MM-DD') and emo_cate='출금'";
     		     		%>
     		  <%
-    		  	for(kb_Emoney emo : db.EmoneyList(Query)){
+    		  	for(kb_Emoney emo : db.EmoneyList(Query, LoginId)){
     		          	 String Price = df.format(emo.getEmoney());
     		  %>
 	         <tr>
@@ -138,12 +140,12 @@
     		 <%
     		     		 	} else if(Divide.equals("Withraw") && TheDay.equals("false")){
     		     		     		String Query = "select to_char(emo_date, 'YYYY-MM-DD'), emo_cate, emo_amount from p4emoney"
-    		     		     				 + " where mem_id='userezenkb77' and emo_date between to_date(?, 'YYYY-MM-DD') and "
+    		     		     				 + " where mem_id=? and emo_date between to_date(?, 'YYYY-MM-DD') and "
     		     		     				 + "to_date(?, 'YYYY-MM-DD') and emo_cate='출금'";
     		     		 %>
     		 
     		  <%
-    		     		  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay)){
+    		     		  	for(kb_Emoney emo : db.EmoneyListDate(Query, StartDay, EndDay, LoginId)){
     		     		  	        	String Price = df.format(emo.getEmoney());
     		     		  %>
 			         <tr>
