@@ -17,6 +17,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import zental.*;
+
 
 public class dbModule {
 	
@@ -110,30 +112,35 @@ public class dbModule {
 	}
 
 //아이디 찾기
-	public String findingId(String name, String email) {
-		
-		boolean flag = false;
-		String answer="";
+	public String findingId(String name, String email){
+		String result = "";
 		try {
 			setCon();
-			String sql = "select MEM_ID from SCOTT.P4MEMBER where MEM_NAME = ? AND MEM_EMAIL =?";
+			String sql = "select MEM_ID from SCOTT.P4MEMBER where MEM_NAME=? and MEM_EMAIL=?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, name);
-			pstmt.setString(2, email);			
+			pstmt.setString(1,name);
+			pstmt.setString(2,email);
 			rs = pstmt.executeQuery();
-			flag = rs.next();
-			if(flag) {
-				answer = rs.getString("MEM_ID");
-			}else {
-				answer = "불일치";
-			}
-		rs.close();
-		stmt.close();
-		con.close();
-		}catch(Exception e){
+			if(rs.next()) result = rs.getString("MEM_ID");
+			
+			System.out.print(result);
+			}catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println(e.getMessage());
+			try {
+				con.rollback();
+				System.out.println("sql오류");
+			} catch (SQLException e1) {
+
+				e1.printStackTrace();
+			}catch(Exception e1){
+				e.printStackTrace();
+			}	
+		
 		}
-		return answer;
+		
+		return result;
+		
 	}
 
 
@@ -204,4 +211,4 @@ public class dbModule {
 		}
 		return userinfotList;
 	}
-}
+}	

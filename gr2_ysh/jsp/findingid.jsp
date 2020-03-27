@@ -15,22 +15,13 @@ String path = request.getContextPath(); %>
     <div class="finding">
            <p class="form form__title">아이디 찾기</p>
             <form action="./findingidSecond.jsp"> 
-            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__username"  type="text" placeholder="이름"><br><hr>
-            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input class="form__address"  type="text" placeholder="이메일"><br><hr>
+            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input name="MEM_NAME" class="form__username"  type="text" placeholder="이름"><br><hr>
+            <img class="form__img" src="https://assets.bunjang.co.kr/bunny_desktop/images/input-email@2x.png" alt=""><input name="MEM_EMAIL" class="form__address"  type="text" placeholder="이메일"><br><hr>
             <input class="submit" type="submit" value="아이디 찾기">    
             </form>
     </div>
     <script>
-    function findinIdCheck(id){
-		var frm = document.regFrm;
-		if(id==""){
-			alert('id를 입력해주세요');
-			frm.id.focus();
-			return;
-		} 
-		url = "idCheck.jsp?id="+id;
-		window.open(url,"idCheck","width=300px,height=150px");
-	}
+    
     </script>
     <script src="../js/findingid.js"></script>
 </body>
