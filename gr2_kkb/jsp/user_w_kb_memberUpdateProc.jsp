@@ -65,11 +65,14 @@
 		}
  		%>
  		<script>
+ 			var isSuccess = <%=isSuccess%>
+ 			if(isSuccess){
  			alert("수정되었습니다");
  			location.href="user_w_kb_MypageMain.jsp";
+ 			}
  		</script>
  		<%
-	    	
+	    isSuccess = false;
 	} catch(Exception e){
 		e.printStackTrace();
 	}
